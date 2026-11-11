@@ -100,4 +100,14 @@
       <frame duration="400" ref="gengar-water.flood-a" tint="#FFA9B8FF"/>
     </animation>
   </images>
+  <images file="res/battle-hud.png" filter="linear">
+    <area name="gengar-move.default" xywh="640,140,209,52" splitx="L12,R80" splity="T10,B10"/>
+    <area name="gengar-move.hover" xywh="640,196,209,52" splitx="L12,R80" splity="T10,B10"/>
+    <area name="gengar-move.disabled" xywh="640,252,209,52" splitx="L12,R80" splity="T10,B10"/>
+    <select name="gengar-move.background">
+      <alias ref="gengar-move.disabled" if="disabled"/>
+      <alias ref="gengar-move.hover" if="hover | keyboardFocus | selected | pressed"/>
+      <alias ref="gengar-move.default"/>
+    </select>
+  </images>
 </themes>

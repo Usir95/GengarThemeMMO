@@ -2,8 +2,16 @@ import sys
 from PIL import Image, ImageDraw, ImageFilter
 
 src, pattern, dst = sys.argv[1], sys.argv[2], sys.argv[3]
+face_src = sys.argv[4] if len(sys.argv) > 4 else None
 S = 4
+import numpy as np
+from PIL import ImageEnhance
 im = Image.open(src).convert("RGBA")
+face_img = None
+if face_src:
+    fs = Image.open(face_src).convert("RGBA")
+    fw_, fh_ = fs.size
+    face_img = fs.crop((int(fw_ * 0.70), int(fh_ * 0.27), int(fw_ * 0.955), int(fh_ * 0.585)))
 pat = Image.open(pattern).convert("RGBA")
 
 
@@ -21,7 +29,7 @@ def clear(box):
     im.paste(Image.new("RGBA", (w, h), (0, 0, 0, 0)), (x, y))
 
 
-def rounded(box, top, bottom, border, radius, accent=None, glow=None, square=False, icon=None):
+def rounded(box, top, bottom, border, radius, accent=None, glow=None, square=False, icon=None, face=None):
     x, y, w, h = box
     big = Image.new("RGBA", (w * S, h * S), (0, 0, 0, 0))
     g = Image.new("RGBA", (w * S, h * S))
@@ -45,6 +53,26 @@ def rounded(box, top, bottom, border, radius, accent=None, glow=None, square=Fal
         d.rounded_rectangle([9 * S, 9 * S, (h - 9) * S + 4 * S, (h - 9) * S], radius=3 * S, fill=(18, 12, 30, 35), outline=(border[0], border[1], border[2], 60), width=S)
     d.rounded_rectangle([S, S, w * S - S - 1, h * S - S - 1], radius=radius * S, outline=border, width=S)
     small = big.resize((w, h), Image.LANCZOS)
+    if face is not None and face_img is not None:
+        strength, = face
+        fh = h - 4
+        fw = int(face_img.width * fh / face_img.height)
+        f = face_img.resize((fw, fh), Image.LANCZOS)
+        if strength < 0.5:
+            f = ImageEnhance.Brightness(f).enhance(0.55)
+        fade = Image.new("L", (fw, fh), 0)
+        fd = ImageDraw.Draw(fade)
+        for i in range(fw):
+            fd.line([(i, 0), (i, fh)], fill=int(255 * strength * min(1, i / (fw * 0.45))))
+        f.putalpha(Image.fromarray(np.minimum(np.array(f.getchannel("A")), np.array(fade)).astype(np.uint8)))
+        clip = small.getchannel("A")
+        layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        layer.alpha_composite(f, (w - fw - 3, 2))
+        layer.putalpha(Image.fromarray(np.minimum(np.array(layer.getchannel("A")), np.array(clip)).astype(np.uint8)))
+        small.alpha_composite(layer)
+        bd = Image.new("RGBA", (w * S, h * S), (0, 0, 0, 0))
+        ImageDraw.Draw(bd).rounded_rectangle([S, S, w * S - S - 1, h * S - S - 1], radius=radius * S, outline=border, width=S)
+        small.alpha_composite(bd.resize((w, h), Image.LANCZOS))
     if icon is not None:
         small.alpha_composite(icon)
     clear(box)
@@ -90,8 +118,11 @@ base = dict(top=hx("#5E3D90", 235), bottom=hx("#3A2460", 235), border=hx("#9B78C
 hover = dict(top=hx("#7D52B8", 245), bottom=hx("#55367F", 245), border=hx("#F0B8FF"), radius=6, accent=hx("#FF6FD8"), glow=hx("#E04EC0", 180))
 dis = dict(top=hx("#3C3546", 200), bottom=hx("#2B2633", 200), border=hx("#5A5266"), radius=6, accent=hx("#5A5266"))
 dish = dict(dis, border=hx("#E04EC0"))
-rounded((2, 145, 209, 52), square=True, **base)
-rounded((2, 200, 209, 52), square=True, **hover)
+rounded((2, 145, 209, 52), square=True, face=(0.35,), **base)
+rounded((2, 200, 209, 52), square=True, face=(1.0,), **hover)
+rounded((640, 140, 209, 52), face=(0.35,), **base)
+rounded((640, 196, 209, 52), face=(1.0,), **hover)
+rounded((640, 252, 209, 52), **dis)
 rounded((2, 257, 209, 52), square=True, **dis)
 rounded((218, 257, 209, 52), square=True, **dish)
 
@@ -108,7 +139,7 @@ for col, _ in small_sets:
         if ic is not None:
             icon_layer = Image.new("RGBA", (96, 30), (0, 0, 0, 0))
             icon_layer.alpha_composite(ic, (2, 0))
-        rounded((col, row, 96, 30), icon=icon_layer, **st2)
+        rounded((col, row, 96, 30), icon=icon_layer, face=(1.0,) if row == 176 else None, **st2)
 
 x, y, w, h = 6, 312, 800, 115
 panel = Image.new("RGBA", (w, h))

@@ -86,4 +86,13 @@
       </theme>
     </theme>
   </theme>
+  <theme name="battle-move-button">
+    <param name=""><image>gengar-move.*</image></param>
+  </theme>
+  <theme name="battle-panel">
+    <param name="background"><image>battle-area</image></param>
+  </theme>
+  <theme name="battle-frame">
+    <param name="background"><image>battle-area</image></param>
+  </theme>
 </themes>
