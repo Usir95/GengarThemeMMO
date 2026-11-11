@@ -1027,4 +1027,14 @@
       <alias ref="pcslot.border.selected" if="keyboardFocus"/>
     </select>
   </images>
+	<images file="res/gengar-mlist.png" filter="linear">
+		<area name="gengar-mlist.default" xywh="0,0,400,60" splitx="L80,R16" splity="T16,B16"/>
+		<area name="gengar-mlist.hover" xywh="0,64,400,60" splitx="L80,R16" splity="T16,B16"/>
+		<area name="gengar-mlist.disabled" xywh="0,128,400,60" splitx="L80,R16" splity="T16,B16"/>
+		<select name="gengar-mlist.background">
+			<alias ref="gengar-mlist.disabled" if="disabled"/>
+			<alias ref="gengar-mlist.hover" if="hover | keyboardFocus | selected | pressed"/>
+			<alias ref="gengar-mlist.default"/>
+		</select>
+	</images>
 </themes>

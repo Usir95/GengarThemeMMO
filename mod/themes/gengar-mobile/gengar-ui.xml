@@ -50,11 +50,86 @@
   </theme>
   <theme name="battle-panel">
     <param name="background"><image>none</image></param>
+    <theme name="dialoglayout">
+      <theme name="button">
+        <param name="background"><image>gengar-cmd.background</image></param>
+      </theme>
+    </theme>
+    <theme name="scrollpane">
+      <param name="background"><image>gengar-bpanel</image></param>
+      <theme name="dialoglayout">
+        <theme name="button">
+          <param name=""><image>gengar-mlist.*</image></param>
+          <param name="border"><border>10,10,10,24</border></param>
+          <param name="minHeight"><int>60</int></param>
+        </theme>
+      </theme>
+    </theme>
+    <theme name="button">
+      <param name=""><image>gengar-cmd.*</image></param>
+    </theme>
   </theme>
   <theme name="battle-panel-dark">
     <param name="background"><image>none</image></param>
+    <theme name="dialoglayout">
+      <theme name="button">
+        <param name="background"><image>gengar-cmd.background</image></param>
+      </theme>
+    </theme>
+    <theme name="scrollpane">
+      <param name="background"><image>gengar-bpanel</image></param>
+      <theme name="dialoglayout">
+        <theme name="button">
+          <param name=""><image>gengar-mlist.*</image></param>
+          <param name="border"><border>10,10,10,24</border></param>
+          <param name="minHeight"><int>60</int></param>
+        </theme>
+      </theme>
+    </theme>
+    <theme name="button">
+      <param name=""><image>gengar-cmd.*</image></param>
+    </theme>
   </theme>
   <theme name="battle-frame">
     <param name="background"><image>label1.background</image></param>
+  </theme>
+  <theme name="battle-run">
+    <param name=""><image>mobile.battle.run.*</image></param>
+  </theme>
+  <theme name="battle-switch">
+    <param name=""><image>mobile.battle.switch.*</image></param>
+  </theme>
+  <theme name="battle-shift">
+    <param name=""><image>mobile.battle.shift.*</image></param>
+  </theme>
+  <theme name="battle-sheet">
+    <param name=""><image>mobile.battle.sheet.*</image></param>
+  </theme>
+  <theme name="battle-carving">
+    <param name=""><image>mobile.battle.carve.*</image></param>
+  </theme>
+  <theme name="battle-rotate">
+    <param name=""><image>mobile.battle.rotate.*</image></param>
+  </theme>
+  <theme name="battle-win">
+    <param name=""><image>mobile.battle.win.*</image></param>
+  </theme>
+  <theme name="battle-fight">
+    <param name=""><image>mobile.battle.attack.*</image></param>
+  </theme>
+  <theme name="battle-bag">
+    <param name=""><image>mobile.battle.bag.*</image></param>
+  </theme>
+  <theme name="battle-bait">
+    <param name=""><image>mobile.battle.bait.*</image></param>
+  </theme>
+  <theme name="battle-rock">
+    <param name=""><image>mobile.battle.rock.*</image></param>
+  </theme>
+  <theme name="battle-ball">
+    <param name=""><image>mobile.battle.ball.*</image></param>
+  </theme>
+  <theme name="rbattle-big">
+    <param name=""><image>button.*</image></param>
   </theme>
 </themes>
