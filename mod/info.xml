@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<resource name="Gengar Theme" version="1.1.1" description="Tema de interfaz inspirado en Gengar." author="Osiris">
+<resource name="Gengar Theme" version="1.2.0" description="Tema de interfaz inspirado en Gengar." author="Osiris">
   <themes theme_revision="11">
     <theme path="themes/gengar/" name="Gengar" is_mobile="false">
       <constants>
@@ -50,4 +50,7 @@
       </constants_presets>
     </theme>
   </themes>
+  <strings string_revision="1">
+    <string path="strings/gengar_es.xml"/>
+  </strings>
 </resource>
