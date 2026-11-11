@@ -22,9 +22,9 @@
   <include filename="../../data/themes/default/ui/battle.xml"/>
   <include filename="../../data/themes/default/ui/contest.xml"/>
   <include filename="ui/party.xml"/>
-  <include filename="../../data/themes/default/ui/inventory.xml"/>
+  <include filename="ui/inventory.xml"/>
   <include filename="../../data/themes/default/ui/chat.xml"/>
-  <include filename="../../data/themes/default/ui/monster-dex.xml"/>
+  <include filename="ui/monster-dex.xml"/>
   <include filename="../../data/themes/default/ui/monster-frame.xml"/>
   <include filename="../../data/themes/default/ui/customization.xml"/>
   <include filename="../../data/themes/default/ui/settings.xml"/>

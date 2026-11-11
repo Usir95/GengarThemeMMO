@@ -47,4 +47,57 @@
     <area name="gengar-bars.hp-red.background" xywh="64,54,32,2" splitx="L3,R3"/>
     <area name="gengar-bars.hp-red.progressImage" xywh="184,54,32,2" splitx="L3,R3"/>
   </images>
+  <images file="res/gengar-panel-pattern.png" filter="linear">
+    <area name="gengar-panel.pattern" xywh="0,0,192,192" repeatX="true" repeatY="true"/>
+    <area name="gengar-panel.dex" xywh="0,0,192,192" repeatX="true" repeatY="true" inset="32,0,0,0"/>
+    <area name="gengar-panel.bag" xywh="0,0,192,192" repeatX="true" repeatY="true" inset="24,0,0,0"/>
+  </images>
+  <images file="res/monster-info.png" filter="nearest">
+    <area name="mi-label-value31" xywh="386,57,125,25"/>
+    <area name="mi-label-value0" xywh="386,82,125,25"/>
+  </images>
+  <images file="res/breedwindow.png" filter="nearest">
+    <area name="gengar-breedwindow" xywh="*" inset="-10,-25,-20,-25"/>
+  </images>
+  <images file="res/pcxiangzi.png" filter="nearest">
+    <area name="gengar-pc" xywh="*"/>
+  </images>
+  <images file="res/gengar-water-levels.png" filter="linear">
+    <area name="gengar-water.icon1" xywh="1,1,46,46" center="true"/>
+    <area name="gengar-water.icon2" xywh="53,1,46,46" center="true"/>
+    <area name="gengar-water.icon3" xywh="1,50,46,46" center="true"/>
+    <area name="gengar-water.icon4" xywh="53,50,46,46" center="true"/>
+    <area name="gengar-water.icon5" xywh="1,99,46,46" center="true"/>
+    <area name="gengar-water.icondry" xywh="53,99,46,46" center="true"/>
+    <area name="gengar-water.iconflood" xywh="1,148,46,46" center="true"/>
+    <composed name="gengar-water.1">
+      <alias ref="gengar-water.icon1" inset="20,-5,-80,5"/>
+    </composed>
+    <composed name="gengar-water.2">
+      <alias ref="gengar-water.icon2" inset="20,-5,-80,5"/>
+    </composed>
+    <composed name="gengar-water.3">
+      <alias ref="gengar-water.icon3" inset="20,-5,-80,5"/>
+    </composed>
+    <composed name="gengar-water.4">
+      <alias ref="gengar-water.icon4" inset="20,-5,-80,5"/>
+    </composed>
+    <composed name="gengar-water.5">
+      <alias ref="gengar-water.icon5" inset="20,-5,-80,5"/>
+    </composed>
+    <composed name="gengar-water.dry-a">
+      <alias ref="gengar-water.icondry" inset="20,-5,-80,5"/>
+    </composed>
+    <animation name="gengar-water.dry" timeSource="enabled">
+      <frame duration="400" ref="gengar-water.dry-a" tint="#FFFFFFFF"/>
+      <frame duration="400" ref="gengar-water.dry-a" tint="#FFEC939F"/>
+    </animation>
+    <composed name="gengar-water.flood-a">
+      <alias ref="gengar-water.iconflood" inset="20,-5,-80,5"/>
+    </composed>
+    <animation name="gengar-water.flood" timeSource="enabled">
+      <frame duration="400" ref="gengar-water.flood-a" tint="#FFFFFFFF"/>
+      <frame duration="400" ref="gengar-water.flood-a" tint="#FFA9B8FF"/>
+    </animation>
+  </images>
 </themes>

@@ -27,4 +27,63 @@
   <theme name="queuegui">
     <param name="background"><image>gengar-login-bg</image></param>
   </theme>
+  <theme name="label-monster-area">
+    <theme name="label-monster-value-stat-complete" ref="label">
+      <param name="background"><image>mi-label-value31</image></param>
+    </theme>
+    <theme name="label-monster-value-stat-bad" ref="label">
+      <param name="background"><image>mi-label-value0</image></param>
+    </theme>
+  </theme>
+  <theme name="breed-window">
+    <param name="background"><image>gengar-breedwindow</image></param>
+    <theme name="breed-group1" ref="breed-group">
+      <param name="background"><image>none</image></param>
+    </theme>
+    <theme name="breed-group2" ref="breed-group">
+      <param name="background"><image>none</image></param>
+    </theme>
+  </theme>
+  <theme name="pc-frame" ref="pc-frame">
+    <param name="background"><image>gengar-pc</image></param>
+  </theme>
+  <theme name="nameplategui">
+    <theme name="nameplate">
+      <theme name="moisture-level0" ref="-defaults">
+        <param name="background"><image>gengar-water.dry</image></param>
+        <param name="minWidth"><int>50</int></param>
+        <param name="minHeight"><int>15</int></param>
+      </theme>
+      <theme name="moisture-level1" ref="-defaults">
+        <param name="background"><image>gengar-water.1</image></param>
+        <param name="minWidth"><int>50</int></param>
+        <param name="minHeight"><int>15</int></param>
+      </theme>
+      <theme name="moisture-level2" ref="-defaults">
+        <param name="background"><image>gengar-water.2</image></param>
+        <param name="minWidth"><int>50</int></param>
+        <param name="minHeight"><int>15</int></param>
+      </theme>
+      <theme name="moisture-level3" ref="-defaults">
+        <param name="background"><image>gengar-water.3</image></param>
+        <param name="minWidth"><int>50</int></param>
+        <param name="minHeight"><int>15</int></param>
+      </theme>
+      <theme name="moisture-level4" ref="-defaults">
+        <param name="background"><image>gengar-water.4</image></param>
+        <param name="minWidth"><int>50</int></param>
+        <param name="minHeight"><int>15</int></param>
+      </theme>
+      <theme name="moisture-level5" ref="-defaults">
+        <param name="background"><image>gengar-water.5</image></param>
+        <param name="minWidth"><int>50</int></param>
+        <param name="minHeight"><int>15</int></param>
+      </theme>
+      <theme name="moisture-level6" ref="-defaults">
+        <param name="background"><image>gengar-water.flood</image></param>
+        <param name="minWidth"><int>50</int></param>
+        <param name="minHeight"><int>15</int></param>
+      </theme>
+    </theme>
+  </theme>
 </themes>
