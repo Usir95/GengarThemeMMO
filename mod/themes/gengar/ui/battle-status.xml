@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+  <theme name="redlabel">
+    <param name="font"><font>mechabold-large</font></param>
+  </theme>
+
+  <theme name="battle-gui-enemy">
+    <param name="minWidth"><int>350</int></param>
+    <theme name="health-progressbar" ref="health-progressbar">
+      <param name="minWidth"><int>260</int></param>
+    </theme>
+    <theme name="health-progressbar-orange" ref="health-progressbar-orange">
+      <param name="minWidth"><int>260</int></param>
+    </theme>
+    <theme name="health-progressbar-red" ref="health-progressbar-red">
+      <param name="minWidth"><int>260</int></param>
+    </theme>
+  </theme>
+
+  <theme name="battle-gui-self">
+    <param name="minWidth"><int>342</int></param>
+    <theme name="health-progressbar" ref="health-progressbar">
+      <param name="minWidth"><int>260</int></param>
+    </theme>
+    <theme name="health-progressbar-orange" ref="health-progressbar-orange">
+      <param name="minWidth"><int>260</int></param>
+    </theme>
+    <theme name="health-progressbar-red" ref="health-progressbar-red">
+      <param name="minWidth"><int>260</int></param>
+    </theme>
+  </theme>
+</themes>
