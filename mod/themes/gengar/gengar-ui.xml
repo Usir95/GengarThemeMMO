@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+  <theme name="logingui">
+    <param name="background"><image>gengar-login-bg</image></param>
+    <theme name="login-window">
+      <param name="background"><image>gengar-frame.background</image></param>
+      <theme name="button" ref="button" allowWildcard="true">
+        <param name=""><image>gengar-button.*</image></param>
+      </theme>
+      <theme name="combobox" ref="combobox" allowWildcard="true">
+        <param name=""><image>gengar-button.*</image></param>
+      </theme>
+      <theme name="editfield" ref="editfield" allowWildcard="true">
+        <param name="background"><image>gengar-input.background</image></param>
+      </theme>
+    </theme>
+    <theme name="serverselect-window">
+      <param name="background"><image>gengar-frame.background</image></param>
+      <theme name="button" ref="button" allowWildcard="true">
+        <param name=""><image>gengar-button.*</image></param>
+      </theme>
+    </theme>
+  </theme>
+  <theme name="characterselectgui">
+    <param name="background"><image>gengar-select-bg</image></param>
+  </theme>
+  <theme name="queuegui">
+    <param name="background"><image>gengar-login-bg</image></param>
+  </theme>
+</themes>

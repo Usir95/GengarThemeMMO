@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource name="Gengar Theme" version="1.0.0" description="Tema de interfaz inspirado en Gengar." author="Osiris">
+  <themes theme_revision="11">
+    <theme path="themes/gengar/" name="Gengar" is_mobile="false">
+      <constants>
+        <constant name="main-theme-color" public_name="Color base" type="COLOR" default_value="#735196"/>
+        <constant name="main-color" public_name="Color principal" type="COLOR" default_value="#9B78C6"/>
+        <constant name="sub-color" public_name="Color secundario" type="COLOR" default_value="#9B78C6"/>
+      </constants>
+    </theme>
+  </themes>
+</resource>
