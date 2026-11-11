@@ -179,7 +179,7 @@
     <param name="background"><image>none</image></param>
     <param name="panelFill"><image>none</image></param>
     <param name="panelEdge"><image>none</image></param>
-    <param name="panelFillTint"><color>#FF190D21</color></param>
+    <param name="panelFillTint"><color>#FF2A1840</color></param>
     <param name="panelEdgeTint"><color>#17FFFFFF</color></param>
   </theme>
 
@@ -187,7 +187,7 @@
     <param name="background"><image>none</image></param>
     <param name="panelFill"><image>none</image></param>
     <param name="panelEdge"><image>none</image></param>
-    <param name="panelFillTint"><color>#FF20122A</color></param>
+    <param name="panelFillTint"><color>#FF34204F</color></param>
     <param name="panelEdgeTint"><color>#1FFFFFFF</color></param>
   </theme>
 
