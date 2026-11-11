@@ -90,11 +90,12 @@ def noise(px, py, seed):
     return n
 
 
-d_outer = sdf_box(xx, yy, 8, 8, W - 8, H - 8, 16) - noise(xx, yy, 7) * 1.4
-d_inner = sdf_box(xx, yy, 13, 13, W - 13, H - 13, 12) - noise(xx, yy, 11) * 0.8
+wt = np.clip(yy / 30, 0.15, 1)
+d_outer = sdf_box(xx, yy, 8, 2, W - 8, H - 8, 14) - noise(xx, yy, 7) * 1.4 * wt
+d_inner = sdf_box(xx, yy, 12, 0, W - 12, H - 13, 10) - noise(xx, yy, 11) * 0.8 * wt
 rng = np.random.default_rng(5)
 for _ in range(26):
-    side = rng.integers(4)
+    side = int(rng.integers(1, 4))
     t = rng.uniform(0.05, 0.95)
     r = rng.uniform(2.0, 6.5)
     if side == 0:
@@ -158,3 +159,12 @@ base.paste(area, (0, 0), rm)
 card.paste(base, (24 * S, 54 * S))
 ImageDraw.Draw(card).rounded_rectangle([24 * S, 54 * S, 148 * S, 219 * S], radius=10 * S, outline=hx("#9B78C6"), width=S + S // 2)
 card.resize((W, H), Image.LANCZOS).save(dst, optimize=True)
+
+fin = Image.open(dst).convert("RGBA")
+fp = fin.load()
+for x in range(fin.width):
+    for y in range(0, 2):
+        r, g, b, a = fp[x, y]
+        if a > 0:
+            fp[x, y] = (201, 168, 245, a) if y == 1 else (224, 78, 192, a)
+fin.save(dst, optimize=True)

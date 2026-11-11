@@ -154,11 +154,12 @@ def noise(px, py, seed):
 
 
 heavy = np.clip((280 - xx) / 280, 0, 1)
-d_outer = sdf_box(xx, yy, 8, 8, W - 3, H - 3, 14) - noise(xx, yy, 3) * (0.6 + 1.4 * heavy)
-d_inner = sdf_box(xx, yy, 13, 12, W - 7, H - 7, 10) - noise(xx, yy, 9) * (0.3 + 0.8 * heavy)
+wt = np.clip(yy / 40, 0.1, 1)
+d_outer = sdf_box(xx, yy, 8, 1, W - 3, H - 3, 14) - noise(xx, yy, 3) * (0.6 + 1.4 * heavy) * wt
+d_inner = sdf_box(xx, yy, 12, 0, W - 6, H - 7, 9) - noise(xx, yy, 9) * (0.3 + 0.8 * heavy) * wt
 rng = np.random.default_rng(21)
 for _ in range(30):
-    side = rng.integers(4)
+    side = int(rng.integers(1, 4))
     t = rng.uniform(0.03, 0.97)
     if side == 2 or (side in (0, 1) and t < 0.55):
         r = rng.uniform(2.5, 7.5)
@@ -201,3 +202,12 @@ img = style_small(img)
 img.paste(Image.new("RGBA", (W + 2, H + 2), (0, 0, 0, 0)), (X0 - 1, Y0 - 1))
 img.alpha_composite(frame, (X0, Y0))
 img.save(dst, optimize=True)
+
+fin = Image.open(dst).convert("RGBA")
+fp = fin.load()
+for x in range(X0, X0 + W):
+    for y in range(Y0, Y0 + 2):
+        r, g, b, a = fp[x, y]
+        if a > 0:
+            fp[x, y] = (201, 168, 245, a) if y == Y0 + 1 else (224, 78, 192, a)
+fin.save(dst, optimize=True)
