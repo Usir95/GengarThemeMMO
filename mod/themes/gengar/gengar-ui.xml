@@ -41,12 +41,20 @@
   </theme>
   <theme name="monster-frame">
     <param name="maxHeight"><int>440</int></param>
+    <param name="closeButtonX"><int>-32</int></param>
+    <param name="closeButtonY"><int>9</int></param>
+    <theme name="closeButton">
+      <param name="background"><image>mi-close.background</image></param>
+      <param name="minWidth"><int>18</int></param>
+      <param name="minHeight"><int>18</int></param>
+    </theme>
     <theme name="title" ref="-defaults">
       <param name="textAlignment"><enum type="alignment">center</enum></param>
       <param name="font"><font>title-font</font></param>
       <param name="border"><border>2,283,0,0</border></param>
     </theme>
     <theme name="dialoglayout">
+      <param name="border"><border>7,13,5,5</border></param>
       <theme name="tabbedpane">
         <theme name="container">
           <theme name="dialoglayout">

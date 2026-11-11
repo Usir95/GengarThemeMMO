@@ -83,11 +83,28 @@ def pill(img, box, fill, border, radius=5, glow=None):
     img.alpha_composite(big.resize((w, h), Image.LANCZOS), (x0, y0))
 
 
+def style_header_icons(img):
+    for x in (5, 31, 56, 85, 112, 138, 158, 243, 263):
+        recolor_px(img, (x, 6, 20, 20), lambda r, g, b, a: (255, 225, 249, a))
+        recolor_px(img, (x, 32, 20, 20), lambda r, g, b, a: (216, 193, 246, a))
+
+    for y, fill, outline in (
+        (6, "#49245F", "#A47AC6"),
+        (26, "#743675", "#F4A9E6"),
+        (46, "#321842", "#E04EC0"),
+    ):
+        tile = Image.new("RGBA", (18 * S, 18 * S))
+        draw = ImageDraw.Draw(tile)
+        draw.rounded_rectangle((0, 0, 18 * S - 1, 18 * S - 1), radius=4 * S,
+                               fill=hx(fill), outline=hx(outline), width=S)
+        draw.line((5 * S, 5 * S, 12 * S, 12 * S), fill=hx("#FFF1FC"), width=2 * S)
+        draw.line((12 * S, 5 * S, 5 * S, 12 * S), fill=hx("#FFF1FC"), width=2 * S)
+        img.paste(tile.resize((18, 18), Image.LANCZOS), (290, y))
+
+
 def style_small(img):
     recolor_px(img, (0, 0, img.width, 190), purple_general)
-    for x in (5, 31, 56, 85, 112, 138, 158, 243, 263):
-        recolor_px(img, (x, 6, 20, 20), lum_tint((255, 184, 240)))
-        recolor_px(img, (x, 32, 20, 20), lum_tint((155, 120, 198)))
+    style_header_icons(img)
     recolor_px(img, (5, 58, 18, 24), lum_tint((201, 168, 245)))
     pill(img, (25, 58, 125, 25), hx("#1E1230", 225), hx("#9B78C6"), 5)
     pill(img, (7, 101, 165, 17), hx("#2A1846", 225), hx("#9B78C6"), 4)
