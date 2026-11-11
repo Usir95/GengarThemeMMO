@@ -21,3 +21,7 @@ Ejecuta lo siguiente en PowerShell desde esta carpeta.
 ```
 
 El script empaqueta `mod/` en `dist/GengarTheme.mod`. Usa esta carpeta, `GengarTheme/`, como raíz del repositorio cuando lo subas a Git.
+
+## Sonido shiny
+
+`mod/sounds/2/1554.wav` usa el audio de `fuentes/audio/Gengar_Shiny_Bruma.wav` para el destello shiny en combate. PokeMMO puede reproducirlo cuando el destello aparece en cualquiera de los dos lados.
