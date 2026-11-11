@@ -11,6 +11,15 @@ def hx(h, a=255):
     return (int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16), a)
 
 
+def vgrad_local(w, h, c1, c2):
+    g = Image.new("RGBA", (w, h))
+    gd = ImageDraw.Draw(g)
+    for y in range(h):
+        t = y / max(1, h - 1)
+        gd.line([(0, y), (w, y)], fill=tuple(int(c1[k] + (c2[k] - c1[k]) * t) for k in range(4)))
+    return g
+
+
 src = Image.open(bg_path).convert("RGBA")
 sw, sh = src.size
 cw = int(sw * 0.42)
@@ -29,9 +38,15 @@ d = ImageDraw.Draw(card)
 
 d.rectangle([0, 0, W * S, 46 * S], fill=hx("#1A1128", 215))
 d.rectangle([0, 46 * S, W * S, 47 * S + S // 2], fill=hx("#E04EC0"))
-d.rounded_rectangle([6 * S, 6 * S, 290 * S, 40 * S], radius=6 * S, fill=hx("#2A1846", 200), outline=hx("#9B78C6", 160), width=S)
+nb = vgrad_local(276 * S, 32 * S, hx("#EFE6FC", 245), hx("#C9B3F0", 245))
+nm = Image.new("L", nb.size, 0)
+ImageDraw.Draw(nm).rounded_rectangle([0, 0, 276 * S - 1, 32 * S - 1], radius=6 * S, fill=255)
+card.paste(nb, (14 * S, 7 * S), nm)
+d = ImageDraw.Draw(card)
+d.rounded_rectangle([14 * S, 7 * S, 290 * S, 39 * S], radius=6 * S, outline=hx("#9B78C6"), width=S)
+d.line([(20 * S, 37 * S), (284 * S, 37 * S)], fill=hx("#E04EC0", 200), width=S)
 
-d.rounded_rectangle([318 * S, 50 * S, 448 * S, 70 * S], radius=10 * S, fill=hx("#2A1846", 220), outline=hx("#9B78C6", 200), width=S)
+d.rounded_rectangle([312 * S, 50 * S, 438 * S, 70 * S], radius=10 * S, fill=hx("#2A1846", 220), outline=hx("#9B78C6", 200), width=S)
 
 glow = Image.new("RGBA", (W * S, H * S), (0, 0, 0, 0))
 ImageDraw.Draw(glow).rounded_rectangle([24 * S, 54 * S, 148 * S, 219 * S], radius=10 * S, outline=hx("#C77DFF", 160), width=4 * S)

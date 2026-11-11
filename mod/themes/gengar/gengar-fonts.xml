@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+  <fontDef name="trainer-name" filename="../../data/themes/default/res/fonts/NotoSans-SemiCondensedBlack.ttf" color="#2A1846" size="15" incremental="false" characters="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789_-" renderer="text"/>
+</themes>
