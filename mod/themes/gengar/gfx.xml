@@ -681,13 +681,13 @@
 		<area name="battle-button.hover" xywh="321,176,96,30"/>
 		<area name="battle-button.disabled" xywh="321,207,96,30"/>
 
-		<area name="battle-button-return.default" xywh="218,145,96,30"/>
-		<area name="battle-button-return.hover" xywh="218,176,96,30"/>
-		<area name="battle-button-return.disabled" xywh="218,207,96,30"/>
+		<area name="battle-button-return.default" xywh="218,145,96,30" splitx="L24,R8" splity="T8,B8"/>
+		<area name="battle-button-return.hover" xywh="218,176,96,30" splitx="L24,R8" splity="T8,B8"/>
+		<area name="battle-button-return.disabled" xywh="218,207,96,30" splitx="L24,R8" splity="T8,B8"/>
 
-		<area name="battle-button-confirm.default" xywh="424,145,96,30"/>
-		<area name="battle-button-confirm.hover" xywh="424,176,96,30"/>
-		<area name="battle-button-confirm.disabled" xywh="424,207,96,30"/>
+		<area name="battle-button-confirm.default" xywh="424,145,96,30" splitx="L24,R8" splity="T8,B8"/>
+		<area name="battle-button-confirm.hover" xywh="424,176,96,30" splitx="L24,R8" splity="T8,B8"/>
+		<area name="battle-button-confirm.disabled" xywh="424,207,96,30" splitx="L24,R8" splity="T8,B8"/>
 
 		<area name="battle-button-switch.default" xywh="2,145,209,52"/>
 		<area name="battle-button-switch.hover" xywh="2,200,209,52"/>

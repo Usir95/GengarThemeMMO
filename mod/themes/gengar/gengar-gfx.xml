@@ -104,6 +104,14 @@
     <area name="gengar-move.default" xywh="640,140,209,52" splitx="L12,R80" splity="T10,B10"/>
     <area name="gengar-move.hover" xywh="640,196,209,52" splitx="L12,R80" splity="T10,B10"/>
     <area name="gengar-move.disabled" xywh="640,252,209,52" splitx="L12,R80" splity="T10,B10"/>
+    <area name="gengar-list.default" xywh="0,486,200,30" splitx="L40,R8" splity="T8,B8"/>
+    <area name="gengar-list.hover" xywh="205,486,200,30" splitx="L40,R8" splity="T8,B8"/>
+    <area name="gengar-list.disabled" xywh="410,486,200,30" splitx="L40,R8" splity="T8,B8"/>
+    <select name="gengar-list.background">
+      <alias ref="gengar-list.disabled" if="disabled"/>
+      <alias ref="gengar-list.hover" if="hover | keyboardFocus | selected | pressed"/>
+      <alias ref="gengar-list.default"/>
+    </select>
     <select name="gengar-move.background">
       <alias ref="gengar-move.disabled" if="disabled"/>
       <alias ref="gengar-move.hover" if="hover | keyboardFocus | selected | pressed"/>

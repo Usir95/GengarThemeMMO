@@ -91,11 +91,41 @@
   </theme>
   <theme name="battle-panel">
     <param name="background"><image>battle-area</image></param>
+    <theme name="scrollpane">
+      <theme name="dialoglayout">
+        <theme name="button">
+          <param name=""><image>gengar-list.*</image></param>
+        </theme>
+      </theme>
+    </theme>
+    <theme name="button">
+      <param name=""><image>gengar-list.*</image></param>
+    </theme>
   </theme>
   <theme name="battle-frame">
     <param name="background"><image>battle-area</image></param>
   </theme>
   <theme name="battle-button-ui">
     <param name=""><image>gengar-move.*</image></param>
+  </theme>
+  <theme name="battle-panel-dark">
+    <param name="background"><image>battle-area</image></param>
+    <theme name="scrollpane">
+      <theme name="dialoglayout">
+        <theme name="button">
+          <param name=""><image>gengar-list.*</image></param>
+        </theme>
+      </theme>
+    </theme>
+    <theme name="button">
+      <param name=""><image>gengar-list.*</image></param>
+    </theme>
+  </theme>
+  <theme name="battle-button-confirm">
+    <param name="border"><border>2,28,4,10</border></param>
+    <param name="minWidth"><int>120</int></param>
+  </theme>
+  <theme name="battle-button-return">
+    <param name="border"><border>2,28,4,10</border></param>
   </theme>
 </themes>

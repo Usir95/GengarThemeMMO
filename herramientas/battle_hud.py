@@ -141,6 +141,47 @@ for col, _ in small_sets:
             icon_layer.alpha_composite(ic, (2, 0))
         rounded((col, row, 96, 30), icon=icon_layer, face=(1.0,) if row == 176 else None, **st2)
 
+
+
+def list_btn(box, top, bottom, border, accent, face_strength):
+    x, y, w, h = box
+    big = Image.new("RGBA", (w * S, h * S), (0, 0, 0, 0))
+    g = Image.new("RGBA", (w * S, h * S))
+    gd = ImageDraw.Draw(g)
+    for i in range(h * S):
+        gd.line([(0, i), (w * S, i)], fill=lerp(top, bottom, i / max(1, h * S - 1)))
+    m = Image.new("L", (w * S, h * S), 0)
+    ImageDraw.Draw(m).rounded_rectangle([S, S, w * S - S - 1, h * S - S - 1], radius=5 * S, fill=255)
+    big.paste(g, (0, 0), m)
+    d = ImageDraw.Draw(big)
+    d.rounded_rectangle([3 * S, 4 * S, 5 * S, h * S - 4 * S], radius=S, fill=accent)
+    small = big.resize((w, h), Image.LANCZOS)
+    if face_strength and face_img is not None:
+        fh = h - 2
+        fw = int(face_img.width * fh / face_img.height)
+        f = face_img.resize((fw, fh), Image.LANCZOS)
+        if face_strength < 0.5:
+            f = ImageEnhance.Brightness(f).enhance(0.55)
+        fade = Image.new("L", (fw, fh), 0)
+        fd = ImageDraw.Draw(fade)
+        for i in range(fw):
+            fd.line([(i, 0), (i, fh)], fill=int(255 * face_strength * min(1, (fw - i) / (fw * 0.45))))
+        f.putalpha(Image.fromarray(np.minimum(np.array(f.getchannel("A")), np.array(fade)).astype(np.uint8)))
+        layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        layer.alpha_composite(f, (8, 1))
+        layer.putalpha(Image.fromarray(np.minimum(np.array(layer.getchannel("A")), np.array(small.getchannel("A"))).astype(np.uint8)))
+        small.alpha_composite(layer)
+    bd = Image.new("RGBA", (w * S, h * S), (0, 0, 0, 0))
+    ImageDraw.Draw(bd).rounded_rectangle([S, S, w * S - S - 1, h * S - S - 1], radius=5 * S, outline=border, width=S)
+    small.alpha_composite(bd.resize((w, h), Image.LANCZOS))
+    clear(box)
+    im.alpha_composite(small, (x, y))
+
+
+list_btn((0, 486, 200, 30), hx("#4A2E78", 235), hx("#2A1846", 235), hx("#9B78C6", 200), hx("#E04EC0"), 0.3)
+list_btn((205, 486, 200, 30), hx("#7D52B8", 245), hx("#55367F", 245), hx("#F0B8FF"), hx("#FF6FD8"), 1.0)
+list_btn((410, 486, 200, 30), hx("#3C3546", 200), hx("#2B2633", 200), hx("#5A5266"), hx("#5A5266"), 0)
+
 x, y, w, h = 6, 312, 800, 115
 panel = Image.new("RGBA", (w, h))
 pd = ImageDraw.Draw(panel)
@@ -182,4 +223,21 @@ for y in range(0, 30):
         if 5 <= h * 360 <= 50 and s > 0.3:
             nr, ng, nb = colorsys.hsv_to_rgb((300 - (h * 360 - 5)) / 360, s, v)
             px[x, y] = (round(nr * 255), round(ng * 255), round(nb * 255), a)
+im.save(dst, optimize=True)
+
+im = Image.open(dst).convert("RGBA")
+px = im.load()
+bars = {20: ("#F7C2CA", "#EC939F", "#B8606D"), 21: ("#C2EED9", "#83D2AD", "#4E9C78"), 22: ("#F5DFB5", "#E6C082", "#B08A48")}
+for x, (a, b, c) in bars.items():
+    for y, col in zip(range(9, 13), (a, b, b, c)):
+        px[x, y] = hx(col)
+track = hx("#1A1128", 225)
+edge = hx("#9B78C6")
+for y in range(8, 14):
+    for x in range(35, 48):
+        r, g, b, al = px[x, y]
+        if al == 0 and 9 <= y <= 12 and 36 <= x <= 46:
+            px[x, y] = track
+        elif al > 0:
+            px[x, y] = (edge[0], edge[1], edge[2], 255 if al > 0x80 else 150)
 im.save(dst, optimize=True)
