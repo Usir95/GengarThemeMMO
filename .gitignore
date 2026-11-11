@@ -1,0 +1,5 @@
+dist/
+*.mod
+*.bak
+Thumbs.db
+desktop.ini
