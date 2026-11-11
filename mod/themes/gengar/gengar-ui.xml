@@ -34,6 +34,33 @@
     <theme name="label-monster-value-stat-bad" ref="label">
       <param name="background"><image>mi-label-value0</image></param>
     </theme>
+    <theme name="label-monster-ability-desc" ref="label-monster-value">
+      <param name="border"><border>3,5,3,0</border></param>
+      <param name="maxHeight"><int>90</int></param>
+    </theme>
+  </theme>
+  <theme name="monster-frame">
+    <param name="maxHeight"><int>440</int></param>
+    <theme name="title" ref="-defaults">
+      <param name="textAlignment"><enum type="alignment">center</enum></param>
+      <param name="font"><font>title-font</font></param>
+      <param name="border"><border>2,283,0,0</border></param>
+    </theme>
+    <theme name="dialoglayout">
+      <theme name="tabbedpane">
+        <theme name="container">
+          <theme name="dialoglayout">
+            <param name="minHeight"><int>270</int></param>
+          </theme>
+          <theme name="scrollpane">
+            <param name="minHeight"><int>270</int></param>
+            <theme name="dialoglayout">
+              <param name="minHeight"><int>270</int></param>
+            </theme>
+          </theme>
+        </theme>
+      </theme>
+    </theme>
   </theme>
   <theme name="breed-window">
     <param name="background"><image>gengar-breedwindow</image></param>
@@ -122,10 +149,74 @@
     </theme>
   </theme>
   <theme name="battle-button-confirm">
-    <param name="border"><border>2,28,4,10</border></param>
+    <param name=""><image>gengar-confirm.*</image></param>
+    <param name="border"><border>2,36,4,10</border></param>
     <param name="minWidth"><int>120</int></param>
+    <param name="minHeight"><int>30</int></param>
+    <param name="maxHeight"><int>30</int></param>
   </theme>
   <theme name="battle-button-return">
     <param name="border"><border>2,28,4,10</border></param>
+  </theme>
+  <theme name="rbattle-big">
+    <param name=""><image>gengar-cmd.*</image></param>
+  </theme>
+  <theme name="battle-fight">
+    <param name=""><image>gengar-cmd-fight.*</image></param>
+  </theme>
+  <theme name="battle-bag">
+    <param name=""><image>gengar-cmd-bag.*</image></param>
+  </theme>
+  <theme name="battle-switch">
+    <param name=""><image>gengar-cmd-switch.*</image></param>
+  </theme>
+  <theme name="battle-run">
+    <param name=""><image>gengar-cmd-run.*</image></param>
+  </theme>
+  <theme name="battle-shift">
+    <param name=""><image>gengar-cmd.*</image></param>
+  </theme>
+  <theme name="battle-rotate">
+    <param name=""><image>gengar-cmd.*</image></param>
+  </theme>
+  <theme name="battle-sheet">
+    <param name=""><image>gengar-cmd.*</image></param>
+  </theme>
+  <theme name="battle-carving">
+    <param name=""><image>gengar-cmd.*</image></param>
+  </theme>
+  <theme name="battle-win">
+    <param name=""><image>gengar-cmd.*</image></param>
+  </theme>
+  <theme name="battle-ball">
+    <param name=""><image>gengar-cmd.*</image></param>
+  </theme>
+  <theme name="battle-bait">
+    <param name=""><image>gengar-cmd.*</image></param>
+  </theme>
+  <theme name="battle-rock">
+    <param name=""><image>gengar-cmd.*</image></param>
+  </theme>
+  <theme name="battle-item-usage-panel">
+    <param name="background"><image>battle-area</image></param>
+    <theme name="button" ref="-defaults" allowWildcard="true">
+      <param name="font"><font>main-border</font></param>
+      <param name="border"><border>2,4,4,4</border></param>
+      <param name=""><image>gengar-list.*</image></param>
+      <param name="textAlignment"><enum type="alignment">CENTER</enum></param>
+    </theme>
+    <theme name="scrollpane">
+      <param name="background"><image>gengar-bpanel</image></param>
+      <param name="border"><border>4,4,4,4</border></param>
+      <theme name="dialoglayout">
+        <param name="defaultGap"><dimension>0,4</dimension></param>
+        <theme name="button" ref="-defaults" allowWildcard="true">
+          <param name="font"><font>main-border</font></param>
+          <param name="border"><border>2,0,4,10</border></param>
+          <param name=""><image>gengar-list.*</image></param>
+          <param name="textAlignment"><enum type="alignment">RIGHT</enum></param>
+        </theme>
+      </theme>
+    </theme>
   </theme>
 </themes>

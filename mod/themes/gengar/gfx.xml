@@ -1023,7 +1023,7 @@
 		<area name="mi-skill-use-selected" xywh="203,75,165,42"/>
 		<area name="mi-bg" xywh="279,226,234,231"/>
 		<area name="mi-frame" xywh="6,194,506,316"/>
-		<grid name="mi-frame-grid" weightsX="1,1" weightsY="1,1,1">
+		<grid name="mi-frame-grid" weightsX="1,1" weightsY="0,1,0">
 			<area xywh="5,193,274,33"/>
 			<area xywh="279,193,234,33"/>
 			<area xywh="5,226,274,231"/>

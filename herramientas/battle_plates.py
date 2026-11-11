@@ -1,14 +1,12 @@
 import sys
 import math
-import random
 from PIL import Image, ImageDraw, ImageFilter
 
 base_src, dst = sys.argv[1], sys.argv[2]
-pattern_src = sys.argv[3] if len(sys.argv) > 3 else None
 
 base = Image.open(base_src).convert("RGBA")
 im = Image.open(dst).convert("RGBA")
-pat = Image.open(pattern_src).convert("RGBA") if pattern_src else None
+S = 4
 
 
 def hx(h, a=255):
@@ -21,141 +19,127 @@ def lerp(c1, c2, t):
     return tuple(int(c1[i] + (c2[i] - c1[i]) * t) for i in range(4))
 
 
-BODY_A = hx("#3A2160")
-BODY_B = hx("#1E1233")
-GOO_A = hx("#D0479A")
-GOO_B = hx("#6B2E5E")
-LILAC = hx("#9B78C6")
-LINE = hx("#E04EC0")
-OUT = hx("#120A1E")
-
-
-def split_row(reg):
+def light_rows(reg):
     w, h = reg.size
     px = reg.load()
-    best = h
+    rows = []
     for j in range(h):
-        lights = sum(1 for i in range(w) if px[i, j][3] > 0 and max(px[i, j][:3]) > 150)
-        if j > 2 and lights < w * 0.25:
-            best = j
-            break
-    return best
+        n = sum(1 for i in range(w) if px[i, j][3] > 0 and max(px[i, j][:3]) > 150)
+        rows.append(n > w * 0.3)
+    last = max([j for j, v in enumerate(rows) if v] or [h // 2])
+    first = min([j for j, v in enumerate(rows) if v] or [0])
+    return first, last + 1
 
 
-def draw_face(d, cx, cy, s):
-    e = s * 0.30
-    d.polygon([(cx - s * 0.62, cy - s * 0.30), (cx - s * 0.12, cy - s * 0.06), (cx - s * 0.20, cy + s * 0.08), (cx - s * 0.55, cy - s * 0.05)], fill=hx("#FF3B6B"))
-    d.polygon([(cx + s * 0.62, cy - s * 0.30), (cx + s * 0.12, cy - s * 0.06), (cx + s * 0.20, cy + s * 0.08), (cx + s * 0.55, cy - s * 0.05)], fill=hx("#FF3B6B"))
-    d.ellipse([cx - s * 0.36, cy - s * 0.14, cx - s * 0.26, cy - s * 0.02], fill=hx("#FFE3F0"))
-    d.ellipse([cx + s * 0.26, cy - s * 0.14, cx + s * 0.36, cy - s * 0.02], fill=hx("#FFE3F0"))
-    d.chord([cx - s * 0.70, cy - s * 0.30, cx + s * 0.70, cy + s * 0.62], 15, 165, fill=hx("#F6F0FF"))
-    d.chord([cx - s * 0.62, cy - s * 0.10, cx + s * 0.62, cy + s * 0.42], 15, 165, fill=hx("#1E1233"))
-    for k in range(-3, 4):
-        tx = cx + k * s * 0.16
-        d.line([(tx, cy + s * 0.18), (tx, cy + s * 0.48)], fill=hx("#C9B8F0"), width=max(1, int(s * 0.04)))
+def face(d, cx, cy, s):
+    d.polygon([(cx - s * 0.78, cy - s * 0.36), (cx - s * 0.14, cy - s * 0.06), (cx - s * 0.26, cy + s * 0.10), (cx - s * 0.66, cy - s * 0.06)], fill=hx("#FF2E5F"))
+    d.polygon([(cx + s * 0.78, cy - s * 0.36), (cx + s * 0.14, cy - s * 0.06), (cx + s * 0.26, cy + s * 0.10), (cx + s * 0.66, cy - s * 0.06)], fill=hx("#FF2E5F"))
+    d.ellipse([cx - s * 0.44, cy - s * 0.15, cx - s * 0.32, cy - s * 0.03], fill=hx("#FFF4F8"))
+    d.ellipse([cx + s * 0.32, cy - s * 0.15, cx + s * 0.44, cy - s * 0.03], fill=hx("#FFF4F8"))
+    d.chord([cx - s * 0.80, cy - s * 0.30, cx + s * 0.80, cy + s * 0.66], 12, 168, fill=hx("#FBF6FF"))
+    d.chord([cx - s * 0.70, cy - s * 0.06, cx + s * 0.70, cy + s * 0.40], 12, 168, fill=hx("#1A0F2C"))
+    for k in range(-4, 5):
+        tx = cx + k * s * 0.145
+        d.line([(tx, cy + s * 0.20), (tx, cy + s * 0.52)], fill=hx("#C9B8F0"), width=max(1, int(s * 0.04)))
 
 
-def plate(box, face=None, seed=1):
+def plate(box, badge=None):
     x, y, w, h = box
     reg = base.crop((x, y, x + w, y + h))
     alpha = reg.getchannel("A").point(lambda a: 255 if a > 0 else 0)
-    rnd = random.Random(seed)
-    S = 4
+    l0, l1 = light_rows(reg)
     W, H = w * S, h * S
+    Z = Image.new("L", (W, H), 0)
     mask = alpha.resize((W, H), Image.NEAREST)
+
     bb = alpha.getbbox()
-    top_px, bot_px = bb[1], bb[3]
-    gh = max(4, int((bot_px - top_px) * 0.36))
+    bot = bb[3]
+    fz = max(4, int(round((bot - bb[1]) * 0.24)))
+    cut = (bot - fz) * S
+    band = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(band).rectangle([0, 0, W, cut - 1], fill=255)
+    band = Image.composite(mask, Z, band)
+
+    spikes = Image.new("L", (W, H), 0)
+    sd = ImageDraw.Draw(spikes)
+    depth = fz * S
+    xx = W - S * 3
+    k = 0
+    while xx > S * 6:
+        f = 0.35 + 0.65 * (xx / W)
+        wv = depth * (1.5 if k % 3 == 0 else 1.0)
+        dv = depth * f * (1.0 if k % 2 == 0 else 0.55)
+        sd.polygon([(xx - wv, cut - S), (xx, cut - S), (xx - wv * 0.35, cut + dv)], fill=255)
+        xx -= wv + S * 1.2
+        k += 1
+    spikes = Image.composite(spikes, Z, mask)
+
+    full = Image.composite(Image.new("L", (W, H), 255), Z, band)
+    full = Image.composite(Image.new("L", (W, H), 255), full, spikes)
 
     body = Image.new("RGBA", (W, H))
-    bdr = ImageDraw.Draw(body)
+    bd = ImageDraw.Draw(body)
     for i in range(W):
-        bdr.line([(i, 0), (i, H)], fill=lerp(BODY_A, BODY_B, i / (W - 1)))
-    if pat:
-        tile = pat.resize((pat.width * S // 3, pat.height * S // 3), Image.BICUBIC)
-        tile.putalpha(tile.getchannel("A").point(lambda a: int(a * 0.14)))
-        for tx in range(0, W, tile.width):
-            for ty in range(0, H, tile.height):
-                body.alpha_composite(tile, (tx, ty))
-    shine = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    sd = ImageDraw.Draw(shine)
-    for j in range(top_px * S, top_px * S + 6 * S):
-        t = (j - top_px * S) / (6 * S)
-        sd.line([(0, j), (W, j)], fill=(255, 225, 255, int(40 * (1 - t) ** 2)))
-    body.alpha_composite(shine)
+        t = i / (W - 1)
+        bd.line([(i, 0), (i, H)], fill=lerp(hx("#3B2163", 240), hx("#160C26", 240), t ** 0.8))
+    sheen = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sh = ImageDraw.Draw(sheen)
+    for j in range(l0 * S, l0 * S + int((l1 - l0) * S * 0.45)):
+        tt = (j - l0 * S) / ((l1 - l0) * S * 0.45)
+        sh.line([(0, j), (W, j)], fill=(235, 205, 255, int(46 * (1 - tt))))
+    for k in range(3):
+        ox = S * (14 + k * 7)
+        sh.polygon([(ox, l0 * S), (ox + S * 3, l0 * S), (ox + S * 3 - (l1 - l0) * S, l1 * S), (ox - (l1 - l0) * S, l1 * S)], fill=(255, 150, 230, 40 - k * 10))
+    body.alpha_composite(sheen)
 
-    goo_mask = Image.new("L", (W, H), 0)
-    gd = ImageDraw.Draw(goo_mask)
-    base_y = (bot_px - gh) * S
-    amp = gh * S * 0.45
-    phase = rnd.random() * 6.28
-    pts = [(0, H)]
-    for i in range(0, W + 1, 2):
-        t = i / W
-        v = math.sin(t * 23 + phase) * 0.55 + math.sin(t * 8.1 + phase * 1.7) * 0.45
-        pts.append((i, base_y + amp * 0.5 + v * amp * 0.5))
-    pts.append((W, H))
-    gd.polygon(pts, fill=255)
-    for _ in range(max(3, w // 40)):
-        cx = rnd.randint(int(W * 0.04), int(W * 0.96))
-        r = rnd.uniform(1.0, 1.7) * S
-        gd.ellipse([cx - r, base_y - r * 1.4, cx + r, base_y + r * 1.2], fill=255)
-    goo_mask = Image.composite(goo_mask, Image.new("L", (W, H), 0), mask)
-
-    gooimg = Image.new("RGBA", (W, H))
-    gdr = ImageDraw.Draw(gooimg)
+    sp = Image.new("RGBA", (W, H))
+    spd = ImageDraw.Draw(sp)
     for j in range(H):
-        gdr.line([(0, j), (W, j)], fill=lerp(GOO_A, GOO_B, (j - base_y) / max(1, H - base_y)))
-    for _ in range(max(4, w // 28)):
-        cx = rnd.randint(0, W)
-        cy = rnd.randint(int(base_y + S), H - S)
-        r = rnd.uniform(0.7, 1.4) * S
-        gdr.ellipse([cx - r, cy - r, cx + r, cy + r], outline=(255, 190, 236, 190), width=max(1, S // 2))
-    gooedge = goo_mask.filter(ImageFilter.MaxFilter(5))
-    rim = Image.composite(Image.new("L", (W, H), 255), Image.new("L", (W, H), 0), Image.eval(goo_mask, lambda a: 255 - a))
-    rim = Image.composite(gooedge, Image.new("L", (W, H), 0), rim)
-    rim = Image.composite(rim, Image.new("L", (W, H), 0), mask)
+        spd.line([(0, j), (W, j)], fill=lerp(hx("#B8358F", 240), hx("#4A1646", 220), (j - cut) / max(1, H - cut)))
 
-    final = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    final.paste(Image.new("RGBA", (W, H), OUT), (0, 0), mask)
-    inner = mask.filter(ImageFilter.MinFilter(5))
-    final.paste(Image.new("RGBA", (W, H), LILAC), (0, 0), Image.composite(Image.new("L", (W, H), 255), Image.new("L", (W, H), 0), inner))
-    inner2 = mask.filter(ImageFilter.MinFilter(9))
-    final.paste(body, (0, 0), inner2)
-    final.paste(Image.new("RGBA", (W, H), LINE), (0, 0), Image.composite(rim, Image.new("L", (W, H), 0), inner))
-    final.paste(gooimg, (0, 0), Image.composite(goo_mask, Image.new("L", (W, H), 0), inner))
-    acc = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ld = ImageDraw.Draw(acc)
-    ld.line([(S * 6, top_px * S + int(S * 2.6)), (W * 0.45, top_px * S + int(S * 2.6))], fill=hx("#E04EC0", 170), width=S // 2 + 1)
-    acc.putalpha(Image.composite(acc.getchannel("A"), Image.new("L", (W, H), 0), inner2))
-    final.alpha_composite(acc)
+    out = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    edge = full.filter(ImageFilter.MaxFilter(5))
+    out.paste(Image.new("RGBA", (W, H), hx("#0C0614", 230)), (0, 0), Image.composite(edge, Z, mask))
+    out.paste(sp, (0, 0), spikes)
+    out.paste(body, (0, 0), band)
 
-    if face:
-        side, size = face
-        fs_ = size * S
-        cx = W - fs_ * 0.9 - S * 6 if side == "r" else fs_ * 0.9 + S * 6
-        cy = (top_px + (bot_px - top_px) * 0.42) * S
-        glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        gl = ImageDraw.Draw(glow)
-        gl.ellipse([cx - fs_ * 1.0, cy - fs_ * 0.6, cx + fs_ * 1.0, cy + fs_ * 0.8], fill=(208, 71, 154, 110))
-        glow = glow.filter(ImageFilter.GaussianBlur(S * 3))
-        glow.putalpha(Image.composite(glow.getchannel("A"), Image.new("L", (W, H), 0), inner2))
-        final.alpha_composite(glow)
-        fl = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        draw_face(ImageDraw.Draw(fl), cx, cy, fs_)
-        fl.putalpha(Image.composite(fl.getchannel("A"), Image.new("L", (W, H), 0), inner2))
-        final.alpha_composite(fl)
+    neon = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    nd = ImageDraw.Draw(neon)
+    for i in range(0, W, 2):
+        t = i / W
+        nd.line([(i, l0 * S), (i + 2, l0 * S)], fill=lerp(hx("#FF5FD2"), hx("#B79CF0"), t), width=int(S * 1.6))
+        nd.line([(i, l1 * S + S), (i + 2, l1 * S + S)], fill=lerp(hx("#B79CF0", 110), hx("#FF5FD2", 170), t), width=S // 2 + 1)
+        nd.line([(i, cut - S), (i + 2, cut - S)], fill=lerp(hx("#FF5FD2", 230), hx("#B79CF0", 200), t), width=S)
+    glow = neon.filter(ImageFilter.GaussianBlur(S * 1.5))
+    for a in (glow, neon):
+        a.putalpha(Image.composite(a.getchannel("A"), Z, band))
+        out.alpha_composite(a)
 
-    small = final.resize((w, h), Image.LANCZOS)
-    small.putalpha(small.getchannel("A").point(lambda v: 0 if v < 20 else min(255, int(v * 1.1))))
+    if badge:
+        side, r = badge
+        R = r * S
+        cy = (bb[1] + (bot - bb[1]) * 0.45) * S
+        cx = W - R - S * 8 if side == "r" else R + S * 10
+        bl = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        b = ImageDraw.Draw(bl)
+        b.ellipse([cx - R * 1.6, cy - R * 1.4, cx + R * 1.6, cy + R * 1.4], fill=(220, 70, 170, 120))
+        bl = bl.filter(ImageFilter.GaussianBlur(S * 3))
+        b = ImageDraw.Draw(bl)
+        b.ellipse([cx - R, cy - R, cx + R, cy + R], fill=hx("#1A0F2C"), outline=hx("#FF5FD2"), width=int(S * 1.5))
+        face(b, cx, cy + R * 0.05, R * 0.78)
+        bl.putalpha(Image.composite(bl.getchannel("A"), Z, mask))
+        out.alpha_composite(bl)
+
+    small = out.resize((w, h), Image.LANCZOS)
+    small.putalpha(small.getchannel("A").point(lambda v: 0 if v < 18 else min(255, int(v * 1.08))))
     im.paste(Image.new("RGBA", (w, h), (0, 0, 0, 0)), (x, y))
     im.alpha_composite(small, (x, y))
 
 
-plate((0, 43, 306, 20), seed=3)
-plate((326, 65, 239, 28), seed=5)
-plate((0, 71, 298, 33), face=("r", 22), seed=7)
-plate((326, 107, 298, 20), face=("l", 14), seed=11)
-plate((583, 63, 309, 30), face=("r", 18), seed=13)
+plate((0, 43, 306, 20))
+plate((326, 65, 239, 28))
+plate((0, 71, 298, 33), badge=("r", 12))
+plate((326, 107, 298, 20), badge=("l", 8))
+plate((583, 63, 309, 30), badge=("r", 10))
 
 im.save(dst, optimize=True)
