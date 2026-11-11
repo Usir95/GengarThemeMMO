@@ -48,4 +48,13 @@
   <theme name="monster-slot-selected" ref="-defaults">
     <param name="background"><image>gengar-bars.selected</image></param>
   </theme>
+  <theme name="battle-panel">
+    <param name="background"><image>none</image></param>
+  </theme>
+  <theme name="battle-panel-dark">
+    <param name="background"><image>none</image></param>
+  </theme>
+  <theme name="battle-frame">
+    <param name="background"><image>label1.background</image></param>
+  </theme>
 </themes>
