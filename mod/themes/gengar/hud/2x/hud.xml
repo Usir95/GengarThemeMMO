@@ -1203,15 +1203,15 @@
     </composed>
     <alias name="hud.style.party.empty.dash" ref="hud.dashed.party48x46" tint="#3DFFFFFF"/>
     <alias name="hud.style.group.empty.dash" ref="hud.dashed.tile28" tint="#2EFFFFFF"/>
-    <alias name="hud.style.pip.high" ref="hud.shape.r2.fill" tint="#FF5CCB6B"/>
-    <alias name="hud.style.pip.mid" ref="hud.shape.r2.fill" tint="#FFDE6CF0"/>
-    <alias name="hud.style.pip.low" ref="hud.shape.r2.fill" tint="#FFE8584E"/>
+    <alias name="hud.style.pip.high" ref="hud.shape.r2.fill" tint="#FF83D2AD"/>
+    <alias name="hud.style.pip.mid" ref="hud.shape.r2.fill" tint="#FFE6C082"/>
+    <alias name="hud.style.pip.low" ref="hud.shape.r2.fill" tint="#FFEC939F"/>
     <alias name="hud.style.pip.fainted" ref="hud.shape.r2.fill" tint="#FF554163"/>
     <alias name="hud.style.pip.empty" ref="hud.dashed.pip" tint="#52FFFFFF"/>
     <alias name="hud.style.bar.track" ref="hud.shape.r2.fill" tint="#24FFFFFF"/>
-    <alias name="hud.style.bar.hp.high" ref="hud.shape.r2.fill" tint="#FF5CCB6B"/>
-    <alias name="hud.style.bar.hp.mid" ref="hud.shape.r2.fill" tint="#FFDE6CF0"/>
-    <alias name="hud.style.bar.hp.low" ref="hud.shape.r2.fill" tint="#FFE8584E"/>
+    <alias name="hud.style.bar.hp.high" ref="hud.shape.r2.fill" tint="#FF83D2AD"/>
+    <alias name="hud.style.bar.hp.mid" ref="hud.shape.r2.fill" tint="#FFE6C082"/>
+    <alias name="hud.style.bar.hp.low" ref="hud.shape.r2.fill" tint="#FFEC939F"/>
     <alias name="hud.style.bar.exp" ref="hud.shape.r2.fill" tint="#FFB651FF"/>
     <alias name="hud.style.badge" ref="hud.shape.r7.fill" tint="#FFE8584E"/>
     <alias name="hud.style.badge.mobile" ref="hud.shape.r9.fill" tint="#FFE8584E"/>

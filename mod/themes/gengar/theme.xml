@@ -3,7 +3,7 @@
   <constantDef name="main-theme-color"><color>#735196</color></constantDef>
   <constantDef name="main-color"><color>#9B78C6</color></constantDef>
   <constantDef name="sub-color"><color>#9B78C6</color></constantDef>
-  <constantDef name="tooltip-tint"><color>#FF565D63</color></constantDef>
+  <constantDef name="tooltip-tint"><color>#FF3D2A55</color></constantDef>
 
   <include filename="../../data/themes/default/fonts.xml"/>
   <include filename="../../data/themes/default/hud-fonts.xml"/>
@@ -21,7 +21,7 @@
   <include filename="../../data/themes/default/ui/main.xml"/>
   <include filename="../../data/themes/default/ui/battle.xml"/>
   <include filename="../../data/themes/default/ui/contest.xml"/>
-  <include filename="../../data/themes/default/ui/party.xml"/>
+  <include filename="ui/party.xml"/>
   <include filename="../../data/themes/default/ui/inventory.xml"/>
   <include filename="../../data/themes/default/ui/chat.xml"/>
   <include filename="../../data/themes/default/ui/monster-dex.xml"/>
