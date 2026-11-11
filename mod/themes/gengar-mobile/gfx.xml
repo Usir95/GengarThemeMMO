@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <themes>
 	<images file="res/ui-mobile-atlas.png" filter="nearest">
-		<grid name="mobile.frame.background" weightsX="0,1,0" weightsY="0,0,1,0">
+		<grid name="mobile.frame.background.plain" weightsX="0,1,0" weightsY="0,0,1,0">
 			<area xywh="33,0,14,9"/>
 			<area xywh="60,0,14,9"/>
 			<area xywh="122,0,14,9"/>
@@ -15,6 +15,7 @@
 			<area xywh="80,76,14,50"/>
 			<area xywh="122,76,14,50"/>
 		</grid>
+		<composed name="mobile.frame.background"><alias ref="mobile.frame.background.plain"/><alias ref="gengar-bgpat" inset="69,14,50,14" tint="#70FFFFFF"/></composed>
 		<grid name="mobile.frame.background.thinbar" weightsX="0,1,0" weightsY="0,0,1,0">
 			<area xywh="33,0,14,9"/>
 			<area xywh="60,0,14,9"/>
@@ -185,20 +186,22 @@
 			<alias ref="mobile.battle.mon.default" tint="#80FFFFFF"/>
 		</select>
 
-		<grid name="mobile.window.background" weightsX="1" weightsY="0,1,0">
+		<grid name="mobile.window.background.plain" weightsX="1" weightsY="0,1,0">
 			<area xywh="372,9,17,60"/>
 			<area xywh="372,69,17,600"/>
 			<area xywh="372,669,17,60"/>
 		</grid>
+		<composed name="mobile.window.background"><alias ref="mobile.window.background.plain"/><alias ref="gengar-bgpat" inset="60,2,60,2" tint="#70FFFFFF"/></composed>
 
-		<grid name="mobile.window.onebar.left.background" weightsX="0,1" weightsY="0,1">
+		<grid name="mobile.window.onebar.left.background.plain" weightsX="0,1" weightsY="0,1">
 			<area xywh="825,9,17,60"/>
 			<area xywh="825,9,17,60"/>
 			<area xywh="825,69,6,600" sizeOverwriteH="218"/>
 			<area xywh="838,69,4,600"/>
 		</grid>
+		<composed name="mobile.window.onebar.left.background"><alias ref="mobile.window.onebar.left.background.plain"/><alias ref="gengar-bgpat" inset="60,17,2,2" tint="#70FFFFFF"/></composed>
 
-		<grid name="mobile.window.left.background" weightsX="0,1" weightsY="0,1,0">
+		<grid name="mobile.window.left.background.plain" weightsX="0,1" weightsY="0,1,0">
 			<area xywh="825,9,17,60"/>
 			<area xywh="825,9,17,60"/>
 			<area xywh="825,69,6,600" sizeOverwriteH="218"/>
@@ -206,11 +209,13 @@
 			<area xywh="825,9,17,60"/>
 			<area xywh="825,9,17,60"/>
 		</grid>
+		<composed name="mobile.window.left.background"><alias ref="mobile.window.left.background.plain"/><alias ref="gengar-bgpat" inset="60,17,60,2" tint="#70FFFFFF"/></composed>
 
-		<grid name="mobile.window.onebar.background" weightsX="1" weightsY="0,1">
+		<grid name="mobile.window.onebar.background.plain" weightsX="1" weightsY="0,1">
 			<area xywh="372,9,15,60" sizeOverwriteV="60"/>
 			<area xywh="372,69,15,600" sizeOverwriteV="660" tint="#FFFFFFFF"/>
 		</grid>
+		<composed name="mobile.window.onebar.background"><alias ref="mobile.window.onebar.background.plain"/><alias ref="gengar-bgpat" inset="60,2,2,2" tint="#70FFFFFF"/></composed>
 
 		<area name="mobile.label.title" xywh="490,370,25,60" splitx="L12,R0" splity="T12,B9"/>
 		<area name="mobile.label.value" xywh="512,370,28,60" splitx="L16,R16" splity="T14,B15"/>
@@ -369,11 +374,12 @@
 			<area xywh="0,0,1024,60"/>
 			<area xywh="0,60,1024,600"/>
 		</grid>
-		<grid name="mobile.window.bottom.background" weightsX="1" weightsY="0,1,0">
+		<grid name="mobile.window.bottom.background.plain" weightsX="1" weightsY="0,1,0">
 			<area xywh="0,0,1024,60"/>
 			<area xywh="0,60,1024,600"/>
 			<area xywh="0,660,1024,60"/>
 		</grid>
+		<composed name="mobile.window.bottom.background"><alias ref="mobile.window.bottom.background.plain"/><alias ref="gengar-bgpat" inset="60,2,60,2" tint="#70FFFFFF"/></composed>
 		<alias name="mobile.window.bottom.background.blue" ref="mobile.window.bottom.background" tint="#B3A0E8"/>
 		<alias name="mobile.window.bottom.background.green" ref="mobile.window.bottom.background" tint="#A98FE0"/>
 		<alias name="mobile.window.bottom.background.red" ref="mobile.window.bottom.background" tint="#C890D8"/>
@@ -387,11 +393,12 @@
 	</images>
 
 	<images file="res/ui-mon-background.png" filter="linear">
-		<grid name="mobile.window.grid.background" weightsX="1" weightsY="0,1,0">
+		<grid name="mobile.window.grid.background.plain" weightsX="1" weightsY="0,1,0">
 			<area xywh="0,0,1024,60"/>
 			<area xywh="0,60,1024,600" tint="#FFFFFFFF"/>
 			<area xywh="0,660,1024,60"/>
 		</grid>
+		<composed name="mobile.window.grid.background"><alias ref="mobile.window.grid.background.plain"/><alias ref="gengar-bgpat" inset="60,2,60,2" tint="#70FFFFFF"/></composed>
 	</images>
 
 	<images file="res/android_ui.png" filter="nearest">

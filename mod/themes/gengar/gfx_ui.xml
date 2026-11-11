@@ -46,7 +46,7 @@
 			<area xywh="115,69,10,5"/>
 		</grid>
 
-    <grid name="ui-inner-frame.background" weightsX="0,1,0" weightsY="0,0,1,0">
+    <grid name="ui-inner-frame.background.plain" weightsX="0,1,0" weightsY="0,0,1,0">
       <area xywh="5,82,10,11"/>
       <area xywh="33,82,10,11" tiled="true"/>
       <area xywh="67,82,10,11"/>
@@ -60,8 +60,9 @@
       <area xywh="33,133,10,5"/>
       <area xywh="67,133,10,5"/>
     </grid>
+		<composed name="ui-inner-frame.background"><alias ref="ui-inner-frame.background.plain"/><alias ref="gengar-bgpat" inset="39,10,5,10" tint="#70FFFFFF"/></composed>
 
-    <grid name="ui-inner-frame-floating.background" weightsX="0,1,0" weightsY="0,0,1,0">
+    <grid name="ui-inner-frame-floating.background.plain" weightsX="0,1,0" weightsY="0,0,1,0">
       <area xywh="197,4,10,11"/>
       <area xywh="210,4,10,11" tiled="true"/>
       <area xywh="222,4,10,11"/>
@@ -75,8 +76,9 @@
       <area xywh="209,69,10,5"/>
       <area xywh="222,69,10,5"/>
     </grid>
+		<composed name="ui-inner-frame-floating.background"><alias ref="ui-inner-frame-floating.background.plain"/><alias ref="gengar-bgpat" inset="22,10,5,10" tint="#70FFFFFF"/></composed>
     
-    <grid name="ui-inner-frame-tabbed.background" weightsX="0,1,0" inset="25,0,0,0" weightsY="0,0,1,0">
+    <grid name="ui-inner-frame-tabbed.background.plain" weightsX="0,1,0" inset="25,0,0,0" weightsY="0,0,1,0">
 			<area xywh="5,82,10,11"/>
 			<area xywh="33,82,10,11" tiled="true"/>
 			<area xywh="67,82,10,11"/>
@@ -90,8 +92,9 @@
 			<area xywh="33,133,10,5"/>
 			<area xywh="67,133,10,5"/>
 		</grid>
+		<composed name="ui-inner-frame-tabbed.background"><alias ref="ui-inner-frame-tabbed.background.plain"/><alias ref="gengar-bgpat" inset="39,10,5,10" tint="#70FFFFFF"/></composed>
 
-		<grid name="ui-inner-frame-tabbed-dex.background" weightsX="0,1,0" inset="47,0,0,0" weightsY="0,0,1,0">
+		<grid name="ui-inner-frame-tabbed-dex.background.plain" weightsX="0,1,0" inset="47,0,0,0" weightsY="0,0,1,0">
 			<area xywh="5,82,10,11"/>
 			<area xywh="33,82,10,11" tiled="true"/>
 			<area xywh="67,82,10,11"/>
@@ -105,8 +108,9 @@
 			<area xywh="33,133,10,5"/>
 			<area xywh="67,133,10,5"/>
 		</grid>
+		<composed name="ui-inner-frame-tabbed-dex.background"><alias ref="ui-inner-frame-tabbed-dex.background.plain"/><alias ref="gengar-bgpat" inset="39,10,5,10" tint="#70FFFFFF"/></composed>
 
-		<grid name="ui-inner-frame-inverted.background" weightsX="0,1,0" weightsY="0,0,1,0">
+		<grid name="ui-inner-frame-inverted.background.plain" weightsX="0,1,0" weightsY="0,0,1,0">
 
 			<area xywh="5,133,10,-5"/>
 			<area xywh="33,133,10,-5"/>
@@ -124,6 +128,7 @@
 			<area xywh="33,82,11,-11" tiled="true"/>
 			<area xywh="66,81,11,-11"/>
 		</grid>
+		<composed name="ui-inner-frame-inverted.background"><alias ref="ui-inner-frame-inverted.background.plain"/><alias ref="gengar-bgpat" inset="28,2,2,2" tint="#70FFFFFF"/></composed>
 
 
 		<grid name="ui-inner-roundedframe.background" weightsX="0,1,0" weightsY="0,0,1,0">
@@ -154,7 +159,7 @@
 			<area xywh="33,133,10,5"/>
 			<area xywh="67,133,10,5"/>
 		</grid>
-		<grid name="ui-inner-frame-tab.background" weightsX="0,1,0" weightsY="0,0,1,0" inset="-2,0,0,0">
+		<grid name="ui-inner-frame-tab.background.plain" weightsX="0,1,0" weightsY="0,0,1,0" inset="-2,0,0,0">
 			<area xywh="5,151,10,11"/>
 			<area xywh="33,151,10,11" tiled="true"/>
 			<area xywh="67,151,10,11"/>
@@ -168,8 +173,9 @@
 			<area xywh="33,131,10,5"/>
 			<area xywh="67,131,10,5"/>
 		</grid>
+		<composed name="ui-inner-frame-tab.background"><alias ref="ui-inner-frame-tab.background.plain"/><alias ref="gengar-bgpat" inset="39,10,5,10" tint="#70FFFFFF"/></composed>
 
-		<grid name="ui-inner-frame-tab2.background" weightsX="0,1,0" weightsY="0,0,1,0" inset="34,0,0,0">
+		<grid name="ui-inner-frame-tab2.background.plain" weightsX="0,1,0" weightsY="0,0,1,0" inset="34,0,0,0">
 			<area xywh="5,151,10,11"/>
 			<area xywh="33,151,10,11" tiled="true"/>
 			<area xywh="67,151,10,11"/>
@@ -183,6 +189,7 @@
 			<area xywh="33,131,10,5"/>
 			<area xywh="67,131,10,5"/>
 		</grid>
+		<composed name="ui-inner-frame-tab2.background"><alias ref="ui-inner-frame-tab2.background.plain"/><alias ref="gengar-bgpat" inset="39,10,5,10" tint="#70FFFFFF"/></composed>
 
 		<grid name="ui-inner-tab.background" weightsX="0,1,0" weightsY="0,0,0,1,0" inset="13,0,0,0">
 			<area xywh="5,139,10,11"/>
@@ -202,7 +209,7 @@
 			<area xywh="67,131,10,5"/>
 		</grid>
 
-		<grid name="ui-inner-frame-tab3.background" weightsX="0,1,0" weightsY="0,0,0,1,0" inset="-13,0,0,0">
+		<grid name="ui-inner-frame-tab3.background.plain" weightsX="0,1,0" weightsY="0,0,0,1,0" inset="-13,0,0,0">
 			<area xywh="5,139,10,11"/>
 			<area xywh="33,139,10,11" tiled="true"/>
 			<area xywh="67,139,10,11"/>
@@ -219,8 +226,9 @@
 			<area xywh="33,131,10,5"/>
 			<area xywh="67,131,10,5"/>
 		</grid>
+		<composed name="ui-inner-frame-tab3.background"><alias ref="ui-inner-frame-tab3.background.plain"/><alias ref="gengar-bgpat" inset="50,10,5,10" tint="#70FFFFFF"/></composed>
 
-		<grid name="ui-inner-frame-mail.background" weightsX="0,1,0" weightsY="0,0,1,0">
+		<grid name="ui-inner-frame-mail.background.plain" weightsX="0,1,0" weightsY="0,0,1,0">
 			<area xywh="5,151,10,11"/>
 			<area xywh="33,151,10,11" tiled="true"/>
 			<area xywh="67,151,10,11"/>
@@ -234,6 +242,7 @@
 			<area xywh="33,131,10,5"/>
 			<area xywh="67,131,10,5"/>
 		</grid>
+		<composed name="ui-inner-frame-mail.background"><alias ref="ui-inner-frame-mail.background.plain"/><alias ref="gengar-bgpat" inset="39,10,5,10" tint="#70FFFFFF"/></composed>
 
 		<area name="ui-status-success.default" xywh="172,4,18,18" splitx="L5,R5" splity="T5,B5" tint="#06ab32"/>
 		<area name="ui-status-info.default" xywh="172,4,18,18" splitx="L5,R5" splity="T5,B5" tint="#0679ab"/>
