@@ -1050,15 +1050,6 @@
 		<area name="mi-tab8.default" xywh="243,32,20,20"/>
 		<area name="mi-tab9.selected" xywh="263,6,20,20"/>
 		<area name="mi-tab9.default" xywh="263,32,20,20"/>
-		<area name="mi-close.default" xywh="290,6,18,18"/>
-		<area name="mi-close.hover" xywh="290,26,18,18"/>
-		<area name="mi-close.pressed" xywh="290,46,18,18"/>
-
-		<select name="mi-close.background">
-			<alias ref="mi-close.pressed" if="armed"/>
-			<alias ref="mi-close.hover" if="hover | keyboardFocus"/>
-			<alias ref="mi-close.default"/>
-		</select>
 
 		<select name="mi-skill-use.background">
 			<alias ref="mi-skill-use-selected" if="selected | hover"/>
