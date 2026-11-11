@@ -1223,6 +1223,15 @@
     <alias name="hud.style.heads.head.open" ref="hud.shape.r8.left.fill" tint="#E02A1840"/>
     <alias name="hud.style.heads.strip" ref="hud.shape.r8.right.fill" tint="#E02A1840"/>
     <alias name="hud.style.menu.row" ref="hud.shape.r6.fill" tint="#1AB79AE0"/>
+    <composed name="gengar-hud-menu.background">
+      <alias ref="hud.shape.r10.fill" tint="#FA251635"/>
+      <alias ref="hud.shape.r10.edge" tint="#80B79AE0"/>
+    </composed>
+    <select name="gengar-hud-menu.row">
+      <alias ref="hud.shape.r6.fill" tint="#B06E438D" if="pressed | hover | keyboardFocus"/>
+      <alias ref="hud.shape.r6.fill" tint="#804A3265"/>
+    </select>
+    <alias name="gengar-hud-menu.divider" ref="hud.white" tint="#66B79AE0"/>
     <alias name="hud.style.menu.row.mobile" ref="hud.shape.r8.fill" tint="#1FB79AE0"/>
     <alias name="hud.style.menu.row.exit" ref="hud.shape.r8.fill" tint="#1AE8584E"/>
     <alias name="hud.style.drawer" ref="hud.white" tint="#F52A1840"/>

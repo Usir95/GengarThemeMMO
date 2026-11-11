@@ -246,10 +246,14 @@
   <theme name="hud-player-menu" ref="-defaults" allowWildcard="true">
     <param name="background"><image>none</image></param>
     <theme name="menu" ref="-defaults">
-      <param name="background"><image>none</image></param>
-      <theme name="row" ref="-defaults"/>
+      <param name="background"><image>gengar-hud-menu.background</image></param>
+      <theme name="row" ref="-defaults">
+        <param name="background"><image>gengar-hud-menu.row</image></param>
+      </theme>
       <theme name="header" ref="-defaults"/>
-      <theme name="divider" ref="-defaults"/>
+      <theme name="divider" ref="-defaults">
+        <param name="background"><image>gengar-hud-menu.divider</image></param>
+      </theme>
     </theme>
     <theme name="submenu" ref="-defaults">
       <param name="background"><image>none</image></param>
