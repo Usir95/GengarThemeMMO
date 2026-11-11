@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+  <fontDef name="title-font" filename="res/fonts/Creepster-Regular.ttf" color="#FFFFFF" size="14" hinting="AutoMedium" shadow_color="#55000000" shadow_offset_x="1" shadow_offset_y="1" renderer="text">
+    <fallbackFontDef filename="../../data/themes/default/res/fonts/NotoSansCJK-Bold.ttc" faces="sc,tc,jp"/>
+    <fallbackFontDef filename="../../data/themes/default/res/fonts/NotoSans-Bold.ttf"/>
+  </fontDef>
+  <fontDef name="title-font-black" filename="res/fonts/Creepster-Regular.ttf" color="#252525" size="14" hinting="AutoMedium" renderer="text">
+    <fallbackFontDef filename="../../data/themes/default/res/fonts/NotoSansCJK-Bold.ttc" faces="sc,tc,jp"/>
+    <fallbackFontDef filename="../../data/themes/default/res/fonts/NotoSans-Bold.ttf"/>
+  </fontDef>
+</themes>

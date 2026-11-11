@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+  <theme name="logingui">
+    <param name="background"><image>gengar-login-bg</image></param>
+  </theme>
+  <theme name="characterselectgui">
+    <param name="background"><image>gengar-select-bg</image></param>
+  </theme>
+  <theme name="queuegui">
+    <param name="background"><image>gengar-login-bg</image></param>
+  </theme>
+  <theme name="mobile-inventory-tabbedframe" ref="inventory-tabbedframe">
+    <param name="background"><image>gengar-panel.bag</image></param>
+  </theme>
+  <theme name="inventory-button" ref="-defaults" allowWildcard="true">
+    <param name="background"><image>gengar-bars.background</image></param>
+  </theme>
+  <theme name="monsterdex-box" ref="-defaults">
+    <param name="background"><image>gengar-panel.pattern</image></param>
+  </theme>
+  <theme name="monsterdex-frame" ref="mobile-panel">
+    <param name="background"><image>gengar-panel.dex</image></param>
+  </theme>
+  <theme name="pc-frame" ref="mobile-panel">
+    <param name="background"><image>gengar-panel.pattern</image></param>
+  </theme>
+  <theme name="monster-slot" ref="-defaults">
+    <param name="background"><image>gengar-bars.background</image></param>
+    <theme name="slot-health-progressbar" ref="-defaults" allowWildcard="true">
+      <param name=""><image>gengar-bars.hp-green.*</image></param>
+    </theme>
+  </theme>
+  <theme name="monster-slot-orange" ref="monster-slot">
+    <param name="background"><image>gengar-bars.background</image></param>
+    <theme name="slot-health-progressbar" ref="-defaults" allowWildcard="true">
+      <param name=""><image>gengar-bars.hp-orange.*</image></param>
+    </theme>
+  </theme>
+  <theme name="monster-slot-red" ref="monster-slot">
+    <param name="background"><image>gengar-bars.background</image></param>
+    <theme name="slot-health-progressbar" ref="-defaults" allowWildcard="true">
+      <param name=""><image>gengar-bars.hp-red.*</image></param>
+    </theme>
+  </theme>
+  <theme name="monster-slot-empty" ref="-defaults">
+    <param name="background"><image>gengar-bars.disabled</image></param>
+  </theme>
+  <theme name="monster-slot-selected" ref="-defaults">
+    <param name="background"><image>gengar-bars.selected</image></param>
+  </theme>
+</themes>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+  <constantDef name="main-theme-color"><color>#735196</color></constantDef>
+  <constantDef name="main-color"><color>#9B78C6</color></constantDef>
+  <constantDef name="sub-color"><color>#9B78C6</color></constantDef>
+  <constantDef name="tooltip-tint"><color>#FF3D2A55</color></constantDef>
+
+  <include filename="../../data/themes/android/fonts.xml"/>
+  <include filename="../../data/themes/android/hud-fonts.xml"/>
+  <include filename="gengar-fonts.xml"/>
+  <fontGen/>
+
+  <include filename="../gengar/cursors.xml"/>
+  <include filename="../gengar/gfx.xml"/>
+  <include filename="../gengar/gfx_ui.xml"/>
+  <include filename="gfx.xml"/>
+  <include filename="../../data/themes/default/init.xml"/>
+  <include filename="hud_kit"/>
+  <include filename="hud/hud-widgets.xml"/>
+
+  <include filename="../gengar/gengar-gfx.xml"/>
+
+  <include filename="../../data/themes/default/ui/main.xml"/>
+  <include filename="../../data/themes/default/ui/battle.xml"/>
+  <include filename="../../data/themes/default/ui/contest.xml"/>
+  <include filename="../gengar/ui/party.xml"/>
+  <include filename="../gengar/ui/inventory.xml"/>
+  <include filename="../../data/themes/default/ui/chat.xml"/>
+  <include filename="../../data/themes/default/ui/monster-frame.xml"/>
+  <include filename="../../data/themes/default/ui/customization.xml"/>
+  <include filename="../../data/themes/default/ui/settings.xml"/>
+  <include filename="../../data/themes/default/ui/guild.xml"/>
+  <include filename="../../data/themes/default/ui/matchmaking.xml"/>
+  <include filename="../../data/themes/default/ui/social.xml"/>
+  <include filename="../../data/themes/default/ui/trade.xml"/>
+  <include filename="../../data/themes/default/ui/shop.xml"/>
+  <include filename="../../data/themes/default/ui/misc.xml"/>
+  <include filename="../../data/themes/default/ui/broker.xml"/>
+  <include filename="../../data/themes/default/ui/staff.xml"/>
+  <include filename="../../data/themes/default/main-widgets.xml"/>
+
+  <include filename="../../data/themes/android/android.xml"/>
+  <include filename="../../data/themes/android/ui/android-battle.xml"/>
+  <include filename="../../data/themes/android/ui/android-chat.xml"/>
+  <include filename="../../data/themes/android/ui/android-party.xml"/>
+  <include filename="../../data/themes/android/ui/android-inventory.xml"/>
+  <include filename="../../data/themes/android/ui/android-customization.xml"/>
+  <include filename="../../data/themes/android/ui/android-event.xml"/>
+  <include filename="../../data/themes/android/ui/android-monster-dex.xml"/>
+  <include filename="../../data/themes/android/ui/android-monster-frame.xml"/>
+  <include filename="../../data/themes/android/ui/android-settings.xml"/>
+  <include filename="../../data/themes/android/ui/android-guild.xml"/>
+  <include filename="../../data/themes/android/ui/android-matchmaking.xml"/>
+  <include filename="../../data/themes/android/ui/android-social.xml"/>
+  <include filename="../../data/themes/android/ui/android-shop.xml"/>
+  <include filename="../../data/themes/android/ui/android-misc.xml"/>
+  <include filename="../../data/themes/android/ui/android-staff.xml"/>
+  <include filename="../../data/themes/android/ui/android-advanced-search.xml"/>
+  <include filename="../../data/themes/android/ui/android-broker.xml"/>
+  <include filename="../../data/themes/android/ui/android-pc.xml"/>
+  <include filename="../../data/themes/android/ui/android-trade.xml"/>
+  <include filename="../../data/themes/android/ui/android-instance.xml"/>
+  <include filename="../../data/themes/android/ui/android-tt.xml"/>
+  <include filename="../../data/themes/android/ui/android-encounter.xml"/>
+  <include filename="../../data/themes/android/ui/android-incubator.xml"/>
+
+  <include filename="../gengar/gengar-ui.xml"/>
+  <include filename="gengar-ui.xml"/>
+</themes>
