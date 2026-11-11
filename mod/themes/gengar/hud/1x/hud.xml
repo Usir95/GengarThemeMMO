@@ -1141,7 +1141,7 @@
 
     <alias name="hud.style.clear" ref="hud.shape.r6.fill" tint="#00FFFFFF"/>
     <alias name="hud.style.panel.fill" ref="hud.shape.r8.fill" tint="#E02A1840"/>
-    <alias name="hud.style.panel.edge" ref="hud.shape.r8.edge" tint="#17FFFFFF"/>
+    <alias name="hud.style.panel.edge" ref="hud.shape.r8.edge" tint="#59B79AE0"/>
     <composed name="hud.style.panel">
       <alias ref="hud.style.panel.fill"/>
       <alias ref="hud.style.panel.edge"/>
@@ -1149,32 +1149,32 @@
     <alias name="hud.style.panel.rest" ref="hud.shape.r8.fill" tint="#402A1840"/>
     <alias name="hud.style.panel.shadow" ref="hud.shape.r8.fill" tint="#59000000"/>
     <alias name="hud.style.panel.mobile.fill" ref="hud.shape.r10.fill" tint="#E02A1840"/>
-    <alias name="hud.style.panel.mobile.edge" ref="hud.shape.r10.edge" tint="#17FFFFFF"/>
+    <alias name="hud.style.panel.mobile.edge" ref="hud.shape.r10.edge" tint="#59B79AE0"/>
     <composed name="hud.style.panel.mobile">
       <alias ref="hud.style.panel.mobile.fill"/>
       <alias ref="hud.style.panel.mobile.edge"/>
     </composed>
     <alias name="hud.style.panel.mobile.rest" ref="hud.shape.r10.fill" tint="#592A1840"/>
     <alias name="hud.style.popover.fill" ref="hud.shape.r6.fill" tint="#F02A1840"/>
-    <alias name="hud.style.popover.edge" ref="hud.shape.r6.edge" tint="#1FFFFFFF"/>
+    <alias name="hud.style.popover.edge" ref="hud.shape.r6.edge" tint="#66B79AE0"/>
     <composed name="hud.style.popover">
       <alias ref="hud.style.popover.fill"/>
       <alias ref="hud.style.popover.edge"/>
     </composed>
     <alias name="hud.style.popover.arrow.down.fill" ref="hud.arrow.down.fill" tint="#F02A1840"/>
-    <alias name="hud.style.popover.arrow.down.edge" ref="hud.arrow.down.edge" tint="#1FFFFFFF"/>
+    <alias name="hud.style.popover.arrow.down.edge" ref="hud.arrow.down.edge" tint="#66B79AE0"/>
     <composed name="hud.style.popover.arrow.down">
       <alias ref="hud.style.popover.arrow.down.fill"/>
       <alias ref="hud.style.popover.arrow.down.edge"/>
     </composed>
     <alias name="hud.style.popover.arrow.up.fill" ref="hud.arrow.up.fill" tint="#F02A1840"/>
-    <alias name="hud.style.popover.arrow.up.edge" ref="hud.arrow.up.edge" tint="#1FFFFFFF"/>
+    <alias name="hud.style.popover.arrow.up.edge" ref="hud.arrow.up.edge" tint="#66B79AE0"/>
     <composed name="hud.style.popover.arrow.up">
       <alias ref="hud.style.popover.arrow.up.fill"/>
       <alias ref="hud.style.popover.arrow.up.edge"/>
     </composed>
     <alias name="hud.style.row.open" ref="hud.shape.r6.fill" tint="#0FFFFFFF"/>
-    <alias name="hud.style.divider" ref="hud.white" tint="#12FFFFFF"/>
+    <alias name="hud.style.divider" ref="hud.white" tint="#26B79AE0"/>
     <alias name="hud.style.tile" ref="hud.shape.r6.fill" tint="#EB3F2860"/>
     <alias name="hud.style.tile.hover" ref="hud.shape.r6.fill" tint="#F5553877"/>
     <alias name="hud.style.tile.open" ref="hud.shape.r6.fill" tint="#0DFFFFFF"/>
@@ -1222,16 +1222,16 @@
     <alias name="hud.style.heads.head" ref="hud.shape.r8.fill" tint="#E02A1840"/>
     <alias name="hud.style.heads.head.open" ref="hud.shape.r8.left.fill" tint="#E02A1840"/>
     <alias name="hud.style.heads.strip" ref="hud.shape.r8.right.fill" tint="#E02A1840"/>
-    <alias name="hud.style.menu.row" ref="hud.shape.r6.fill" tint="#0AFFFFFF"/>
-    <alias name="hud.style.menu.row.mobile" ref="hud.shape.r8.fill" tint="#0DFFFFFF"/>
+    <alias name="hud.style.menu.row" ref="hud.shape.r6.fill" tint="#1AB79AE0"/>
+    <alias name="hud.style.menu.row.mobile" ref="hud.shape.r8.fill" tint="#1FB79AE0"/>
     <alias name="hud.style.menu.row.exit" ref="hud.shape.r8.fill" tint="#1AE8584E"/>
     <alias name="hud.style.drawer" ref="hud.white" tint="#F52A1840"/>
     <alias name="hud.style.tag.fainted" ref="hud.shape.r3.fill" tint="#FF554163"/>
     <alias name="hud.style.tile.pressed" ref="hud.shape.r6.fill" tint="#F5543968"/>
     <alias name="hud.style.slot.mobile.pressed" ref="hud.shape.r8.fill" tint="#F5543968"/>
-    <alias name="hud.style.ring.select" ref="hud.shape.r6.edge" tint="#59FFFFFF"/>
+    <alias name="hud.style.ring.select" ref="hud.shape.r6.edge" tint="#D9E06DF2"/>
     <alias name="hud.style.ring.flash" ref="hud.shape.r6.edge" tint="#E6E06DF2"/>
-    <alias name="hud.style.ring.select.mobile" ref="hud.shape.r8.edge" tint="#73FFFFFF"/>
+    <alias name="hud.style.ring.select.mobile" ref="hud.shape.r8.edge" tint="#D9E06DF2"/>
     <alias name="hud.style.ring.flash.mobile" ref="hud.shape.r8.edge" tint="#E6E06DF2"/>
     <alias name="hud.style.ring.outline" ref="hud.shape.r8.edge2" tint="#80E06DF2"/>
     <alias name="hud.style.ring.outline.mobile" ref="hud.shape.r10.edge2" tint="#80E06DF2"/>
@@ -1240,19 +1240,19 @@
     <alias name="hud.style.popover.solid" ref="hud.shape.r6.fill" tint="#FF34204F"/>
     <alias name="hud.style.panel.chat.rest" ref="hud.shape.r8.fill" tint="#802A1840"/>
     <alias name="hud.style.panel.unlocked.edge" ref="hud.shape.r8.edge" tint="#99E06DF2"/>
-    <alias name="hud.style.button.fill" ref="hud.shape.r6.fill" tint="#0FFFFFFF"/>
-    <alias name="hud.style.button.hover" ref="hud.shape.r6.fill" tint="#1AFFFFFF"/>
+    <alias name="hud.style.button.fill" ref="hud.shape.r6.fill" tint="#24B79AE0"/>
+    <alias name="hud.style.button.hover" ref="hud.shape.r6.fill" tint="#40C77DFF"/>
     <select name="hud.style.button">
       <alias ref="hud.style.button.hover" if="hover"/>
       <alias ref="hud.style.button.fill"/>
     </select>
-    <alias name="hud.style.button.primary.fill" ref="hud.shape.r6.fill" tint="#1AFFFFFF"/>
-    <alias name="hud.style.button.primary.hover" ref="hud.shape.r6.fill" tint="#29FFFFFF"/>
+    <alias name="hud.style.button.primary.fill" ref="hud.shape.r6.fill" tint="#33C77DFF"/>
+    <alias name="hud.style.button.primary.hover" ref="hud.shape.r6.fill" tint="#55C77DFF"/>
     <select name="hud.style.button.primary">
       <alias ref="hud.style.button.primary.hover" if="hover"/>
       <alias ref="hud.style.button.primary.fill"/>
     </select>
-    <alias name="hud.style.button.ghost.hover" ref="hud.shape.r6.fill" tint="#1AFFFFFF"/>
+    <alias name="hud.style.button.ghost.hover" ref="hud.shape.r6.fill" tint="#33C77DFF"/>
     <select name="hud.style.button.ghost">
       <alias ref="hud.style.button.ghost.hover" if="hover"/>
       <alias ref="hud.style.clear"/>
