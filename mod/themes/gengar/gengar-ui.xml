@@ -95,4 +95,7 @@
   <theme name="battle-frame">
     <param name="background"><image>battle-area</image></param>
   </theme>
+  <theme name="battle-button-ui">
+    <param name=""><image>gengar-move.*</image></param>
+  </theme>
 </themes>
