@@ -289,16 +289,17 @@
 			<area xywh="475,522,1,28" splity="T12,B12"/>
 		</grid>
 
-		<alias name="mobile.progress.progressImage" ref="-mobile.progress.progressImage" tint="#9B59B6"/>
-		<alias name="mobile.progress.orange.progressImage" ref="-mobile.progress.progressImage" tint="#E67E22"/>
-		<alias name="mobile.progress.violet.progressImage" ref="-mobile.progress.progressImage" tint="#9B59B6"/>
-    <alias name="mobile.progress.darkviolet.progressImage" ref="-mobile.progress.progressImage" tint="#8B73BD"/>
-    <alias name="mobile.progress.green.progressImage" ref="-mobile.progress.progressImage" tint="#2ECC71"/>
-		<alias name="mobile.progress.yellow.progressImage" ref="-mobile.progress.progressImage" tint="#F1C40F"/>
-    <alias name="mobile.progress.darkblue.progressImage" ref="-mobile.progress.progressImage" tint="#5B3377"/>
-    <alias name="mobile.progress.red.progressImage" ref="-mobile.progress.progressImage" tint="#FF8C70"/>
+		<alias name="mobile.progress.progressImage" ref="-mobile.progress.progressImage" tint="#C9A8F0"/>
+		<alias name="mobile.progress.orange.progressImage" ref="-mobile.progress.progressImage" tint="#E6C082"/>
+		<alias name="mobile.progress.violet.progressImage" ref="-mobile.progress.progressImage" tint="#C9A8F0"/>
+    <alias name="mobile.progress.darkviolet.progressImage" ref="-mobile.progress.progressImage" tint="#9B78C6"/>
+    <alias name="mobile.progress.green.progressImage" ref="-mobile.progress.progressImage" tint="#83D2AD"/>
+		<alias name="mobile.progress.yellow.progressImage" ref="-mobile.progress.progressImage" tint="#F0D051"/>
+    <alias name="mobile.progress.darkblue.progressImage" ref="-mobile.progress.progressImage" tint="#7A5BA8"/>
+    <alias name="mobile.progress.red.progressImage" ref="-mobile.progress.progressImage" tint="#EC939F"/>
     <alias name="mobile.progress.darkred.progressImage" ref="-mobile.progress.progressImage" tint="#800000"/>
     <alias name="mobile.progress.gold.progressImage" ref="-mobile.progress.progressImage" tint="#d4af37"/>
+    <alias name="mobile.progress.pink.progressImage" ref="-mobile.progress.progressImage" tint="#EC96C8"/>
     <alias name="mobile.progress.halloween.progressImage" ref="-mobile.progress.progressImage" tint="#dd84fd"/>
 
 
