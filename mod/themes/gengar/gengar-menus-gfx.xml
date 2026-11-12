@@ -9,6 +9,19 @@
       <alias ref="gm-header.hover" if="hover"/>
       <alias ref="gm-header.default"/>
     </select>
+    <select name="gm-th.background">
+      <alias ref="gm-header.selected" if="selected"/>
+      <composed if="sortAscending">
+        <alias ref="gm-header.hover"/>
+        <alias ref="ui-table-sort-asc.background"/>
+      </composed>
+      <composed if="sortDescending">
+        <alias ref="gm-header.hover"/>
+        <alias ref="ui-table-sort-desc.background"/>
+      </composed>
+      <alias ref="gm-header.hover" if="hover"/>
+      <alias ref="gm-header.default"/>
+    </select>
     <area name="gm-cell.default" xywh="144,0,16,16" splitx="L4,R4" splity="T4,B4"/>
     <area name="gm-cell.hover" xywh="160,0,16,16" splitx="L4,R4" splity="T4,B4"/>
     <area name="gm-cell.selected" xywh="176,0,16,16" splitx="L4,R4" splity="T4,B4"/>

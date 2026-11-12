@@ -48,4 +48,5 @@
   <include filename="gengar-ui.xml"/>
   <include filename="ui/battle-status.xml"/>
   <include filename="ui/menus.xml"/>
+  <include filename="ui/menus-sociales.xml"/>
 </themes>
