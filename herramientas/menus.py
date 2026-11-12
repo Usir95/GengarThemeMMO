@@ -65,4 +65,11 @@ d.rectangle([(192 + 8) * S, (32 + 1) * S, (192 + 40) * S, (32 + 2) * S], fill=MA
 piece(0, 64, 48, 48, 6, (40, 24, 62, 215), (22, 14, 36, 215), (118, 86, 166, 255))
 d.rectangle([(0 + 6) * S, (64 + 1) * S, (0 + 42) * S, (64 + 2) * S], fill=(185, 56, 164, 255))
 
+
+g = Image.new("RGBA", (24 * S, 24 * S), (0, 0, 0, 0))
+ImageDraw.Draw(g).rounded_rectangle([2 * S, 2 * S, 22 * S - 1, 22 * S - 1], 5 * S, outline=(255, 110, 215, 210), width=2 * S)
+g = g.filter(ImageFilter.GaussianBlur(1.2 * S))
+ImageDraw.Draw(g).rounded_rectangle([1 * S, 1 * S, 23 * S - 1, 23 * S - 1], 5 * S, outline=(255, 150, 225, 230), width=1 * S)
+img.alpha_composite(g, (208 * S, 0))
+
 img.resize((W, H), Image.LANCZOS).save(out)

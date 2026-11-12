@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <themes>
+  <images file="res/gengar-menus.png" filter="linear">
+    <area name="gm-glow" xywh="208,0,24,24" splitx="L8,R8" splity="T8,B8"/>
+    <animation name="gm-glow.hover" timeSource="hover" count="1">
+      <frame duration="150" ref="gm-glow" tint="#00FFFFFF"/>
+      <frame duration="1" ref="gm-glow"/>
+    </animation>
+  </images>
 	<!-- WIP Theme -->
 	<images file="res/pokemmo_ui.png" filter="nearest">
 		<grid name="ui-frame.background" weightsX="0,1,0" weightsY="0,0,1,0">
@@ -304,6 +311,7 @@
 		<composed name="ui-button.hover">
 			<alias ref="ui-button.default"/>
 			<alias ref="ui-button.hover-animation"/>
+			<alias ref="gm-glow.hover"/>
 		</composed>
 
 		<composed name="ui-button.selected">
@@ -316,6 +324,7 @@
 			<alias ref="ui-button.default"/>
 			<alias ref="ui-button.selected.background"/>
       <alias ref="ui-button.hover-animation"/>
+			<alias ref="gm-glow.hover"/>
 		</composed>
 
     <composed name="ui-button.selected.alt">
