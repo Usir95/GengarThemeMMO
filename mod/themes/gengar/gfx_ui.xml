@@ -2,6 +2,12 @@
 <themes>
   <images file="res/gengar-menus.png" filter="linear">
     <area name="gm-glow" xywh="208,128,24,24" splitx="L8,R8" splity="T8,B8"/>
+    <area name="gm-popup.b" xywh="64,72,32,32" splitx="L6,R6" splity="T6,B6" tint="main-color"/>
+    <area name="gm-popup.f" xywh="64,200,32,32" splitx="L6,R6" splity="T6,B6"/>
+    <composed name="gm-popup"><alias ref="gm-popup.b"/><alias ref="gm-popup.f"/></composed>
+    <area name="gm-popup-warn.b" xywh="104,72,32,32" splitx="L6,R6" splity="T6,B6" tint="main-color"/>
+    <area name="gm-popup-warn.f" xywh="104,200,32,32" splitx="L6,R6" splity="T6,B6"/>
+    <composed name="gm-popup-warn"><alias ref="gm-popup-warn.b"/><alias ref="gm-popup-warn.f"/></composed>
     <animation name="gm-glow.hover" timeSource="hover" count="1">
       <frame duration="150" ref="gm-glow" tint="#00FFFFFF"/>
       <frame duration="1" ref="gm-glow"/>
@@ -686,11 +692,11 @@
 			</composed>
 		</select>
 
-    <area name="ui-popup.background" xywh="317,247,42,42" splitx="L5,R5" splity="T5,B5"/>
-    <area name="ui-popup-warning.background" xywh="405,245,41,41" splitx="L10,R10" splity="T10,B10"/>
+    <alias name="ui-popup.background" ref="gm-popup"/>
+    <alias name="ui-popup-warning.background" ref="gm-popup-warn"/>
 		<area name="ui-popup-button.selected" xywh="364,254,35,29" splitx="L4,R4" splity="T4,B4"/>
 		<area name="ui-popup-button.default" xywh="0,0,44,14" tint="#00FFFFFF"/>
-		<area name="ui-popup.background" xywh="317,247,42,42" splitx="L5,R5" splity="T5,B5"/>
+		<alias name="ui-popup.background" ref="gm-popup"/>
 
 		<area name="ui-misc-btn.background" xywh="326,292,23,20" splitx="L5,R5" splity="T5,B5"/>
 		<area name="ui-misc-btn.selected" xywh="373,294,17,16" splitx="L5,R5" splity="T5,B5"/>
