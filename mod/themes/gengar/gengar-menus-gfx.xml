@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+  <images file="res/gengar-menus.png" filter="linear">
+    <area name="gm-header.default" xywh="0,0,48,28" splitx="L6,R6" splity="T6,B6"/>
+    <area name="gm-header.hover" xywh="48,0,48,28" splitx="L6,R6" splity="T6,B6"/>
+    <area name="gm-header.selected" xywh="96,0,48,28" splitx="L6,R6" splity="T6,B6"/>
+    <select name="gm-header.background">
+      <alias ref="gm-header.selected" if="selected"/>
+      <alias ref="gm-header.hover" if="hover"/>
+      <alias ref="gm-header.default"/>
+    </select>
+    <area name="gm-cell.default" xywh="144,0,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <area name="gm-cell.hover" xywh="160,0,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <area name="gm-cell.selected" xywh="176,0,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <area name="gm-cell.disabled" xywh="192,0,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <select name="gm-cell.background">
+      <alias ref="gm-cell.disabled" if="disabled"/>
+      <alias ref="gm-cell.selected" if="selected | keyboardFocus"/>
+      <alias ref="gm-cell.hover" if="hover"/>
+      <alias ref="gm-cell.default"/>
+    </select>
+    <area name="gm-tab-v.default" xywh="0,32,64,28" splitx="L8,R6" splity="T6,B6"/>
+    <area name="gm-tab-v.hover" xywh="64,32,64,28" splitx="L8,R6" splity="T6,B6"/>
+    <area name="gm-tab-v.selected" xywh="128,32,64,28" splitx="L8,R6" splity="T6,B6"/>
+    <select name="gm-tab-v.background">
+      <alias ref="gm-tab-v.selected" if="selected"/>
+      <alias ref="gm-tab-v.hover" if="hover"/>
+      <alias ref="gm-tab-v.default"/>
+    </select>
+    <area name="gm-card.background" xywh="192,32,48,48" splitx="L10,R10" splity="T10,B10"/>
+    <area name="gm-panel.background" xywh="0,64,48,48" splitx="L8,R8" splity="T8,B8"/>
+  </images>
+</themes>
