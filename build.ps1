@@ -1,25 +1,37 @@
 $ErrorActionPreference = "Stop"
 
-$root = Join-Path $PSScriptRoot "mod"
-$dist = Join-Path $PSScriptRoot "dist"
-if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Null }
-$out = Join-Path $dist "GengarTheme.mod"
-if (Test-Path $out) { Remove-Item $out }
-
-$tar = Join-Path $env:SystemRoot "System32\tar.exe"
-if (-not (Test-Path $tar)) { throw "No se encontro $tar" }
-
-$files = Get-ChildItem -Path $root -Recurse -File | Where-Object { $_.Name -notlike ".*" } | ForEach-Object {
-    $_.FullName.Substring($root.Length + 1).Replace("\", "/")
+$python = Get-Command py -ErrorAction SilentlyContinue
+$pythonArgs = @("-3")
+if (-not $python) {
+    $python = Get-Command python -ErrorAction SilentlyContinue
+    $pythonArgs = @()
 }
-$list = Join-Path $dist "archivos.txt"
-[System.IO.File]::WriteAllLines($list, [string[]]$files, (New-Object System.Text.UTF8Encoding $false))
+if (-not $python) { throw "Se requiere Python 3 para generar el mod." }
 
-try {
-    & $tar -c --format zip --options zip:compression=store -n -f $out -C $root -T $list
-    if ($LASTEXITCODE -ne 0) { throw "tar termino con codigo $LASTEXITCODE" }
-}
-finally {
-    Remove-Item $list -ErrorAction SilentlyContinue
-}
-Write-Host $out
+$package = @"
+from pathlib import Path
+import sys
+from tempfile import TemporaryDirectory
+from zipfile import ZIP_STORED, ZipFile
+
+project = Path(sys.argv[1])
+root = project / "mod"
+dist = project / "dist"
+out = dist / "GengarTheme.mod"
+allowed = {".xml", ".png", ".ogg", ".wav", ".ttf", ".ttc"}
+if not (root / "info.xml").is_file():
+    raise SystemExit("Falta mod/info.xml")
+dist.mkdir(exist_ok=True)
+with TemporaryDirectory(dir=dist) as temporary:
+    archive_path = Path(temporary) / out.name
+    with ZipFile(archive_path, "w", ZIP_STORED) as archive:
+        for path in sorted(root.rglob("*")):
+            relative = path.relative_to(root)
+            if path.is_file() and path.suffix.lower() in allowed and not any(part.startswith(".") for part in relative.parts):
+                archive.write(path, relative.as_posix())
+    archive_path.replace(out)
+print(out)
+"@
+
+$package | & $python.Source @pythonArgs - $PSScriptRoot
+if ($LASTEXITCODE -ne 0) { throw "No se pudo generar el mod." }
