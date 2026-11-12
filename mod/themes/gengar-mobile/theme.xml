@@ -20,6 +20,7 @@
   <include filename="hud/hud-widgets.xml"/>
 
   <include filename="../gengar/gengar-gfx.xml"/>
+  <include filename="../gengar/gengar-menus-gfx.xml"/>
 
   <include filename="../../data/themes/default/ui/main.xml"/>
   <include filename="../../data/themes/default/ui/battle.xml"/>
@@ -67,4 +68,5 @@
 
   <include filename="../gengar/gengar-ui.xml"/>
   <include filename="gengar-ui.xml"/>
+  <include filename="ui/menus-movil.xml"/>
 </themes>

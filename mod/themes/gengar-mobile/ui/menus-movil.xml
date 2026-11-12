@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+  <theme name="addon-item-picker" ref="addon-item-picker">
+    <param name="background">
+      <image>gengar-bars.background</image>
+    </param>
+  </theme>
+  <theme name="advanced-search-dialog" ref="advanced-search-dialog">
+    <theme name="label-title-medium" ref="label-title-medium">
+      <param name="background">
+        <image>gm-header.background</image>
+      </param>
+    </theme>
+    <theme name="label-title-medium2" ref="label-title-medium2">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+    <theme name="label-value-medium" ref="label-value-medium">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+    <theme name="label-value-medium2" ref="label-value-medium2">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+    <theme name="label-value-small" ref="label-value-small">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="advanced-search-dialog-alt" ref="advanced-search-dialog-alt">
+    <theme name="label-title-medium2" ref="label-title-medium2">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="chat-settings-color-popup" ref="chat-settings-color-popup">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="customization-label" ref="customization-label">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="dex-move-table" ref="dex-move-table">
+    <theme name="columnHeader" ref="columnHeader">
+      <param name="">
+        <image>gm-th.*</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="edit-button" ref="edit-button">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-area-monsterdex" ref="label-area-monsterdex">
+    <theme name="label" ref="label">
+      <param name="background">
+        <image>gm-header.background</image>
+      </param>
+    </theme>
+    <theme name="stat-widget" ref="stat-widget">
+      <param name="background">
+        <image>gm-header.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="label-chat-settings-color" ref="label-chat-settings-color">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-chat-settings-special" ref="label-chat-settings-special">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-chat-settings-title" ref="label-chat-settings-title">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-chat-settings-transparency" ref="label-chat-settings-transparency">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex" ref="label-title-dex">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-long" ref="label-title-dex-long">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-medium" ref="label-title-dex-medium">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-name" ref="label-title-dex-name">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-small" ref="label-title-dex-small">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-smallest" ref="label-title-dex-smallest">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-type" ref="label-title-dex-type">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex-long" ref="label-value-dex-long">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex-medium" ref="label-value-dex-medium">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex-name" ref="label-value-dex-name">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex-small" ref="label-value-dex-small">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex-smallest" ref="label-value-dex-smallest">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex2" ref="label-value-dex2">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="monstergear-pic" ref="monstergear-pic">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="wardrobe" ref="wardrobe">
+    <theme name="button" ref="button">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="wardrobe-purchase-table" ref="wardrobe-purchase-table">
+    <theme name="box-layout-row" ref="box-layout-row">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+    <theme name="button" ref="button">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+    <theme name="button-wheel" ref="button-wheel">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="word-ping-window" ref="word-ping-window">
+    <theme name="dialoglayout" ref="dialoglayout">
+      <theme name="scrollpane" ref="scrollpane">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+    </theme>
+  </theme>
+</themes>

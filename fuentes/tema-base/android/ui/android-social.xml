@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+	<!-- social window -->
+	<theme name="social-window" ref="mobile-panel" overwrite="true">
+		<param name="border"><border>0</border></param>
+		<param name="fadeDurationShow"><int>200</int></param>
+		<param name="fadeDurationHide"><int>200</int></param>
+		<theme name="dialoglayout" ref="dialoglayout">
+			<param name="border"><border>0</border></param>
+			<theme name="tabbedpane" ref="base-tabbed-pane">
+				<param name="tabPosition"><enum type="tabposition">LEFT</enum></param>
+				<param name="background"><image>none</image></param>
+				<theme name="tabbox" ref="mobile-tabbox-inset" overwrite="true">
+					<param name="border"><border>60,0,0,0</border></param>
+					<theme name="tabbutton" ref="tabbutton">
+						<param name="minWidth"><int>208</int></param>
+					</theme>
+				</theme>
+				<theme name="container" ref="container">
+					<param name="minWidth"><int>900</int></param>
+					<param name="maxWidth"><int>1900</int></param>
+					<theme name="dialoglayout" ref="dialoglayout">
+						<param name="border"><border>0,10,0,10</border></param>
+						<theme name="label" ref="label" overwrite="true">
+							<param name="border"><border>0,0</border></param>
+							<param name="font"><font>med-noshadow-18-white</font></param>
+						</theme>
+						<theme name="button" ref="mobile-bottom-button" overwrite="true">
+							<param name="minWidth"><int>150</int></param>
+						</theme>
+						<theme name="editfield" ref="editfield">
+							<theme name="renderer" ref="renderer">
+								<param name="textAlignment"><enum type="alignment">LEFT</enum></param>
+							</theme>
+						</theme>
+					</theme>
+				</theme>
+				<param name="inputMap"><inputMapDef>
+					<action name="nextTab">CTRL TAB</action>
+					<action name="prevTab">CTRL SHIFT TAB</action>
+				</inputMapDef></param>
+			</theme>
+		</theme>
+	</theme>
+	
+	<theme name="mail-window" ref="mobile-panel" overwrite="true">
+		<param name="fadeDurationShow"><int>200</int></param>
+		<param name="fadeDurationHide"><int>200</int></param>
+		<theme name="dialoglayout" ref="dialoglayout">
+			<param name="border"><border>0,0,0,0</border></param>
+			<theme name="tabbedpane" ref="base-tabbed-pane">
+				<param name="background"><image>none</image></param>
+				<param name="border"><border>0,0,0,0</border></param>
+				<theme name="tabbox" ref="mobile-tabbox-inset" overwrite="true">
+          <theme name="tabbutton" ref="tabbutton">
+            <param name="minWidth"><int>208</int></param>
+            <param name="minHeight"><int>60</int></param>
+          </theme>
+          <param name="border"><border>0,350,0,6</border></param>
+          <param name="spacing"><int>10</int></param>
+          <param name="alignment"><enum type="alignment">FILL</enum></param>
+				</theme>
+				<theme name="container" ref="container">
+					<param name="background"><image>none</image></param>
+					 <theme name="dialoglayout" ref="dialoglayout">
+						<param name="border"><border>10,10,0,10</border></param>
+						<param name="namedGaps"><map/></param>
+						<param name="background"><image>none</image></param>
+		
+						<theme name="label" ref="label" allowWildcard="true">
+							<param name="border"><border>0</border></param>
+							<param name="background"><image>none</image></param>
+							<param name="font"><font>med-noshadow-18-white</font></param>
+						</theme>
+						
+						<theme name="pager" ref="mobile-pager"/>
+
+						<theme name="mail-footer-warning" ref="label">
+							<param name="font"><font>med-noshadow-18-yellow</font></param>
+							<param name="background"><image>none</image></param>
+							<param name="textAlignment"><enum type="alignment">LEFT</enum></param>
+						</theme>
+
+						<theme name="button-small2" ref="button" overwrite="true"/>
+
+						<theme name="button-icon" ref="button">
+							<param name="minWidth"><int>60</int></param>
+						</theme>
+
+						<theme name="combobox" ref="mobile-combobox-50" overwrite="true">
+							<param name="popupDirection"><enum type="popupdirection">TOP</enum></param>
+						</theme>
+					</theme>
+				</theme>
+				<param name="inputMap"><inputMapDef>
+					<action name="nextTab">CTRL TAB</action>
+					<action name="prevTab">CTRL SHIFT TAB</action>
+				</inputMapDef></param>
+			</theme>
+		</theme>
+	</theme>
+	
+	<theme name="mail-inner" allowWildcard="true">
+		<param name="background"><image>none</image></param>
+		<param name="overlay"><image>none</image></param>
+		<theme name="hscrollbar" ref="hscrollbar"/>  <!-- not used -->
+		<theme name="vscrollbar" ref="vscrollbar-white"/>
+		<param name="border"><border>0</border></param>
+		<param name="minWidth"><int>500</int></param>
+		<param name="minHeight"><int>450</int></param>
+		<param name="maxWidth"><int>32767</int></param>
+		<param name="maxHeight"><int>32767</int></param>
+		<param name="hasDragButton"><bool>false</bool></param>
+		<param name="scrollbarsAlwaysVisible"><bool>false</bool></param>
+		<param name="autoScrollArea"><int>5</int></param>
+		<param name="autoScrollSpeed"><int>10</int></param>
+		<theme name="dialoglayout" ref="-defaults">
+			<param name="background"><image>none</image></param>
+			<param name="border"><border>0,0,0,0</border></param>
+			<param name="defaultGap"><dimension>4,5</dimension></param>
+			<param name="smallGap"><dimension>8,8</dimension></param>
+			<param name="mediumGap"><dimension>10,10</dimension></param>
+			<param name="largeGap"><dimension>15,15</dimension></param>
+			<param name="namedGaps"><map/></param>
+			<param name="minWidth"><int>415</int></param>
+			<param name="maxWidth"><int>415</int></param>
+			<param name="maxHeight"><int>32767</int></param>
+
+      <param name="unreadRowBackground"><image>ui-header.background</image></param>
+      <param name="contentRowBackground"><image>mobile.button.flat.background</image></param>
+      <param name="openRowOverlay"><image>ui-inputbox-2px.selected.blue</image></param>
+			
+			<theme name="button" ref="button" overwrite="true">
+				<param name="font"><font>med-noshadow-18-white</font></param>
+        <param name="minWidth"><int>50</int></param>
+			</theme>
+      <theme name="button-row" ref="button" overwrite="true">
+        <param name="background"><image>none</image></param>
+        <param name="font"><font>med-noshadow-18-white</font></param>
+      </theme>
+			<theme name="mail-header-label" ref="label" allowWildcard="true">
+				<param name="background"><image>none</image></param>
+				<param name="border"><border>0,2,0,2</border></param>
+				<param name="font"><font>med-noshadow-14-white</font></param>
+			</theme>
+			<theme name="mail-checkbox" ref="togglebutton">
+				<param name="border"><border>0,0</border></param>
+				<param name="minWidth"><int>44</int></param>
+				<param name="minHeight"><int>44</int></param>
+			</theme>
+			<theme name="mail-row-sender" ref="button-row" overwrite="true">
+				<param name="font"><font>med-noshadow-14-white</font></param>
+				<param name="border"><border>1,2,0,2</border></param>
+				<param name="textAlignment"><enum type="alignment">LEFT</enum></param>
+			</theme>
+			<theme name="mail-row-subject" ref="button-row" overwrite="true">
+				<param name="font"><font>med-noshadow-12-white</font></param>
+				<param name="border"><border>0,2,2,2</border></param>
+				<param name="textAlignment"><enum type="alignment">LEFT</enum></param>
+			</theme>
+			<theme name="mail-row-date" ref="button-row" overwrite="true">
+				<param name="font"><font>med-noshadow-12-white</font></param>
+				<param name="border"><border>6</border></param>
+				<param name="textAlignment"><enum type="alignment">RIGHT</enum></param>
+			</theme>
+			<theme name="mail-row-icon" ref="spritelabel">
+				<param name="background"><image>none</image></param>
+			</theme>
+			<theme name="mail-attachment-tile" ref="spritelabel">
+				<param name="background"><image>label1.background</image></param>
+				<param name="border"><border>2</border></param>
+			</theme>
+			<theme name="mail-attachment-gender" ref="spritelabel">
+				<param name="background"><image>none</image></param>
+			</theme>
+			<theme name="mail-attachment-badge" ref="label">
+				<param name="font"><font>med-noshadow-12-white</font></param>
+				<param name="background"><image>ui-header.background</image></param>
+				<param name="textAlignment"><enum type="alignment">CENTER</enum></param>
+			</theme>
+			<theme name="mail-attachment-more" ref="label">
+				<param name="font"><font>med-noshadow-12-white</font></param>
+				<param name="background"><image>ui-header.background</image></param>
+				<param name="border"><border>2</border></param>
+				<param name="textAlignment"><enum type="alignment">CENTER</enum></param>
+			</theme>
+			<theme name="mail-footer-status" ref="label">
+				<param name="font"><font>med-noshadow-12-white</font></param>
+				<param name="background"><image>none</image></param>
+				<param name="textAlignment"><enum type="alignment">LEFT</enum></param>
+			</theme>
+			<theme name="mail-footer-warning" ref="label">
+				<param name="font"><font>med-noshadow-12-white</font></param>
+				<param name="background"><image>none</image></param>
+				<param name="textAlignment"><enum type="alignment">LEFT</enum></param>
+			</theme>
+			<theme name="mail-clear-link" ref="button">
+				<param name="background"><image>none</image></param>
+				<param name="font"><font>med-noshadow-14-white</font></param>
+				<param name="border"><border>6</border></param>
+			</theme>
+			
+			<theme name="button-small2" ref="button" overwrite="true"/>
+			<!-- Value -->
+			<theme name="label" ref="label" overwrite="true">
+				<param name="font"><font>med-noshadow-18-white</font></param>
+			</theme>
+			<!-- Value -->
+      <theme name="label-value" ref="label" overwrite="true">
+        <param name="background"><image>none</image></param>
+        <param name="minHeight"><int>50</int></param>
+        <param name="textAlignment"><enum type="alignment">left</enum></param>
+        <param name="border"><border>6</border></param>
+      </theme>
+			<!-- Titles -->
+      <theme name="label-field" ref="label-value" overwrite="true">
+        <param name="minWidth"><int>250</int></param>
+        <param name="background"><image>ui-header.background</image></param>
+        <param name="textAlignment"><enum type="alignment">CENTER</enum></param>
+        <param name="border"><border>6</border></param>
+      </theme>
+      <theme name="label-title" ref="label-value" overwrite="true">
+        <param name="background"><image>none</image></param>
+        <param name="textAlignment"><enum type="alignment">CENTER</enum></param>
+        <param name="border"><border>6</border></param>
+      </theme>
+      
+			<theme name="scrollpane" ref="scrollpane">
+				<param name="minHeight"><int>180</int></param>
+				<theme name="hscrollbar" ref="hscrollbar"/>
+				<theme name="editfield" ref="editfield" overwrite="true">
+					<param name="textAlignment"><enum type="alignment">TOPLEFT</enum></param>
+					<param name="autocompletion-height"><int>150</int></param>
+					<param name="minWidth"><int>300</int></param>
+					<param name="minHeight"><int>180</int></param>
+				</theme>
+			</theme>
+			<theme name="valueadjuster" ref="mobile-valueadjuster" overwrite="true"/>
+			<theme name="editfield" ref="editfield" overwrite="true"/>
+		</theme>
+	</theme>
+
+	<theme name="read-mail" ref="mail-inner" overwrite="true">
+    <param name="border"><border>0,0,0,0</border></param>
+    <theme name="mail-delete-button" ref="button" overwrite="true">
+      <param name="font"><font>med-noshadow-18-darkred</font></param>
+    </theme>
+    <theme name="editfield" ref="editfield">
+      <param name="background"><image>ui-header.background</image></param>
+      <param name="font"><font>med-noshadow-18-white</font></param>
+      <theme name="renderer" ref="renderer">
+        <param name="border"><border>4,5</border></param>
+        <param name="textAlignment"><enum type="alignment">LEFT</enum></param>
+        <param name="font"><font>med-noshadow-18-white</font></param>
+      </theme>
+    </theme>
+    <theme name="body-editfield" ref="editfield"/>
+    <theme name="button-small2" ref="button" allowWildcard="true"/>
+    <theme name="item-slot" ref="-defaults">
+      <param name="background"><image>ui-inputbox.background</image></param>
+      <param name="border"><border>6</border></param>
+      <param name="font"><font>med-shadow-18-white</font></param>
+    </theme>
+    <theme name="monster-slot" ref="-defaults">
+      <param name="background"><image>ui-inputbox.background</image></param>
+      <!--        <param name="border"><border>6</border></param>-->
+      <param name="font"><font>med-noshadow-18-white</font></param>
+
+      <theme name="label-dark" ref="label" allowWildcard="true">
+        <param name="font"><font>med-shadow-18-white</font></param>
+        <param name="textAlignment"><enum type="alignment">CENTER</enum></param>
+      </theme>
+    </theme>
+    <theme name="button" ref="button" overwrite="true">
+      <param name="font"><font>med-noshadow-18-white</font></param>
+    </theme>
+    <!-- Value -->
+    <theme name="label-value" ref="label" allowWildcard="true">
+      <param name="background"><image>ui-inputbox.background</image></param>
+      <param name="textAlignment"><enum type="alignment">left</enum></param>
+      <param name="border"><border>6</border></param>
+      <param name="font"><font>med-noshadow-18-white</font></param>
+    </theme>
+    <theme name="label-value-small" ref="label" allowWildcard="true">
+      <param name="background"><image>ui-inputbox.background</image></param>
+      <param name="textAlignment"><enum type="alignment">left</enum></param>
+      <param name="border"><border>6</border></param>
+      <param name="font"><font>med-noshadow-18-white</font></param>
+    </theme>
+    <theme name="label-title" ref="label-value" allowWildcard="true">
+      <param name="background"><image>ui-header.background</image></param>
+      <param name="textAlignment"><enum type="alignment">CENTER</enum></param>
+    </theme>
+    <theme name="label-title-small" ref="label-value-small" allowWildcard="true">
+      <param name="background"><image>ui-header.background</image></param>
+      <param name="textAlignment"><enum type="alignment">CENTER</enum></param>
+    </theme>
+    <theme name="mm-reward-slot" ref="-defaults">
+      <param name="background"><image>ui-inputbox.background</image></param>
+      <theme name="label-value-medium" ref="label-value">
+        <param name="background"><image>none</image></param>
+        <param name="border"><border>6</border></param>
+        <param name="font"><font>med-noshadow-18-white</font></param>
+        <param name="textAlignment"><enum type="alignment">left</enum></param>
+        <!-- Don't know, don't care, works for now -->
+        <param name="maxWidth"><int>5000</int></param>
+      </theme>
+    </theme>
+    <theme name="spritelabel" ref="-defaults" allowWildcard="true"/>
+  </theme>
+
+	<theme name="write-mail" ref="mail-inner" overwrite="true">
+		<param name="minWidth"><int>800</int></param>
+		<param name="minHeight"><int>420</int></param>
+		<theme name="dialoglayout" ref="dialoglayout">
+      <param name="unreadRowBackground"><image>none</image></param>
+      <param name="contentRowBackground"><image>none</image></param>
+
+      <theme name="editfield" ref="editfield" overwrite="true">
+        <param name="minWidth">
+          <int>300</int>
+        </param>
+        <theme name="renderer" ref="-input">
+          <param name="font">
+            <font>med-noshadow-18-white</font>
+          </param>
+          <param name="border">
+            <border>0,5</border>
+          </param>
+          <param name="textAlignment">
+            <enum type="alignment">TOPLEFT</enum>
+          </param>
+        </theme>
+      </theme>
+      <theme name="scrollpane" ref="scrollpane">
+        <theme name="editfield" ref="editfield" overwrite="true">
+          <param name="minWidth">
+            <int>300</int>
+          </param>
+          <theme name="renderer" ref="-input">
+            <param name="font">
+              <font>med-noshadow-18-white</font>
+            </param>
+            <param name="border">
+              <border>0,5</border>
+            </param>
+            <param name="textAlignment">
+              <enum type="alignment">TOPLEFT</enum>
+            </param>
+          </theme>
+        </theme>
+      </theme>
+    </theme>
+	</theme>
+</themes>

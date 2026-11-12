@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+	<!-- instance window -->
+	<theme name="instance-window" ref="base-frame">
+		<param name="fadeDurationShow"><int>200</int></param>
+		<param name="fadeDurationHide"><int>200</int></param>
+    <param name="border"><border>35,8,8,8</border></param>
+	</theme>
+
+	<theme name="instance-table" ref="table" allowWildcard="true">
+		<param name="columnWidths">
+			<map>
+				<param name="1"><int>font.EM * 8</int></param>
+
+			</map>
+		</param>
+		<theme name="box-layout-row" ref="-defaults" allowWildcard="true">
+			<param name="background"><image>ui-table-row.background</image></param>
+			<param name="border"><border>0</border></param>
+			<param name="spacing"><int>30</int></param>
+			<param name="alignment"><enum type="alignment">CENTER</enum></param>
+			<theme name="label" ref="label">
+				<param name="border"><border>0,0</border></param>
+			</theme>
+		</theme>
+	</theme>
+</themes>
