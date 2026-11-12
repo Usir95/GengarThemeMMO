@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <themes>
   <fontDef name="trainer-name" filename="../../data/themes/default/res/fonts/NotoSans-SemiCondensedBlack.ttf" color="#2A1846" size="15" incremental="false" characters="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789_-" renderer="text"/>
+  <fontDef name="gengar-title" filename="../gengar-mobile/res/fonts/Creepster-Regular.ttf" color="#F2E6FF" size="17" hinting="AutoMedium" shadow_color="#AA1A0F2A" shadow_offset_x="1" shadow_offset_y="1" renderer="text">
+    <fallbackFontDef filename="../../data/themes/default/res/fonts/NotoSansCJK-Bold.ttc" faces="sc,tc,jp"/>
+    <fallbackFontDef filename="../../data/themes/default/res/fonts/NotoSans-Bold.ttf"/>
+  </fontDef>
 </themes>
