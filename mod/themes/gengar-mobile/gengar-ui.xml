@@ -150,7 +150,4 @@
       </theme>
     </theme>
   </theme>
-  <theme name="monsterframe-happiness-progressbar" ref="monsterframe-happiness-progressbar">
-    <param name="progressImage"><image>mobile.progress.pink.progressImage</image></param>
-  </theme>
 </themes>

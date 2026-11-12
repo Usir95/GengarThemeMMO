@@ -68,5 +68,4 @@
 
   <include filename="../gengar/gengar-ui.xml"/>
   <include filename="gengar-ui.xml"/>
-  <include filename="ui/menus-movil.xml"/>
 </themes>
