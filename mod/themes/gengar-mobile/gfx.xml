@@ -1036,9 +1036,15 @@
     </select>
   </images>
 	<images file="res/gengar-mlist.png" filter="linear">
-		<area name="gengar-mlist.default" xywh="0,0,400,60" splitx="L80,R16" splity="T16,B16"/>
-		<area name="gengar-mlist.hover" xywh="0,64,400,60" splitx="L80,R16" splity="T16,B16"/>
-		<area name="gengar-mlist.disabled" xywh="0,128,400,60" splitx="L80,R16" splity="T16,B16"/>
+		<area name="gengar-mlist.default.b" xywh="0,0,400,60" splitx="L80,R16" splity="T16,B16" tint="main-color"/>
+		<area name="gengar-mlist.default.f" xywh="0,192,400,60" splitx="L80,R16" splity="T16,B16"/>
+		<composed name="gengar-mlist.default"><alias ref="gengar-mlist.default.b"/><alias ref="gengar-mlist.default.f"/></composed>
+		<area name="gengar-mlist.hover.b" xywh="0,64,400,60" splitx="L80,R16" splity="T16,B16" tint="main-color"/>
+		<area name="gengar-mlist.hover.f" xywh="0,256,400,60" splitx="L80,R16" splity="T16,B16"/>
+		<composed name="gengar-mlist.hover"><alias ref="gengar-mlist.hover.b"/><alias ref="gengar-mlist.hover.f"/></composed>
+		<area name="gengar-mlist.disabled.b" xywh="0,128,400,60" splitx="L80,R16" splity="T16,B16" tint="main-color"/>
+		<area name="gengar-mlist.disabled.f" xywh="0,320,400,60" splitx="L80,R16" splity="T16,B16"/>
+		<composed name="gengar-mlist.disabled"><alias ref="gengar-mlist.disabled.b"/><alias ref="gengar-mlist.disabled.f"/></composed>
 		<select name="gengar-mlist.background">
 			<alias ref="gengar-mlist.disabled" if="disabled"/>
 			<alias ref="gengar-mlist.hover" if="hover | keyboardFocus | selected | pressed"/>

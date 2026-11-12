@@ -7,14 +7,30 @@
     <area name="gengar-select-bg" xywh="*"/>
   </images>
   <images file="res/gengar-login.png" filter="nearest">
-    <area name="gengar-frame.background" xywh="0,0,48,48" splitx="L8,R8" splity="T31,B8"/>
-    <area name="gengar-button.default" xywh="48,0,24,24" splitx="L5,R5" splity="T5,B5"/>
-    <area name="gengar-button.hover" xywh="72,0,24,24" splitx="L5,R5" splity="T5,B5"/>
-    <area name="gengar-button.pressed" xywh="96,0,24,24" splitx="L5,R5" splity="T5,B5"/>
-    <area name="gengar-button.disabled" xywh="48,24,24,24" splitx="L5,R5" splity="T5,B5"/>
-    <area name="gengar-button.focus" xywh="72,24,24,24" splitx="L5,R5" splity="T5,B5"/>
-    <area name="gengar-input.default" xywh="96,24,16,16" splitx="L4,R4" splity="T4,B4"/>
-    <area name="gengar-input.selected" xywh="112,24,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <area name="gengar-frame.background.b" xywh="0,0,48,48" splitx="L8,R8" splity="T31,B8" tint="main-color"/>
+    <area name="gengar-frame.background.f" xywh="0,48,48,48" splitx="L8,R8" splity="T31,B8"/>
+    <composed name="gengar-frame.background"><alias ref="gengar-frame.background.b"/><alias ref="gengar-frame.background.f"/></composed>
+    <area name="gengar-button.default.b" xywh="48,0,24,24" splitx="L5,R5" splity="T5,B5" tint="main-color"/>
+    <area name="gengar-button.default.f" xywh="48,48,24,24" splitx="L5,R5" splity="T5,B5"/>
+    <composed name="gengar-button.default"><alias ref="gengar-button.default.b"/><alias ref="gengar-button.default.f"/></composed>
+    <area name="gengar-button.hover.b" xywh="72,0,24,24" splitx="L5,R5" splity="T5,B5" tint="main-color"/>
+    <area name="gengar-button.hover.f" xywh="72,48,24,24" splitx="L5,R5" splity="T5,B5"/>
+    <composed name="gengar-button.hover"><alias ref="gengar-button.hover.b"/><alias ref="gengar-button.hover.f"/></composed>
+    <area name="gengar-button.pressed.b" xywh="96,0,24,24" splitx="L5,R5" splity="T5,B5" tint="main-color"/>
+    <area name="gengar-button.pressed.f" xywh="96,48,24,24" splitx="L5,R5" splity="T5,B5"/>
+    <composed name="gengar-button.pressed"><alias ref="gengar-button.pressed.b"/><alias ref="gengar-button.pressed.f"/></composed>
+    <area name="gengar-button.disabled.b" xywh="48,24,24,24" splitx="L5,R5" splity="T5,B5" tint="main-color"/>
+    <area name="gengar-button.disabled.f" xywh="48,72,24,24" splitx="L5,R5" splity="T5,B5"/>
+    <composed name="gengar-button.disabled"><alias ref="gengar-button.disabled.b"/><alias ref="gengar-button.disabled.f"/></composed>
+    <area name="gengar-button.focus.b" xywh="72,24,24,24" splitx="L5,R5" splity="T5,B5" tint="main-color"/>
+    <area name="gengar-button.focus.f" xywh="72,72,24,24" splitx="L5,R5" splity="T5,B5"/>
+    <composed name="gengar-button.focus"><alias ref="gengar-button.focus.b"/><alias ref="gengar-button.focus.f"/></composed>
+    <area name="gengar-input.default.b" xywh="96,24,16,16" splitx="L4,R4" splity="T4,B4" tint="main-color"/>
+    <area name="gengar-input.default.f" xywh="96,72,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <composed name="gengar-input.default"><alias ref="gengar-input.default.b"/><alias ref="gengar-input.default.f"/></composed>
+    <area name="gengar-input.selected.b" xywh="112,24,16,16" splitx="L4,R4" splity="T4,B4" tint="main-color"/>
+    <area name="gengar-input.selected.f" xywh="112,72,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <composed name="gengar-input.selected"><alias ref="gengar-input.selected.b"/><alias ref="gengar-input.selected.f"/></composed>
     <select name="gengar-button.background">
       <alias ref="gengar-button.disabled" if="disabled"/>
       <alias ref="gengar-button.pressed" if="pressed"/>
@@ -29,23 +45,45 @@
     </select>
   </images>
   <images file="res/gengar-modern-bars.png" filter="linear">
-    <area name="gengar-bars.default" xywh="0,0,48,48" splitx="L12,R12" splity="T12,B12"/>
-    <area name="gengar-bars.hover" xywh="64,0,48,48" splitx="L12,R12" splity="T12,B12"/>
-    <area name="gengar-bars.selected" xywh="128,0,48,48" splitx="L12,R12" splity="T12,B12"/>
-    <area name="gengar-bars.disabled" xywh="192,0,48,48" splitx="L12,R12" splity="T12,B12"/>
-    <area name="gengar-bars.panel" xywh="0,48,48,32" splitx="L12,R12" splity="T12,B12"/>
+    <area name="gengar-bars.default.b" xywh="0,0,48,48" splitx="L12,R12" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-bars.default.f" xywh="0,80,48,48" splitx="L12,R12" splity="T12,B12"/>
+    <composed name="gengar-bars.default"><alias ref="gengar-bars.default.b"/><alias ref="gengar-bars.default.f"/></composed>
+    <area name="gengar-bars.hover.b" xywh="64,0,48,48" splitx="L12,R12" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-bars.hover.f" xywh="64,80,48,48" splitx="L12,R12" splity="T12,B12"/>
+    <composed name="gengar-bars.hover"><alias ref="gengar-bars.hover.b"/><alias ref="gengar-bars.hover.f"/></composed>
+    <area name="gengar-bars.selected.b" xywh="128,0,48,48" splitx="L12,R12" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-bars.selected.f" xywh="128,80,48,48" splitx="L12,R12" splity="T12,B12"/>
+    <composed name="gengar-bars.selected"><alias ref="gengar-bars.selected.b"/><alias ref="gengar-bars.selected.f"/></composed>
+    <area name="gengar-bars.disabled.b" xywh="192,0,48,48" splitx="L12,R12" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-bars.disabled.f" xywh="192,80,48,48" splitx="L12,R12" splity="T12,B12"/>
+    <composed name="gengar-bars.disabled"><alias ref="gengar-bars.disabled.b"/><alias ref="gengar-bars.disabled.f"/></composed>
+    <area name="gengar-bars.panel.b" xywh="0,48,48,32" splitx="L12,R12" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-bars.panel.f" xywh="0,128,48,32" splitx="L12,R12" splity="T12,B12"/>
+    <composed name="gengar-bars.panel"><alias ref="gengar-bars.panel.b"/><alias ref="gengar-bars.panel.f"/></composed>
     <select name="gengar-bars.background">
       <alias ref="gengar-bars.disabled" if="disabled"/>
       <alias ref="gengar-bars.selected" if="selected | keyboardFocus"/>
       <alias ref="gengar-bars.hover" if="hover"/>
       <alias ref="gengar-bars.default"/>
     </select>
-    <area name="gengar-bars.hp-green.background" xywh="64,54,32,2" splitx="L3,R3"/>
-    <area name="gengar-bars.hp-green.progressImage" xywh="104,54,32,2" splitx="L3,R3"/>
-    <area name="gengar-bars.hp-orange.background" xywh="64,54,32,2" splitx="L3,R3"/>
-    <area name="gengar-bars.hp-orange.progressImage" xywh="144,54,32,2" splitx="L3,R3"/>
-    <area name="gengar-bars.hp-red.background" xywh="64,54,32,2" splitx="L3,R3"/>
-    <area name="gengar-bars.hp-red.progressImage" xywh="184,54,32,2" splitx="L3,R3"/>
+    <area name="gengar-bars.hp-green.background.b" xywh="64,54,32,2" splitx="L3,R3" tint="main-color"/>
+    <area name="gengar-bars.hp-green.background.f" xywh="64,134,32,2" splitx="L3,R3"/>
+    <composed name="gengar-bars.hp-green.background"><alias ref="gengar-bars.hp-green.background.b"/><alias ref="gengar-bars.hp-green.background.f"/></composed>
+    <area name="gengar-bars.hp-green.progressImage.b" xywh="104,54,32,2" splitx="L3,R3" tint="main-color"/>
+    <area name="gengar-bars.hp-green.progressImage.f" xywh="104,134,32,2" splitx="L3,R3"/>
+    <composed name="gengar-bars.hp-green.progressImage"><alias ref="gengar-bars.hp-green.progressImage.b"/><alias ref="gengar-bars.hp-green.progressImage.f"/></composed>
+    <area name="gengar-bars.hp-orange.background.b" xywh="64,54,32,2" splitx="L3,R3" tint="main-color"/>
+    <area name="gengar-bars.hp-orange.background.f" xywh="64,134,32,2" splitx="L3,R3"/>
+    <composed name="gengar-bars.hp-orange.background"><alias ref="gengar-bars.hp-orange.background.b"/><alias ref="gengar-bars.hp-orange.background.f"/></composed>
+    <area name="gengar-bars.hp-orange.progressImage.b" xywh="144,54,32,2" splitx="L3,R3" tint="main-color"/>
+    <area name="gengar-bars.hp-orange.progressImage.f" xywh="144,134,32,2" splitx="L3,R3"/>
+    <composed name="gengar-bars.hp-orange.progressImage"><alias ref="gengar-bars.hp-orange.progressImage.b"/><alias ref="gengar-bars.hp-orange.progressImage.f"/></composed>
+    <area name="gengar-bars.hp-red.background.b" xywh="64,54,32,2" splitx="L3,R3" tint="main-color"/>
+    <area name="gengar-bars.hp-red.background.f" xywh="64,134,32,2" splitx="L3,R3"/>
+    <composed name="gengar-bars.hp-red.background"><alias ref="gengar-bars.hp-red.background.b"/><alias ref="gengar-bars.hp-red.background.f"/></composed>
+    <area name="gengar-bars.hp-red.progressImage.b" xywh="184,54,32,2" splitx="L3,R3" tint="main-color"/>
+    <area name="gengar-bars.hp-red.progressImage.f" xywh="184,134,32,2" splitx="L3,R3"/>
+    <composed name="gengar-bars.hp-red.progressImage"><alias ref="gengar-bars.hp-red.progressImage.b"/><alias ref="gengar-bars.hp-red.progressImage.f"/></composed>
   </images>
   <images file="res/gengar-panel-pattern.png" filter="linear">
     <area name="gengar-panel.pattern" xywh="0,0,192,192" repeatX="true" repeatY="true"/>
@@ -119,46 +157,76 @@
     </select>
   </images>
   <images file="res/gengar-battle-ui.png" filter="linear">
-    <area name="gengar-cmd.default" xywh="0,0,209,52" splitx="L14,R14" splity="T12,B12"/>
-    <area name="gengar-cmd.hover" xywh="0,54,209,52" splitx="L14,R14" splity="T12,B12"/>
-    <area name="gengar-cmd.disabled" xywh="0,108,209,52" splitx="L14,R14" splity="T12,B12"/>
+    <area name="gengar-cmd.default.b" xywh="0,0,209,52" splitx="L14,R14" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-cmd.default.f" xywh="0,256,209,52" splitx="L14,R14" splity="T12,B12"/>
+    <composed name="gengar-cmd.default"><alias ref="gengar-cmd.default.b"/><alias ref="gengar-cmd.default.f"/></composed>
+    <area name="gengar-cmd.hover.b" xywh="0,54,209,52" splitx="L14,R14" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-cmd.hover.f" xywh="0,310,209,52" splitx="L14,R14" splity="T12,B12"/>
+    <composed name="gengar-cmd.hover"><alias ref="gengar-cmd.hover.b"/><alias ref="gengar-cmd.hover.f"/></composed>
+    <area name="gengar-cmd.disabled.b" xywh="0,108,209,52" splitx="L14,R14" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-cmd.disabled.f" xywh="0,364,209,52" splitx="L14,R14" splity="T12,B12"/>
+    <composed name="gengar-cmd.disabled"><alias ref="gengar-cmd.disabled.b"/><alias ref="gengar-cmd.disabled.f"/></composed>
     <select name="gengar-cmd.background">
       <alias ref="gengar-cmd.disabled" if="disabled"/>
       <alias ref="gengar-cmd.hover" if="hover | keyboardFocus | selected | targeted | pressed"/>
       <alias ref="gengar-cmd.default"/>
     </select>
-    <area name="gengar-ico-fight.dim" xywh="214,0,40,40"/>
-    <area name="gengar-ico-fight.lit" xywh="214,42,40,40"/>
+    <area name="gengar-ico-fight.dim.b" xywh="214,0,40,40" tint="main-color"/>
+    <area name="gengar-ico-fight.dim.f" xywh="214,256,40,40"/>
+    <composed name="gengar-ico-fight.dim"><alias ref="gengar-ico-fight.dim.b"/><alias ref="gengar-ico-fight.dim.f"/></composed>
+    <area name="gengar-ico-fight.lit.b" xywh="214,42,40,40" tint="main-color"/>
+    <area name="gengar-ico-fight.lit.f" xywh="214,298,40,40"/>
+    <composed name="gengar-ico-fight.lit"><alias ref="gengar-ico-fight.lit.b"/><alias ref="gengar-ico-fight.lit.f"/></composed>
     <select name="gengar-cmd-fight.background">
       <composed if="disabled"><alias ref="gengar-cmd.disabled"/><alias ref="gengar-ico-fight.dim" center="true" inset="0,140,0,8"/></composed>
       <composed if="hover | keyboardFocus | selected | targeted | pressed"><alias ref="gengar-cmd.hover"/><alias ref="gengar-ico-fight.lit" center="true" inset="0,140,0,8"/></composed>
       <composed><alias ref="gengar-cmd.default"/><alias ref="gengar-ico-fight.dim" center="true" inset="0,140,0,8"/></composed>
     </select>
-    <area name="gengar-ico-bag.dim" xywh="256,0,40,40"/>
-    <area name="gengar-ico-bag.lit" xywh="256,42,40,40"/>
+    <area name="gengar-ico-bag.dim.b" xywh="256,0,40,40" tint="main-color"/>
+    <area name="gengar-ico-bag.dim.f" xywh="256,256,40,40"/>
+    <composed name="gengar-ico-bag.dim"><alias ref="gengar-ico-bag.dim.b"/><alias ref="gengar-ico-bag.dim.f"/></composed>
+    <area name="gengar-ico-bag.lit.b" xywh="256,42,40,40" tint="main-color"/>
+    <area name="gengar-ico-bag.lit.f" xywh="256,298,40,40"/>
+    <composed name="gengar-ico-bag.lit"><alias ref="gengar-ico-bag.lit.b"/><alias ref="gengar-ico-bag.lit.f"/></composed>
     <select name="gengar-cmd-bag.background">
       <composed if="disabled"><alias ref="gengar-cmd.disabled"/><alias ref="gengar-ico-bag.dim" center="true" inset="0,140,0,8"/></composed>
       <composed if="hover | keyboardFocus | selected | targeted | pressed"><alias ref="gengar-cmd.hover"/><alias ref="gengar-ico-bag.lit" center="true" inset="0,140,0,8"/></composed>
       <composed><alias ref="gengar-cmd.default"/><alias ref="gengar-ico-bag.dim" center="true" inset="0,140,0,8"/></composed>
     </select>
-    <area name="gengar-ico-switch.dim" xywh="298,0,40,40"/>
-    <area name="gengar-ico-switch.lit" xywh="298,42,40,40"/>
+    <area name="gengar-ico-switch.dim.b" xywh="298,0,40,40" tint="main-color"/>
+    <area name="gengar-ico-switch.dim.f" xywh="298,256,40,40"/>
+    <composed name="gengar-ico-switch.dim"><alias ref="gengar-ico-switch.dim.b"/><alias ref="gengar-ico-switch.dim.f"/></composed>
+    <area name="gengar-ico-switch.lit.b" xywh="298,42,40,40" tint="main-color"/>
+    <area name="gengar-ico-switch.lit.f" xywh="298,298,40,40"/>
+    <composed name="gengar-ico-switch.lit"><alias ref="gengar-ico-switch.lit.b"/><alias ref="gengar-ico-switch.lit.f"/></composed>
     <select name="gengar-cmd-switch.background">
       <composed if="disabled"><alias ref="gengar-cmd.disabled"/><alias ref="gengar-ico-switch.dim" center="true" inset="0,140,0,8"/></composed>
       <composed if="hover | keyboardFocus | selected | targeted | pressed"><alias ref="gengar-cmd.hover"/><alias ref="gengar-ico-switch.lit" center="true" inset="0,140,0,8"/></composed>
       <composed><alias ref="gengar-cmd.default"/><alias ref="gengar-ico-switch.dim" center="true" inset="0,140,0,8"/></composed>
     </select>
-    <area name="gengar-ico-run.dim" xywh="340,0,40,40"/>
-    <area name="gengar-ico-run.lit" xywh="340,42,40,40"/>
+    <area name="gengar-ico-run.dim.b" xywh="340,0,40,40" tint="main-color"/>
+    <area name="gengar-ico-run.dim.f" xywh="340,256,40,40"/>
+    <composed name="gengar-ico-run.dim"><alias ref="gengar-ico-run.dim.b"/><alias ref="gengar-ico-run.dim.f"/></composed>
+    <area name="gengar-ico-run.lit.b" xywh="340,42,40,40" tint="main-color"/>
+    <area name="gengar-ico-run.lit.f" xywh="340,298,40,40"/>
+    <composed name="gengar-ico-run.lit"><alias ref="gengar-ico-run.lit.b"/><alias ref="gengar-ico-run.lit.f"/></composed>
     <select name="gengar-cmd-run.background">
       <composed if="disabled"><alias ref="gengar-cmd.disabled"/><alias ref="gengar-ico-run.dim" center="true" inset="0,140,0,8"/></composed>
       <composed if="hover | keyboardFocus | selected | targeted | pressed"><alias ref="gengar-cmd.hover"/><alias ref="gengar-ico-run.lit" center="true" inset="0,140,0,8"/></composed>
       <composed><alias ref="gengar-cmd.default"/><alias ref="gengar-ico-run.dim" center="true" inset="0,140,0,8"/></composed>
     </select>
-    <area name="gengar-bpanel" xywh="214,90,48,48" splitx="L12,R12" splity="T12,B12"/>
-    <area name="gengar-confirm.default" xywh="0,164,120,30" splitx="L32,R8" splity="T8,B8"/>
-    <area name="gengar-confirm.hover" xywh="0,195,120,30" splitx="L32,R8" splity="T8,B8"/>
-    <area name="gengar-confirm.disabled" xywh="0,226,120,30" splitx="L32,R8" splity="T8,B8"/>
+    <area name="gengar-bpanel.b" xywh="214,90,48,48" splitx="L12,R12" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-bpanel.f" xywh="214,346,48,48" splitx="L12,R12" splity="T12,B12"/>
+    <composed name="gengar-bpanel"><alias ref="gengar-bpanel.b"/><alias ref="gengar-bpanel.f"/></composed>
+    <area name="gengar-confirm.default.b" xywh="0,164,120,30" splitx="L32,R8" splity="T8,B8" tint="main-color"/>
+    <area name="gengar-confirm.default.f" xywh="0,420,120,30" splitx="L32,R8" splity="T8,B8"/>
+    <composed name="gengar-confirm.default"><alias ref="gengar-confirm.default.b"/><alias ref="gengar-confirm.default.f"/></composed>
+    <area name="gengar-confirm.hover.b" xywh="0,195,120,30" splitx="L32,R8" splity="T8,B8" tint="main-color"/>
+    <area name="gengar-confirm.hover.f" xywh="0,451,120,30" splitx="L32,R8" splity="T8,B8"/>
+    <composed name="gengar-confirm.hover"><alias ref="gengar-confirm.hover.b"/><alias ref="gengar-confirm.hover.f"/></composed>
+    <area name="gengar-confirm.disabled.b" xywh="0,226,120,30" splitx="L32,R8" splity="T8,B8" tint="main-color"/>
+    <area name="gengar-confirm.disabled.f" xywh="0,482,120,30" splitx="L32,R8" splity="T8,B8"/>
+    <composed name="gengar-confirm.disabled"><alias ref="gengar-confirm.disabled.b"/><alias ref="gengar-confirm.disabled.f"/></composed>
     <select name="gengar-confirm.background">
       <alias ref="gengar-confirm.disabled" if="disabled"/>
       <alias ref="gengar-confirm.hover" if="hover | keyboardFocus | selected | pressed"/>

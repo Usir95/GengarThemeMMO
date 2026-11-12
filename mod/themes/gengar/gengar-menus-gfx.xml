@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <themes>
   <images file="res/gengar-menus.png" filter="linear">
-    <area name="gm-header.default" xywh="0,0,48,28" splitx="L6,R6" splity="T6,B6"/>
-    <area name="gm-header.hover" xywh="48,0,48,28" splitx="L6,R6" splity="T6,B6"/>
-    <area name="gm-header.selected" xywh="96,0,48,28" splitx="L6,R6" splity="T6,B6"/>
+    <area name="gm-header.default.b" xywh="0,0,48,28" splitx="L6,R6" splity="T6,B6" tint="main-color"/>
+    <area name="gm-header.default.f" xywh="0,128,48,28" splitx="L6,R6" splity="T6,B6"/>
+    <composed name="gm-header.default"><alias ref="gm-header.default.b"/><alias ref="gm-header.default.f"/></composed>
+    <area name="gm-header.hover.b" xywh="48,0,48,28" splitx="L6,R6" splity="T6,B6" tint="main-color"/>
+    <area name="gm-header.hover.f" xywh="48,128,48,28" splitx="L6,R6" splity="T6,B6"/>
+    <composed name="gm-header.hover"><alias ref="gm-header.hover.b"/><alias ref="gm-header.hover.f"/></composed>
+    <area name="gm-header.selected.b" xywh="96,0,48,28" splitx="L6,R6" splity="T6,B6" tint="main-color"/>
+    <area name="gm-header.selected.f" xywh="96,128,48,28" splitx="L6,R6" splity="T6,B6"/>
+    <composed name="gm-header.selected"><alias ref="gm-header.selected.b"/><alias ref="gm-header.selected.f"/></composed>
     <select name="gm-header.background">
       <alias ref="gm-header.selected" if="selected"/>
       <alias ref="gm-header.hover" if="hover"/>
@@ -22,25 +28,43 @@
       <alias ref="gm-header.hover" if="hover"/>
       <alias ref="gm-header.default"/>
     </select>
-    <area name="gm-cell.default" xywh="144,0,16,16" splitx="L4,R4" splity="T4,B4"/>
-    <area name="gm-cell.hover" xywh="160,0,16,16" splitx="L4,R4" splity="T4,B4"/>
-    <area name="gm-cell.selected" xywh="176,0,16,16" splitx="L4,R4" splity="T4,B4"/>
-    <area name="gm-cell.disabled" xywh="192,0,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <area name="gm-cell.default.b" xywh="144,0,16,16" splitx="L4,R4" splity="T4,B4" tint="main-color"/>
+    <area name="gm-cell.default.f" xywh="144,128,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <composed name="gm-cell.default"><alias ref="gm-cell.default.b"/><alias ref="gm-cell.default.f"/></composed>
+    <area name="gm-cell.hover.b" xywh="160,0,16,16" splitx="L4,R4" splity="T4,B4" tint="main-color"/>
+    <area name="gm-cell.hover.f" xywh="160,128,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <composed name="gm-cell.hover"><alias ref="gm-cell.hover.b"/><alias ref="gm-cell.hover.f"/></composed>
+    <area name="gm-cell.selected.b" xywh="176,0,16,16" splitx="L4,R4" splity="T4,B4" tint="main-color"/>
+    <area name="gm-cell.selected.f" xywh="176,128,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <composed name="gm-cell.selected"><alias ref="gm-cell.selected.b"/><alias ref="gm-cell.selected.f"/></composed>
+    <area name="gm-cell.disabled.b" xywh="192,0,16,16" splitx="L4,R4" splity="T4,B4" tint="main-color"/>
+    <area name="gm-cell.disabled.f" xywh="192,128,16,16" splitx="L4,R4" splity="T4,B4"/>
+    <composed name="gm-cell.disabled"><alias ref="gm-cell.disabled.b"/><alias ref="gm-cell.disabled.f"/></composed>
     <select name="gm-cell.background">
       <alias ref="gm-cell.disabled" if="disabled"/>
       <alias ref="gm-cell.selected" if="selected | keyboardFocus"/>
       <alias ref="gm-cell.hover" if="hover"/>
       <alias ref="gm-cell.default"/>
     </select>
-    <area name="gm-tab-v.default" xywh="0,32,64,28" splitx="L8,R6" splity="T6,B6"/>
-    <area name="gm-tab-v.hover" xywh="64,32,64,28" splitx="L8,R6" splity="T6,B6"/>
-    <area name="gm-tab-v.selected" xywh="128,32,64,28" splitx="L8,R6" splity="T6,B6"/>
+    <area name="gm-tab-v.default.b" xywh="0,32,64,28" splitx="L8,R6" splity="T6,B6" tint="main-color"/>
+    <area name="gm-tab-v.default.f" xywh="0,160,64,28" splitx="L8,R6" splity="T6,B6"/>
+    <composed name="gm-tab-v.default"><alias ref="gm-tab-v.default.b"/><alias ref="gm-tab-v.default.f"/></composed>
+    <area name="gm-tab-v.hover.b" xywh="64,32,64,28" splitx="L8,R6" splity="T6,B6" tint="main-color"/>
+    <area name="gm-tab-v.hover.f" xywh="64,160,64,28" splitx="L8,R6" splity="T6,B6"/>
+    <composed name="gm-tab-v.hover"><alias ref="gm-tab-v.hover.b"/><alias ref="gm-tab-v.hover.f"/></composed>
+    <area name="gm-tab-v.selected.b" xywh="128,32,64,28" splitx="L8,R6" splity="T6,B6" tint="main-color"/>
+    <area name="gm-tab-v.selected.f" xywh="128,160,64,28" splitx="L8,R6" splity="T6,B6"/>
+    <composed name="gm-tab-v.selected"><alias ref="gm-tab-v.selected.b"/><alias ref="gm-tab-v.selected.f"/></composed>
     <select name="gm-tab-v.background">
       <alias ref="gm-tab-v.selected" if="selected"/>
       <alias ref="gm-tab-v.hover" if="hover"/>
       <alias ref="gm-tab-v.default"/>
     </select>
-    <area name="gm-card.background" xywh="192,32,48,48" splitx="L10,R10" splity="T10,B10"/>
-    <area name="gm-panel.background" xywh="0,64,48,48" splitx="L8,R8" splity="T8,B8"/>
+    <area name="gm-card.background.b" xywh="192,32,48,48" splitx="L10,R10" splity="T10,B10" tint="main-color"/>
+    <area name="gm-card.background.f" xywh="192,160,48,48" splitx="L10,R10" splity="T10,B10"/>
+    <composed name="gm-card.background"><alias ref="gm-card.background.b"/><alias ref="gm-card.background.f"/></composed>
+    <area name="gm-panel.background.b" xywh="0,64,48,48" splitx="L8,R8" splity="T8,B8" tint="main-color"/>
+    <area name="gm-panel.background.f" xywh="0,192,48,48" splitx="L8,R8" splity="T8,B8"/>
+    <composed name="gm-panel.background"><alias ref="gm-panel.background.b"/><alias ref="gm-panel.background.f"/></composed>
   </images>
 </themes>
