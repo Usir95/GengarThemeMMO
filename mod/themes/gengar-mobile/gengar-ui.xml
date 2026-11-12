@@ -150,4 +150,21 @@
       </theme>
     </theme>
   </theme>
+  <theme name="monsterframe-happiness-progressbar" ref="-defaults" allowWildcard="true">
+    <param name="progressImage">
+      <image>mobile.progress.pink.progressImage</image>
+    </param>
+    <param name="background">
+      <image>mobile.progress.background</image>
+    </param>
+    <param name="overlay">
+      <image>mobile.progress.overlay</image>
+    </param>
+    <param name="border">
+      <border>0,0</border>
+    </param>
+    <param name="minWidth">
+      <int>50</int>
+    </param>
+  </theme>
 </themes>
