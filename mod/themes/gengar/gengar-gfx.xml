@@ -119,46 +119,76 @@
     </select>
   </images>
   <images file="res/gengar-battle-ui.png" filter="linear">
-    <area name="gengar-cmd.default" xywh="0,0,209,52" splitx="L14,R14" splity="T12,B12"/>
-    <area name="gengar-cmd.hover" xywh="0,54,209,52" splitx="L14,R14" splity="T12,B12"/>
-    <area name="gengar-cmd.disabled" xywh="0,108,209,52" splitx="L14,R14" splity="T12,B12"/>
+    <area name="gengar-cmd.default.b" xywh="0,0,209,52" splitx="L14,R14" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-cmd.default.f" xywh="0,256,209,52" splitx="L14,R14" splity="T12,B12"/>
+    <composed name="gengar-cmd.default"><alias ref="gengar-cmd.default.b"/><alias ref="gengar-cmd.default.f"/></composed>
+    <area name="gengar-cmd.hover.b" xywh="0,54,209,52" splitx="L14,R14" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-cmd.hover.f" xywh="0,310,209,52" splitx="L14,R14" splity="T12,B12"/>
+    <composed name="gengar-cmd.hover"><alias ref="gengar-cmd.hover.b"/><alias ref="gengar-cmd.hover.f"/></composed>
+    <area name="gengar-cmd.disabled.b" xywh="0,108,209,52" splitx="L14,R14" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-cmd.disabled.f" xywh="0,364,209,52" splitx="L14,R14" splity="T12,B12"/>
+    <composed name="gengar-cmd.disabled"><alias ref="gengar-cmd.disabled.b"/><alias ref="gengar-cmd.disabled.f"/></composed>
     <select name="gengar-cmd.background">
       <alias ref="gengar-cmd.disabled" if="disabled"/>
       <alias ref="gengar-cmd.hover" if="hover | keyboardFocus | selected | targeted | pressed"/>
       <alias ref="gengar-cmd.default"/>
     </select>
-    <area name="gengar-ico-fight.dim" xywh="214,0,40,40"/>
-    <area name="gengar-ico-fight.lit" xywh="214,42,40,40"/>
+    <area name="gengar-ico-fight.dim.b" xywh="214,0,40,40" tint="main-color"/>
+    <area name="gengar-ico-fight.dim.f" xywh="214,256,40,40"/>
+    <composed name="gengar-ico-fight.dim"><alias ref="gengar-ico-fight.dim.b"/><alias ref="gengar-ico-fight.dim.f"/></composed>
+    <area name="gengar-ico-fight.lit.b" xywh="214,42,40,40" tint="main-color"/>
+    <area name="gengar-ico-fight.lit.f" xywh="214,298,40,40"/>
+    <composed name="gengar-ico-fight.lit"><alias ref="gengar-ico-fight.lit.b"/><alias ref="gengar-ico-fight.lit.f"/></composed>
     <select name="gengar-cmd-fight.background">
       <composed if="disabled"><alias ref="gengar-cmd.disabled"/><alias ref="gengar-ico-fight.dim" center="true" inset="0,140,0,8"/></composed>
       <composed if="hover | keyboardFocus | selected | targeted | pressed"><alias ref="gengar-cmd.hover"/><alias ref="gengar-ico-fight.lit" center="true" inset="0,140,0,8"/></composed>
       <composed><alias ref="gengar-cmd.default"/><alias ref="gengar-ico-fight.dim" center="true" inset="0,140,0,8"/></composed>
     </select>
-    <area name="gengar-ico-bag.dim" xywh="256,0,40,40"/>
-    <area name="gengar-ico-bag.lit" xywh="256,42,40,40"/>
+    <area name="gengar-ico-bag.dim.b" xywh="256,0,40,40" tint="main-color"/>
+    <area name="gengar-ico-bag.dim.f" xywh="256,256,40,40"/>
+    <composed name="gengar-ico-bag.dim"><alias ref="gengar-ico-bag.dim.b"/><alias ref="gengar-ico-bag.dim.f"/></composed>
+    <area name="gengar-ico-bag.lit.b" xywh="256,42,40,40" tint="main-color"/>
+    <area name="gengar-ico-bag.lit.f" xywh="256,298,40,40"/>
+    <composed name="gengar-ico-bag.lit"><alias ref="gengar-ico-bag.lit.b"/><alias ref="gengar-ico-bag.lit.f"/></composed>
     <select name="gengar-cmd-bag.background">
       <composed if="disabled"><alias ref="gengar-cmd.disabled"/><alias ref="gengar-ico-bag.dim" center="true" inset="0,140,0,8"/></composed>
       <composed if="hover | keyboardFocus | selected | targeted | pressed"><alias ref="gengar-cmd.hover"/><alias ref="gengar-ico-bag.lit" center="true" inset="0,140,0,8"/></composed>
       <composed><alias ref="gengar-cmd.default"/><alias ref="gengar-ico-bag.dim" center="true" inset="0,140,0,8"/></composed>
     </select>
-    <area name="gengar-ico-switch.dim" xywh="298,0,40,40"/>
-    <area name="gengar-ico-switch.lit" xywh="298,42,40,40"/>
+    <area name="gengar-ico-switch.dim.b" xywh="298,0,40,40" tint="main-color"/>
+    <area name="gengar-ico-switch.dim.f" xywh="298,256,40,40"/>
+    <composed name="gengar-ico-switch.dim"><alias ref="gengar-ico-switch.dim.b"/><alias ref="gengar-ico-switch.dim.f"/></composed>
+    <area name="gengar-ico-switch.lit.b" xywh="298,42,40,40" tint="main-color"/>
+    <area name="gengar-ico-switch.lit.f" xywh="298,298,40,40"/>
+    <composed name="gengar-ico-switch.lit"><alias ref="gengar-ico-switch.lit.b"/><alias ref="gengar-ico-switch.lit.f"/></composed>
     <select name="gengar-cmd-switch.background">
       <composed if="disabled"><alias ref="gengar-cmd.disabled"/><alias ref="gengar-ico-switch.dim" center="true" inset="0,140,0,8"/></composed>
       <composed if="hover | keyboardFocus | selected | targeted | pressed"><alias ref="gengar-cmd.hover"/><alias ref="gengar-ico-switch.lit" center="true" inset="0,140,0,8"/></composed>
       <composed><alias ref="gengar-cmd.default"/><alias ref="gengar-ico-switch.dim" center="true" inset="0,140,0,8"/></composed>
     </select>
-    <area name="gengar-ico-run.dim" xywh="340,0,40,40"/>
-    <area name="gengar-ico-run.lit" xywh="340,42,40,40"/>
+    <area name="gengar-ico-run.dim.b" xywh="340,0,40,40" tint="main-color"/>
+    <area name="gengar-ico-run.dim.f" xywh="340,256,40,40"/>
+    <composed name="gengar-ico-run.dim"><alias ref="gengar-ico-run.dim.b"/><alias ref="gengar-ico-run.dim.f"/></composed>
+    <area name="gengar-ico-run.lit.b" xywh="340,42,40,40" tint="main-color"/>
+    <area name="gengar-ico-run.lit.f" xywh="340,298,40,40"/>
+    <composed name="gengar-ico-run.lit"><alias ref="gengar-ico-run.lit.b"/><alias ref="gengar-ico-run.lit.f"/></composed>
     <select name="gengar-cmd-run.background">
       <composed if="disabled"><alias ref="gengar-cmd.disabled"/><alias ref="gengar-ico-run.dim" center="true" inset="0,140,0,8"/></composed>
       <composed if="hover | keyboardFocus | selected | targeted | pressed"><alias ref="gengar-cmd.hover"/><alias ref="gengar-ico-run.lit" center="true" inset="0,140,0,8"/></composed>
       <composed><alias ref="gengar-cmd.default"/><alias ref="gengar-ico-run.dim" center="true" inset="0,140,0,8"/></composed>
     </select>
-    <area name="gengar-bpanel" xywh="214,90,48,48" splitx="L12,R12" splity="T12,B12"/>
-    <area name="gengar-confirm.default" xywh="0,164,120,30" splitx="L32,R8" splity="T8,B8"/>
-    <area name="gengar-confirm.hover" xywh="0,195,120,30" splitx="L32,R8" splity="T8,B8"/>
-    <area name="gengar-confirm.disabled" xywh="0,226,120,30" splitx="L32,R8" splity="T8,B8"/>
+    <area name="gengar-bpanel.b" xywh="214,90,48,48" splitx="L12,R12" splity="T12,B12" tint="main-color"/>
+    <area name="gengar-bpanel.f" xywh="214,346,48,48" splitx="L12,R12" splity="T12,B12"/>
+    <composed name="gengar-bpanel"><alias ref="gengar-bpanel.b"/><alias ref="gengar-bpanel.f"/></composed>
+    <area name="gengar-confirm.default.b" xywh="0,164,120,30" splitx="L32,R8" splity="T8,B8" tint="main-color"/>
+    <area name="gengar-confirm.default.f" xywh="0,420,120,30" splitx="L32,R8" splity="T8,B8"/>
+    <composed name="gengar-confirm.default"><alias ref="gengar-confirm.default.b"/><alias ref="gengar-confirm.default.f"/></composed>
+    <area name="gengar-confirm.hover.b" xywh="0,195,120,30" splitx="L32,R8" splity="T8,B8" tint="main-color"/>
+    <area name="gengar-confirm.hover.f" xywh="0,451,120,30" splitx="L32,R8" splity="T8,B8"/>
+    <composed name="gengar-confirm.hover"><alias ref="gengar-confirm.hover.b"/><alias ref="gengar-confirm.hover.f"/></composed>
+    <area name="gengar-confirm.disabled.b" xywh="0,226,120,30" splitx="L32,R8" splity="T8,B8" tint="main-color"/>
+    <area name="gengar-confirm.disabled.f" xywh="0,482,120,30" splitx="L32,R8" splity="T8,B8"/>
+    <composed name="gengar-confirm.disabled"><alias ref="gengar-confirm.disabled.b"/><alias ref="gengar-confirm.disabled.f"/></composed>
     <select name="gengar-confirm.background">
       <alias ref="gengar-confirm.disabled" if="disabled"/>
       <alias ref="gengar-confirm.hover" if="hover | keyboardFocus | selected | pressed"/>
