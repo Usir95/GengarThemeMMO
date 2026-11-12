@@ -1287,14 +1287,14 @@
 
 
     <area name="ui-contest-button.base" xywh="3,2,67,28" splitx="L5,R6" splity="T5,B11"/>
-    <area name="ui-contest-button.tint" xywh="6,5,60,19" splitx="L2,R2" splity="T3,B4" tint="#6d8498"/>
-		<area name="ui-contest-button.hover" xywh="6,5,60,19" splitx="L2,R2" splity="T3,B4" tint="#91adc6"/>
-		<area name="ui-contest-button.disabled" xywh="6,5,60,19" splitx="L2,R2" splity="T3,B4" tint="#6d8498"/>
-		<area name="ui-contest-button.pressed.background" xywh="6,35,60,19" splitx="L2,R2" splity="T4,B3" tint="#91adc6"/>
-		<area name="ui-contest-button.selected.background" xywh="6,5,60,19" splitx="L2,R2" splity="T3,B4" tint="#3d5680"/>
+    <area name="ui-contest-button.tint" xywh="6,5,60,19" splitx="L2,R2" splity="T3,B4" tint="main-theme-color"/>
+		<area name="ui-contest-button.hover" xywh="6,5,60,19" splitx="L2,R2" splity="T3,B4" tint="main-color"/>
+		<area name="ui-contest-button.disabled" xywh="6,5,60,19" splitx="L2,R2" splity="T3,B4" tint="#4A3E5A"/>
+		<area name="ui-contest-button.pressed.background" xywh="6,35,60,19" splitx="L2,R2" splity="T4,B3" tint="main-color"/>
+		<area name="ui-contest-button.selected.background" xywh="6,5,60,19" splitx="L2,R2" splity="T3,B4" tint="#B83A86"/>
 
-		<area name="ui-contest-progress.progressImage2" tint="#3f7efd" xywh="5,59,110,7" splitx="L3,R3" splity="T2,B2"/>
-		<grid name="ui-contest-progress.progressImage" weightsX="0,1,0" weightsY="1" tint="#8c98b0">
+		<area name="ui-contest-progress.progressImage2" tint="#E25CBE" xywh="5,59,110,7" splitx="L3,R3" splity="T2,B2"/>
+		<grid name="ui-contest-progress.progressImage" weightsX="0,1,0" weightsY="1" tint="#C9A8F0">
 			<area xywh="5,59,3,7"/>
 			<area xywh="9,59,1,7"/>
 			<area xywh="112,59,3,7"/>
