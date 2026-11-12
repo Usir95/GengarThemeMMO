@@ -11,6 +11,7 @@ MAP = {
     "ui-tab-vertical.*": "gm-tab-v.*",
     "ui-tab-shop.background": "gm-header.background",
     "mobile.box.dark3.50": "gm-cell.background",
+    "ui-item-picker.background": "gengar-bars.background",
 }
 
 
