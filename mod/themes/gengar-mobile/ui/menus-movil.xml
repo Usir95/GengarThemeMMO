@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+  <theme name="chat-settings-color-popup" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="dex-move-table" merge="true">
+    <theme name="columnHeader" merge="true">
+      <param name="">
+        <image>gm-th.*</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="edit-button" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-area-monsterdex" merge="true">
+    <theme name="label" merge="true">
+      <param name="background">
+        <image>gm-header.background</image>
+      </param>
+    </theme>
+    <theme name="stat-widget" merge="true">
+      <param name="background">
+        <image>gm-header.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="label-chat-settings-color" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-chat-settings-special" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-chat-settings-title" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-chat-settings-transparency" merge="true">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex" merge="true">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-long" merge="true">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-medium" merge="true">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-name" merge="true">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-small" merge="true">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-smallest" merge="true">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-title-dex-type" merge="true">
+    <param name="background">
+      <image>gm-header.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex-long" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex-medium" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex-name" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex-small" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex-smallest" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="label-value-dex2" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="monstergear-pic" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="word-ping-window" merge="true">
+    <theme name="dialoglayout" merge="true">
+      <theme name="scrollpane" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+    </theme>
+  </theme>
+</themes>

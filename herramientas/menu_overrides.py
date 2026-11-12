@@ -10,6 +10,7 @@ MAP = {
     "ui-inputbox.default": "gm-cell.default",
     "ui-tab-vertical.*": "gm-tab-v.*",
     "ui-tab-shop.background": "gm-header.background",
+    "mobile.box.dark3.50": "gm-cell.background",
 }
 
 
@@ -39,9 +40,15 @@ def build(found):
     return root
 
 
+args = sys.argv[2:]
+skip = set()
+if args and args[0] == "-x":
+    skip = set(args[1].split(","))
+    args = args[2:]
 found = {}
-for f in sys.argv[2:]:
+for f in args:
     walk(ET.parse(f).getroot(), [], found)
+found = {k: v for k, v in found.items() if k[0] not in skip}
 root = build(found)
 ET.indent(root, "  ")
 s = '<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root, encoding="unicode") + "\n"
