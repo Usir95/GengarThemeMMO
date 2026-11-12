@@ -33,7 +33,7 @@ def build(found):
         for i in range(len(path)):
             key = path[: i + 1]
             if key not in nodes:
-                nodes[key] = ET.SubElement(parent, "theme", {"name": path[i], "merge": "true"})
+                nodes[key] = ET.SubElement(parent, "theme", {"name": path[i], "ref": path[i]})
             parent = nodes[key]
         for name, img in found[path]:
             prm = ET.SubElement(parent, "param", {"name": name})

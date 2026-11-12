@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <themes>
-  <theme name="settings-panel" merge="true">
-    <theme name="dialoglayout" merge="true">
-      <theme name="tabbedpane" merge="true">
-        <theme name="tabbox" merge="true">
-          <theme name="tabbutton" merge="true">
+  <theme name="settings-panel" ref="settings-panel">
+    <theme name="dialoglayout" ref="dialoglayout">
+      <theme name="tabbedpane" ref="tabbedpane">
+        <theme name="tabbox" ref="tabbox">
+          <theme name="tabbutton" ref="tabbutton">
             <param name=""><image>gm-tab-v.*</image></param>
             <param name="minHeight"><int>28</int></param>
           </theme>
@@ -12,96 +12,96 @@
       </theme>
     </theme>
   </theme>
-  <theme name="label-settings-title" merge="true">
+  <theme name="label-settings-title" ref="label-settings-title">
     <param name="background"><image>gm-header.background</image></param>
   </theme>
-  <theme name="label-settings-title-small" merge="true">
+  <theme name="label-settings-title-small" ref="label-settings-title-small">
     <param name="background"><image>gm-header.background</image></param>
   </theme>
-  <theme name="label-settings-header" merge="true">
+  <theme name="label-settings-header" ref="label-settings-header">
     <param name="font"><font>gengar-title</font></param>
   </theme>
-  <theme name="label-settings-vai" merge="true">
-    <theme name="decButton" merge="true">
+  <theme name="label-settings-vai" ref="label-settings-vai">
+    <theme name="decButton" ref="decButton">
       <param name=""><image>gengar-button.*</image></param>
     </theme>
-    <theme name="incButton" merge="true">
+    <theme name="incButton" ref="incButton">
       <param name=""><image>gengar-button.*</image></param>
     </theme>
-    <theme name="valueDisplay" merge="true">
+    <theme name="valueDisplay" ref="valueDisplay">
       <param name=""><image>gengar-button.*</image></param>
     </theme>
   </theme>
 
-  <theme name="broker-table" merge="true">
-    <theme name="header-column" merge="true">
+  <theme name="broker-table" ref="broker-table">
+    <theme name="header-column" ref="header-column">
       <param name="background"><image>gm-header.background</image></param>
     </theme>
-    <theme name="header-column-sort-default" merge="true">
+    <theme name="header-column-sort-default" ref="header-column-sort-default">
       <param name="background"><image>gm-header.background</image></param>
     </theme>
-    <theme name="header-column-sort-desc" merge="true">
+    <theme name="header-column-sort-desc" ref="header-column-sort-desc">
       <param name="background"><image>gm-header.background</image></param>
     </theme>
-    <theme name="header-column-sort-asc" merge="true">
+    <theme name="header-column-sort-asc" ref="header-column-sort-asc">
       <param name="background"><image>gm-header.background</image></param>
     </theme>
-    <theme name="box-double" merge="true">
+    <theme name="box-double" ref="box-double">
       <param name="background"><image>gm-header.background</image></param>
     </theme>
-    <theme name="box-double-warn" merge="true">
+    <theme name="box-double-warn" ref="box-double-warn">
       <param name="background"><image>gm-header.background</image></param>
     </theme>
-    <theme name="box-double-danger" merge="true">
+    <theme name="box-double-danger" ref="box-double-danger">
       <param name="background"><image>gm-header.background</image></param>
     </theme>
-    <theme name="box-double-positive" merge="true">
+    <theme name="box-double-positive" ref="box-double-positive">
       <param name="background"><image>gm-header.background</image></param>
     </theme>
-    <theme name="market-section-header" merge="true">
+    <theme name="market-section-header" ref="market-section-header">
       <param name="font"><font>gengar-title</font></param>
     </theme>
-    <theme name="cell" merge="true">
+    <theme name="cell" ref="cell">
       <param name="background"><image>gm-cell.background</image></param>
     </theme>
-    <theme name="cell-markup" merge="true">
+    <theme name="cell-markup" ref="cell-markup">
       <param name="background"><image>gm-cell.background</image></param>
     </theme>
-    <theme name="cell-warn" merge="true">
+    <theme name="cell-warn" ref="cell-warn">
       <param name="background"><image>gm-cell.background</image></param>
     </theme>
-    <theme name="cell-danger" merge="true">
+    <theme name="cell-danger" ref="cell-danger">
       <param name="background"><image>gm-cell.background</image></param>
     </theme>
-    <theme name="cell-positive" merge="true">
+    <theme name="cell-positive" ref="cell-positive">
       <param name="background"><image>gm-cell.background</image></param>
     </theme>
-    <theme name="cell-icon" merge="true">
+    <theme name="cell-icon" ref="cell-icon">
       <param name="background"><image>gm-cell.background</image></param>
     </theme>
-    <theme name="button-monster" merge="true">
+    <theme name="button-monster" ref="button-monster">
       <param name="background"><image>gm-cell.background</image></param>
     </theme>
   </theme>
-  <theme name="category-view" merge="true">
-    <theme name="category-view-inner" merge="true">
-      <theme name="dialoglayout" merge="true">
-        <theme name="label-info" merge="true">
+  <theme name="category-view" ref="category-view">
+    <theme name="category-view-inner" ref="category-view-inner">
+      <theme name="dialoglayout" ref="dialoglayout">
+        <theme name="label-info" ref="label-info">
           <param name="background"><image>gm-panel.background</image></param>
         </theme>
       </theme>
     </theme>
   </theme>
-  <theme name="broker-window" merge="true">
-    <theme name="tabbedpane" merge="true">
-      <theme name="tabbox" merge="true">
-        <theme name="tabbutton" merge="true">
+  <theme name="broker-window" ref="broker-window">
+    <theme name="tabbedpane" ref="tabbedpane">
+      <theme name="tabbox" ref="tabbox">
+        <theme name="tabbutton" ref="tabbutton">
           <param name="background"><image>gm-header.background</image></param>
         </theme>
       </theme>
-      <theme name="container" merge="true">
-        <theme name="dialoglayout" merge="true">
-          <theme name="label-info" merge="true">
+      <theme name="container" ref="container">
+        <theme name="dialoglayout" ref="dialoglayout">
+          <theme name="label-info" ref="label-info">
             <param name="background"><image>gm-panel.background</image></param>
           </theme>
         </theme>
@@ -109,78 +109,78 @@
     </theme>
   </theme>
 
-  <theme name="trade-frame" merge="true">
-    <theme name="dialoglayout" merge="true">
-      <theme name="dialoglayout" merge="true">
+  <theme name="trade-frame" ref="trade-frame">
+    <theme name="dialoglayout" ref="dialoglayout">
+      <theme name="dialoglayout" ref="dialoglayout">
         <param name="background"><image>gm-panel.background</image></param>
-        <theme name="pokeframe" merge="true">
-          <theme name="partyslot" merge="true">
+        <theme name="pokeframe" ref="pokeframe">
+          <theme name="partyslot" ref="partyslot">
             <param name="background"><image>gengar-bars.background</image></param>
           </theme>
-          <theme name="item-slot" merge="true">
+          <theme name="item-slot" ref="item-slot">
             <param name="background"><image>gengar-bars.background</image></param>
           </theme>
         </theme>
-        <theme name="label-horizontal-value" merge="true">
+        <theme name="label-horizontal-value" ref="label-horizontal-value">
           <param name="background"><image>gm-cell.background</image></param>
         </theme>
       </theme>
     </theme>
   </theme>
 
-  <theme name="gameshop-item" merge="true">
+  <theme name="gameshop-item" ref="gameshop-item">
     <param name="background"><image>gm-card.background</image></param>
   </theme>
-  <theme name="gameshop-item-addon" merge="true">
+  <theme name="gameshop-item-addon" ref="gameshop-item-addon">
     <param name="background"><image>gm-card.background</image></param>
-    <theme name="dialoglayout" merge="true">
-      <theme name="spritelabel" merge="true">
+    <theme name="dialoglayout" ref="dialoglayout">
+      <theme name="spritelabel" ref="spritelabel">
         <param name="background"><image>gm-cell.background</image></param>
       </theme>
     </theme>
   </theme>
-  <theme name="gameshop-item-addon-limited" merge="true">
+  <theme name="gameshop-item-addon-limited" ref="gameshop-item-addon-limited">
     <param name="background"><image>gm-card.background</image></param>
   </theme>
-  <theme name="gameshop-item-addon-seasonal" merge="true">
+  <theme name="gameshop-item-addon-seasonal" ref="gameshop-item-addon-seasonal">
     <param name="background"><image>gm-card.background</image></param>
   </theme>
-  <theme name="gameshop-item-addon-sale" merge="true">
+  <theme name="gameshop-item-addon-sale" ref="gameshop-item-addon-sale">
     <param name="background"><image>gm-card.background</image></param>
   </theme>
-  <theme name="gameshop-item-addon-new" merge="true">
+  <theme name="gameshop-item-addon-new" ref="gameshop-item-addon-new">
     <param name="background"><image>gm-card.background</image></param>
   </theme>
-  <theme name="gameshop" merge="true">
-    <theme name="dialoglayout" merge="true">
-      <theme name="tabbedpane" merge="true">
-        <theme name="tabbox" merge="true">
-          <theme name="tabbutton" merge="true">
+  <theme name="gameshop" ref="gameshop">
+    <theme name="dialoglayout" ref="dialoglayout">
+      <theme name="tabbedpane" ref="tabbedpane">
+        <theme name="tabbox" ref="tabbox">
+          <theme name="tabbutton" ref="tabbutton">
             <param name="background"><image>gm-header.background</image></param>
           </theme>
         </theme>
       </theme>
     </theme>
-    <theme name="points" merge="true">
+    <theme name="points" ref="points">
       <param name="background"><image>gm-cell.background</image></param>
     </theme>
   </theme>
-  <theme name="incubator-frame" merge="true">
-    <theme name="incubator-main-table" merge="true">
-      <theme name="incubator-slot" merge="true">
-        <theme name="incubator-temporary-uses" merge="true">
+  <theme name="incubator-frame" ref="incubator-frame">
+    <theme name="incubator-main-table" ref="incubator-main-table">
+      <theme name="incubator-slot" ref="incubator-slot">
+        <theme name="incubator-temporary-uses" ref="incubator-temporary-uses">
           <param name=""><image>gengar-bars.hp-green.*</image></param>
         </theme>
       </theme>
     </theme>
   </theme>
-  <theme name="advanced-search-dialog" merge="true">
-    <theme name="label-title-medium2" merge="true">
+  <theme name="advanced-search-dialog" ref="advanced-search-dialog">
+    <theme name="label-title-medium2" ref="label-title-medium2">
       <param name="background"><image>gm-header.background</image></param>
     </theme>
   </theme>
-  <theme name="advanced-search-dex" merge="true">
-    <theme name="label-title-medium2" merge="true">
+  <theme name="advanced-search-dex" ref="advanced-search-dex">
+    <theme name="label-title-medium2" ref="label-title-medium2">
       <param name="background"><image>gm-header.background</image></param>
     </theme>
   </theme>

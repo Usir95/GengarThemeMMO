@@ -10,6 +10,7 @@ except Exception:
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROPIOS = ("gm-", "gengar-")
+PERMITIDAS = {".xml", ".png", ".jpg", ".ogg", ".wav", ".mp3", ".ttf", ".ttc", ".otf", ".fnt"}
 IMG_TAGS = {"area", "select", "alias", "composed", "grid", "animation", "gradient", "cursor"}
 
 
@@ -64,8 +65,9 @@ class Validador:
                     self.parse(p)
                 if f.startswith("."):
                     continue
-                if f.lower().endswith(".txt"):
-                    self.err(f"Archivo .txt dentro de mod/ (rompe la importación): {self.rel(p)}")
+                ext = os.path.splitext(f)[1].lower()
+                if ext not in PERMITIDAS:
+                    self.err(f"Archivo que no es del mod dentro de mod/ (puede romper la importación): {self.rel(p)}")
 
     def revisar_info(self):
         p = os.path.join(self.mod, "info.xml")
@@ -179,25 +181,31 @@ class Validador:
         defs = {}
         for el, path in orden:
             n = el.get("name")
-            if el.get("merge") == "true":
+            if el.get("merge") == "true" and self.es_mod(path):
+                self.err(f"[{nombre}] {self.rel(path)}: merge=\"true\" en '{n}'; el juego no lo acepta, usa ref=\"{n}\"")
+                continue
+            if el.get("ref") == n and self.es_mod(path):
                 base = defs.get(n)
                 if base is None:
                     if not sin_base or self.es_mod(path):
                         if not sin_base:
-                            self.err(f"[{nombre}] {self.rel(path)}: merge sobre '{n}', que no existe antes")
+                            self.err(f"[{nombre}] {self.rel(path)}: '{n}' sobrescribe una ventana que no existe antes")
                     continue
                 self.merge_hijos(nombre, path, el, base, [n])
-            else:
+            if el.get("ref") != n:
                 defs[n] = el
 
     def merge_hijos(self, nombre, path, mio, base, ruta):
         for ch in mio.findall("theme"):
-            if ch.get("merge") != "true":
+            if ch.get("merge") == "true":
+                self.err(f"[{nombre}] {self.rel(path)}: merge=\"true\" en '{'/'.join(ruta + [ch.get('name')])}'; usa ref=\"{ch.get('name')}\"")
+                continue
+            if ch.get("ref") != ch.get("name"):
                 continue
             cand = [c for c in base.findall("theme") if c.get("name") == ch.get("name")]
             r = ruta + [ch.get("name")]
             if not cand:
-                self.err(f"[{nombre}] {self.rel(path)}: merge sobre '{'/'.join(r)}', que no existe en la versión final de '{ruta[0]}'")
+                self.err(f"[{nombre}] {self.rel(path)}: '{'/'.join(r)}' no existe en la versión final de '{ruta[0]}'")
             else:
                 self.merge_hijos(nombre, path, ch, cand[-1], r)
 

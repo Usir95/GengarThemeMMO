@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <themes>
-  <theme name="addon-item-picker" merge="true">
+  <theme name="addon-item-picker" ref="addon-item-picker">
     <param name="background">
       <image>gengar-bars.background</image>
     </param>
   </theme>
-  <theme name="customization-label" merge="true">
+  <theme name="customization-label" ref="customization-label">
     <param name="background">
       <image>gm-header.background</image>
     </param>
   </theme>
-  <theme name="wardrobe" merge="true">
-    <theme name="button" merge="true">
+  <theme name="wardrobe" ref="wardrobe">
+    <theme name="button" ref="button">
       <param name="background">
         <image>gm-cell.background</image>
       </param>
     </theme>
   </theme>
-  <theme name="wardrobe-purchase-table" merge="true">
-    <theme name="box-layout-row" merge="true">
+  <theme name="wardrobe-purchase-table" ref="wardrobe-purchase-table">
+    <theme name="box-layout-row" ref="box-layout-row">
       <param name="background">
         <image>gm-cell.background</image>
       </param>
     </theme>
-    <theme name="button" merge="true">
+    <theme name="button" ref="button">
       <param name="background">
         <image>gm-cell.background</image>
       </param>
     </theme>
-    <theme name="button-wheel" merge="true">
+    <theme name="button-wheel" ref="button-wheel">
       <param name="background">
         <image>gm-cell.background</image>
       </param>
