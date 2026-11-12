@@ -1,6 +1,4 @@
 $ErrorActionPreference = "Stop"
-Add-Type -AssemblyName System.IO.Compression
-Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 $root = Join-Path $PSScriptRoot "mod"
 $dist = Join-Path $PSScriptRoot "dist"
@@ -8,14 +6,20 @@ if (-not (Test-Path $dist)) { New-Item -ItemType Directory -Path $dist | Out-Nul
 $out = Join-Path $dist "GengarTheme.mod"
 if (Test-Path $out) { Remove-Item $out }
 
-$zip = [System.IO.Compression.ZipFile]::Open($out, [System.IO.Compression.ZipArchiveMode]::Create)
+$tar = Join-Path $env:SystemRoot "System32\tar.exe"
+if (-not (Test-Path $tar)) { throw "No se encontro $tar" }
+
+$files = Get-ChildItem -Path $root -Recurse -File | Where-Object { $_.Name -notlike ".*" } | ForEach-Object {
+    $_.FullName.Substring($root.Length + 1).Replace("\", "/")
+}
+$list = Join-Path $dist "archivos.txt"
+[System.IO.File]::WriteAllLines($list, [string[]]$files, (New-Object System.Text.UTF8Encoding $false))
+
 try {
-    Get-ChildItem -Path $root -Recurse -File | Where-Object { $_.Name -notlike ".*" } | ForEach-Object {
-        $entry = $_.FullName.Substring($root.Length + 1).Replace("\", "/")
-        [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $_.FullName, $entry, [System.IO.Compression.CompressionLevel]::Optimal) | Out-Null
-    }
+    & $tar -c --format zip --options zip:compression=store -n -f $out -C $root -T $list
+    if ($LASTEXITCODE -ne 0) { throw "tar termino con codigo $LASTEXITCODE" }
 }
 finally {
-    $zip.Dispose()
+    Remove-Item $list -ErrorAction SilentlyContinue
 }
 Write-Host $out
