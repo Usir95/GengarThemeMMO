@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+  <theme name="bans" merge="true">
+    <theme name="label-banned-title" merge="true">
+      <param name="background">
+        <image>gm-th.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="game-mode" merge="true">
+    <param name="background">
+      <image>gm-cell.default</image>
+    </param>
+    <theme name="label-desc" merge="true">
+      <param name="background">
+        <image>gm-cell.default</image>
+      </param>
+    </theme>
+    <theme name="label-game-mode" merge="true">
+      <param name="background">
+        <image>gm-th.background</image>
+      </param>
+    </theme>
+    <theme name="label-monster-slot" merge="true">
+      <param name="background">
+        <image>gm-cell.default</image>
+      </param>
+    </theme>
+    <theme name="label-tournament-name" merge="true">
+      <param name="background">
+        <image>gm-th.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="guildwindow" merge="true">
+    <theme name="dialoglayout" merge="true">
+      <theme name="tabbedpane" merge="true">
+        <theme name="container" merge="true">
+          <theme name="dialoglayout" merge="true">
+            <theme name="editfield" merge="true">
+              <param name="background">
+                <image>gm-cell.background</image>
+              </param>
+            </theme>
+            <theme name="scrollpane" merge="true">
+              <theme name="dialoglayout" merge="true">
+                <theme name="label-title-perm" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-title-small" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-title-small2" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-title-small3" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-title-small4" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-value-icon" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+                <theme name="label-value-small" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+                <theme name="label-value-small2" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+                <theme name="label-value-small3" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+                <theme name="label-value-small4" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+              </theme>
+            </theme>
+          </theme>
+        </theme>
+      </theme>
+    </theme>
+    <theme name="settings-frame" merge="true">
+      <theme name="changemotd" merge="true">
+        <theme name="scrollpane" merge="true">
+          <theme name="editfield" merge="true">
+            <param name="background">
+              <image>gm-cell.background</image>
+            </param>
+          </theme>
+        </theme>
+      </theme>
+    </theme>
+  </theme>
+  <theme name="headshot-row" merge="true">
+    <param name="background">
+      <image>gm-cell.background</image>
+    </param>
+  </theme>
+  <theme name="incubator-frame" merge="true">
+    <theme name="incubator-main-table" merge="true">
+      <theme name="desc-label" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+    </theme>
+  </theme>
+  <theme name="info-layout" merge="true">
+    <theme name="label-desc" merge="true">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+    <theme name="label-type" merge="true">
+      <param name="background">
+        <image>gm-th.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="instance-table" merge="true">
+    <theme name="box-layout-row" merge="true">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="mail-inner" merge="true">
+    <theme name="dialoglayout" merge="true">
+      <param name="unreadRowBackground">
+        <image>gm-header.background</image>
+      </param>
+      <param name="contentRowBackground">
+        <image>gm-cell.background</image>
+      </param>
+      <theme name="label-field" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="mail-attachment-badge" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="mail-attachment-more" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+    </theme>
+  </theme>
+  <theme name="mail-window" merge="true">
+    <theme name="dialoglayout" merge="true">
+      <theme name="tabbedpane" merge="true">
+        <theme name="tabbox" merge="true">
+          <theme name="tabbutton" merge="true">
+            <param name="background">
+              <image>gm-header.background</image>
+            </param>
+          </theme>
+        </theme>
+      </theme>
+    </theme>
+  </theme>
+  <theme name="matchmaking-stats-frame" merge="true">
+    <theme name="label-monster-slot" merge="true">
+      <param name="background">
+        <image>gm-cell.default</image>
+      </param>
+    </theme>
+    <theme name="label-name-monster-tiering-value" merge="true">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+    <theme name="label-name-tiering-overview" merge="true">
+      <param name="background">
+        <image>gm-header.background</image>
+      </param>
+    </theme>
+    <theme name="label-name-tiering-overview-label" merge="true">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+    <theme name="label-title-monster-sprite" merge="true">
+      <param name="background">
+        <image>gm-header.background</image>
+      </param>
+    </theme>
+    <theme name="label-winpercent" merge="true">
+      <param name="background">
+        <image>gm-header.background</image>
+      </param>
+    </theme>
+    <theme name="label-winpercent-value" merge="true">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+    <theme name="tabbedpane" merge="true">
+      <theme name="tabbox" merge="true">
+        <theme name="tabbutton" merge="true">
+          <param name="">
+            <image>gm-tab-v.*</image>
+          </param>
+        </theme>
+      </theme>
+    </theme>
+  </theme>
+  <theme name="matchmakingframe" merge="true">
+    <theme name="tabbedpane" merge="true">
+      <theme name="container" merge="true">
+        <theme name="dialoglayout" merge="true">
+          <theme name="label-game-mode" merge="true">
+            <param name="background">
+              <image>gm-th.background</image>
+            </param>
+          </theme>
+          <theme name="label-monster-slot" merge="true">
+            <param name="background">
+              <image>gm-cell.default</image>
+            </param>
+          </theme>
+        </theme>
+      </theme>
+      <theme name="tabbox" merge="true">
+        <theme name="tabbutton" merge="true">
+          <param name="">
+            <image>gm-tab-v.*</image>
+          </param>
+        </theme>
+      </theme>
+    </theme>
+  </theme>
+  <theme name="member-table" merge="true">
+    <theme name="box-layout-row" merge="true">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="mm-stats-window" merge="true">
+    <theme name="dialoglayout" merge="true">
+      <theme name="tabbedpane" merge="true">
+        <theme name="container" merge="true">
+          <theme name="dialoglayout" merge="true">
+            <theme name="stats" merge="true">
+              <theme name="dialoglayout" merge="true">
+                <theme name="label-name" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-name-icon-value" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+                <theme name="label-name-value" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+                <theme name="label-title" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-title-icon" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-title-small" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-title-small2" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-title-smallest" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-title-stat" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-turn" merge="true">
+                  <param name="background">
+                    <image>gm-header.background</image>
+                  </param>
+                </theme>
+                <theme name="label-turn-value" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+                <theme name="label-value-large" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+                <theme name="label-value-small" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+                <theme name="label-value-small2" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+                <theme name="label-value-smallest" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+                <theme name="label-value-stat" merge="true">
+                  <param name="background">
+                    <image>gm-cell.background</image>
+                  </param>
+                </theme>
+              </theme>
+            </theme>
+          </theme>
+        </theme>
+      </theme>
+    </theme>
+  </theme>
+  <theme name="read-mail" merge="true">
+    <theme name="editfield" merge="true">
+      <param name="background">
+        <image>gm-header.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="reward-slot" merge="true">
+    <param name="background">
+      <image>gm-cell.default</image>
+    </param>
+  </theme>
+  <theme name="stats" merge="true">
+    <theme name="dialoglayout" merge="true">
+      <theme name="label-battle" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-duration" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-duration-value" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+      <theme name="label-game-mode" merge="true">
+        <param name="background">
+          <image>gm-th.background</image>
+        </param>
+      </theme>
+      <theme name="label-monster-slot" merge="true">
+        <param name="background">
+          <image>gm-cell.default</image>
+        </param>
+      </theme>
+      <theme name="label-name" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-name-icon-value" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+      <theme name="label-name-value" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+      <theme name="label-rank" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-rank-value" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-rating" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-rating-value" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+      <theme name="label-tier" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-tier-value" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+      <theme name="label-title" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-title-icon" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-title-small" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-title-small2" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-title-smallest" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-title-stat" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-value-large" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+      <theme name="label-value-small" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+      <theme name="label-value-small2" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+      <theme name="label-value-smallest" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+      <theme name="label-value-stat" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+      <theme name="label-vs" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-vs-value" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-winloss" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-winloss-value" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+      <theme name="label-winpercent" merge="true">
+        <param name="background">
+          <image>gm-header.background</image>
+        </param>
+      </theme>
+      <theme name="label-winpercent-value" merge="true">
+        <param name="background">
+          <image>gm-cell.background</image>
+        </param>
+      </theme>
+    </theme>
+  </theme>
+  <theme name="stats-layout" merge="true">
+    <param name="background">
+      <image>gm-cell.default</image>
+    </param>
+    <theme name="label" merge="true">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+    <theme name="label-mmr" merge="true">
+      <param name="background">
+        <image>gm-th.background</image>
+      </param>
+    </theme>
+    <theme name="label-stats" merge="true">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+    <theme name="label-title" merge="true">
+      <param name="background">
+        <image>gm-th.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="tournament-signup" merge="true">
+    <param name="background">
+      <image>gm-cell.default</image>
+    </param>
+    <theme name="label-game-mode" merge="true">
+      <param name="background">
+        <image>gm-th.background</image>
+      </param>
+    </theme>
+  </theme>
+  <theme name="tournament-table" merge="true">
+    <theme name="box-layout-row" merge="true">
+      <param name="background">
+        <image>gm-cell.background</image>
+      </param>
+    </theme>
+  </theme>
+</themes>
