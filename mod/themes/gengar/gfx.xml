@@ -259,19 +259,19 @@
 
 
 		<select name="vscrollbar.upbutton.background" center="true">
-			<area tint="#007dcd" if="pressed" xywh="5,1,7,7"/>
-			<area tint="#5A5A5A" if="hover" xywh="5,1,7,7"/>
-			<area tint="#000000" xywh="5,1,7,7"/>
+			<area tint="#E25CBE" if="pressed" xywh="5,1,7,7"/>
+			<area tint="main-color" if="hover" xywh="5,1,7,7"/>
+			<area tint="main-theme-color" xywh="5,1,7,7"/>
 		</select>
 		<select name="vscrollbar.downbutton.background" center="true">
-			<area tint="#007dcd" if="pressed" xywh="14,1,7,7"/>
-			<area tint="#5A5A5A" if="hover" xywh="14,1,7,7"/>
-			<area tint="#000000" xywh="14,1,7,7"/>
+			<area tint="#E25CBE" if="pressed" xywh="14,1,7,7"/>
+			<area tint="main-color" if="hover" xywh="14,1,7,7"/>
+			<area tint="main-theme-color" xywh="14,1,7,7"/>
 		</select>
 		<select name="vscrollbar.thumb.background">
-			<area splity="T2,T5" tint="#007dcd" if="pressed" xywh="22,1,7,7"/>
-			<area splity="T3,T4" tint="#5A5A5A" if="hover" xywh="22,1,7,7"/>
-			<area splity="T3,T6" tint="#000000" xywh="22,1,7,7"/>
+			<area splity="T2,T5" tint="#E25CBE" if="pressed" xywh="22,1,7,7"/>
+			<area splity="T3,T4" tint="main-color" if="hover" xywh="22,1,7,7"/>
+			<area splity="T3,T6" tint="main-theme-color" xywh="22,1,7,7"/>
 		</select>
 		<select name="vscrollbar-transparent.thumb.background">
 			<area splity="T2,T5" tint="#53737373" if="pressed" xywh="22,1,7,7"/>
@@ -279,51 +279,51 @@
 			<area splity="T3,T6" tint="#53FFFFFF" xywh="22,1,7,7"/>
 		</select>
 		<select name="vscrollbar-white.thumb.background">
-			<area splity="T2,T5" tint="#737373" if="pressed" xywh="22,1,7,7"/>
-			<area splity="T3,T4" tint="#999999" if="hover" xywh="22,1,7,7"/>
-			<area splity="T3,T6" tint="#FFFFFF" xywh="22,1,7,7"/>
+			<area splity="T2,T5" tint="#E25CBE" if="pressed" xywh="22,1,7,7"/>
+			<area splity="T3,T4" tint="#E8D2FF" if="hover" xywh="22,1,7,7"/>
+			<area splity="T3,T6" tint="main-color" xywh="22,1,7,7"/>
 		</select>
 
 		<select name="hscrollbar.thumb.background">
-			<area tint="#007dcd" if="pressed" xywh="5,28,7,7" splitx="L2,R2"/>
-			<area tint="#5A5A5A" if="hover" xywh="5,28,7,7" splitx="L2,R2"/>
-			<area tint="#000000" xywh="5,28,7,7" splitx="L2,R2"/>
+			<area tint="#E25CBE" if="pressed" xywh="5,28,7,7" splitx="L2,R2"/>
+			<area tint="main-color" if="hover" xywh="5,28,7,7" splitx="L2,R2"/>
+			<area tint="main-theme-color" xywh="5,28,7,7" splitx="L2,R2"/>
 		</select>
 		<select name="hscrollbar.leftbutton.background" center="true">
-			<area tint="#007dcd" if="pressed" xywh="5,20,7,7"/>
-			<area tint="#5A5A5A" if="hover" xywh="5,20,7,7"/>
-			<area tint="#000000" xywh="5,20,7,7"/>
+			<area tint="#E25CBE" if="pressed" xywh="5,20,7,7"/>
+			<area tint="main-color" if="hover" xywh="5,20,7,7"/>
+			<area tint="main-theme-color" xywh="5,20,7,7"/>
 		</select>
 		<select name="hscrollbar.rightbutton.background" center="true">
-			<area tint="#007dcd" if="pressed" xywh="5,11,7,7"/>
-			<area tint="#5A5A5A" if="hover" xywh="5,11,7,7"/>
-			<area tint="#000000" xywh="5,11,7,7"/>
+			<area tint="#E25CBE" if="pressed" xywh="5,11,7,7"/>
+			<area tint="main-color" if="hover" xywh="5,11,7,7"/>
+			<area tint="main-theme-color" xywh="5,11,7,7"/>
 		</select>
 
 		<select name="hscrollbar-white.thumb.background">
-			<area tint="#737373" if="pressed" xywh="5,28,7,7" splitx="L2,R2"/>
-			<area tint="#999999" if="hover" xywh="5,28,7,7" splitx="L2,R2"/>
-			<area tint="#FFFFFF" xywh="5,28,7,7" splitx="L2,R2"/>
+			<area tint="#E25CBE" if="pressed" xywh="5,28,7,7" splitx="L2,R2"/>
+			<area tint="#E8D2FF" if="hover" xywh="5,28,7,7" splitx="L2,R2"/>
+			<area tint="main-color" xywh="5,28,7,7" splitx="L2,R2"/>
 		</select>
 		<select name="hscrollbar-white.leftbutton.background" center="true">
-			<area tint="#737373" if="pressed" xywh="5,20,7,7"/>
-			<area tint="#999999" if="hover" xywh="5,20,7,7"/>
-			<area tint="#FFFFFF" xywh="5,20,7,7"/>
+			<area tint="#E25CBE" if="pressed" xywh="5,20,7,7"/>
+			<area tint="#E8D2FF" if="hover" xywh="5,20,7,7"/>
+			<area tint="main-color" xywh="5,20,7,7"/>
 		</select>
 		<select name="hscrollbar-white.rightbutton.background" center="true">
-			<area tint="#737373" if="pressed" xywh="5,11,7,7"/>
-			<area tint="#999999" if="hover" xywh="5,11,7,7"/>
-			<area tint="#FFFFFF" xywh="5,11,7,7"/>
+			<area tint="#E25CBE" if="pressed" xywh="5,11,7,7"/>
+			<area tint="#E8D2FF" if="hover" xywh="5,11,7,7"/>
+			<area tint="main-color" xywh="5,11,7,7"/>
 		</select>
 		<select name="vscrollbar-white.upbutton.background" center="true">
-			<area tint="#737373" if="pressed" xywh="5,1,7,7"/>
-			<area tint="#999999" if="hover" xywh="5,1,7,7"/>
-			<area tint="#FFFFFF" xywh="5,1,7,7"/>
+			<area tint="#E25CBE" if="pressed" xywh="5,1,7,7"/>
+			<area tint="#E8D2FF" if="hover" xywh="5,1,7,7"/>
+			<area tint="main-color" xywh="5,1,7,7"/>
 		</select>
 		<select name="vscrollbar-white.downbutton.background" center="true">
-			<area tint="#737373" if="pressed" xywh="14,1,7,7"/>
-			<area tint="#999999" if="hover" xywh="14,1,7,7"/>
-			<area tint="#FFFFFF" xywh="14,1,7,7"/>
+			<area tint="#E25CBE" if="pressed" xywh="14,1,7,7"/>
+			<area tint="#E8D2FF" if="hover" xywh="14,1,7,7"/>
+			<area tint="main-color" xywh="14,1,7,7"/>
 		</select>
 		<area name="monster-frame-tab-empty.default" xywh="94,147,28,30" inset="-10,0,10,0"/>
 		<area name="monster-frame-tab-empty.selected" xywh="94,177,28,30" inset="-10,0,10,0"/>
