@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+	<!-- instance window -->
+	<theme name="instance-window" ref="mobile-panel">
+		<param name="border"><border>70,0,0,0</border></param>
+	</theme>
+
+	<theme name="instance-table" ref="table" overwrite="true">
+		<param name="columnWidths">
+			<map>
+				<param name="0"><int>font.EM * 12</int></param>
+				<param name="1"><int>font.EM * 15</int></param>
+				<param name="2"><int>font.EM * 8</int></param>
+				<param name="3"><int>font.EM * 8</int></param>
+				<param name="4"><int>font.EM * 8</int></param>
+			</map>
+		</param>
+
+	</theme>
+</themes>

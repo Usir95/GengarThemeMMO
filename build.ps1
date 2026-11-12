@@ -1,4 +1,18 @@
+﻿param([switch]$SinValidar)
 $ErrorActionPreference = "Stop"
+
+if (-not $SinValidar) {
+    $validar = Join-Path $PSScriptRoot "herramientas\validar.py"
+    $py = Get-Command py -ErrorAction SilentlyContinue
+    $pyArgs = @("-3", $validar)
+    if (-not $py) {
+        $py = Get-Command python -ErrorAction SilentlyContinue
+        $pyArgs = @($validar)
+    }
+    if (-not $py) { throw "No encontré Python. Instálalo o usa .\build.ps1 -SinValidar" }
+    & $py.Source @pyArgs
+    if ($LASTEXITCODE -ne 0) { throw "La validación encontró errores; no se generó el paquete." }
+}
 
 $root = Join-Path $PSScriptRoot "mod"
 $dist = Join-Path $PSScriptRoot "dist"
