@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <themes>
+  <images>
+    <composed name="gengar-selection.party">
+      <alias ref="gengar-bars.selected"/>
+      <alias ref="gengar-selection.border"/>
+    </composed>
+  </images>
   <theme name="logingui">
     <param name="background"><image>gengar-login-bg</image></param>
   </theme>
@@ -46,7 +52,7 @@
     <param name="background"><image>gengar-bars.disabled</image></param>
   </theme>
   <theme name="monster-slot-selected" ref="-defaults">
-    <param name="background"><image>gengar-bars.selected</image></param>
+    <param name="background"><image>gengar-selection.party</image></param>
   </theme>
   <theme name="battle-panel">
     <param name="background"><image>none</image></param>

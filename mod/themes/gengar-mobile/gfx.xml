@@ -986,6 +986,14 @@
 	</images>
 
 
+  <images file="res/gengar-selection.png" filter="nearest">
+    <area name="gengar-selection.color" xywh="0,0,16,16" splitx="L5,R5" splity="T5,B5" tint="main-color"/>
+    <area name="gengar-selection.highlight" xywh="16,0,16,16" splitx="L5,R5" splity="T5,B5"/>
+    <composed name="gengar-selection.border">
+      <alias ref="gengar-selection.color"/>
+      <alias ref="gengar-selection.highlight"/>
+    </composed>
+  </images>
 	<images file="res/pc_slots.png" filter="nearest">
 		<area name="pcslot.bg.default" xywh="3,1,80,80"/>
 		<area name="pcslot.bg.active" xywh="86,1,80,80"/>
@@ -996,8 +1004,6 @@
 		<area name="pcslot.bg.overlay.disabled" xywh="3,164,80,80"/>
 		<area name="pcslot.bg.overlay.battlebox" xywh="169,164,80,80"/>
 		<area name="pcslot.border.default" xywh="3,247,80,80"/>
-		<area name="pcslot.border.selected" xywh="86,247,80,80"/>
-		<area name="pcslot.border.selected2" xywh="86,247,80,80" inset="-1" />
 		<area name="pcslot.border.filtered" xywh="169,247,80,80"/>
     <area name="pcslot.border.filtered2" xywh="169,247,80,80" inset="-1"/>
 		<composed name="pc-slot.background">
@@ -1020,10 +1026,7 @@
           <frame duration="400" ref="pcslot.border.filtered2" tint="#FFFFFFFF"/>
           <frame duration="400" ref="pcslot.border.filtered" tint="#FFFFFFFF"/>
         </animation>
-        <animation if="keyboardFocus" timeSource="keyboardFocus">
-          <frame duration="400" ref="pcslot.border.selected2" tint="#FFFFFFFF"/>
-          <frame duration="400" ref="pcslot.border.selected" tint="#FFFFFFFF"/>
-        </animation>
+        <alias ref="gengar-selection.border" if="selected | keyboardFocus"/>
         <alias ref="pcslot.border.default"/>
       </select>
 			<select center="false">
@@ -1032,7 +1035,7 @@
 		</composed>
 
     <select name="pc-slot-border-while-selected.background">
-      <alias ref="pcslot.border.selected" if="keyboardFocus"/>
+      <alias ref="gengar-selection.border" if="keyboardFocus"/>
     </select>
   </images>
 	<images file="res/gengar-mlist.png" filter="linear">
