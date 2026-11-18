@@ -5,4 +5,5 @@
     <fallbackFontDef filename="../../data/themes/default/res/fonts/NotoSansCJK-Bold.ttc" faces="sc,tc,jp"/>
     <fallbackFontDef filename="../../data/themes/default/res/fonts/NotoSans-Bold.ttf"/>
   </fontDef>
+  <fontDef name="chatfont-shiny" ref="chatfont" color="#F0D051"/>
 </themes>
